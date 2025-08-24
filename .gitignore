@@ -1,0 +1,154 @@
+# Croatian Labor Law Fact Checker - GitHub Pages
+# .gitignore optimizado para deployment
+
+# ===========================================
+# Archivos de desarrollo que NO van a GitHub Pages
+# ===========================================
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencias
+package-lock.json
+yarn.lock
+
+# ===========================================
+# Archivos de configuración de desarrollo
+# ===========================================
+
+# Editor configurations
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ===========================================
+# Archivos temporales y logs
+# ===========================================
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# ===========================================
+# Archivos sensibles - NUNCA subir a GitHub
+# ===========================================
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# API keys y configuraciones sensibles
+config.ini
+secrets.json
+private.key
+*.pem
+
+# Database files (si los hubiera)
+*.db
+*.sqlite
+*.sqlite3
+
+# ===========================================
+# Archivos de backup y versiones
+# ===========================================
+
+# Backups
+*.bak
+*.backup
+*.old
+
+# Versiones previas
+*.v1
+*.v2
+version-*
+
+# ===========================================
+# INCLUIR explícitamente archivos para GitHub Pages
+# ===========================================
+
+# Estos archivos SÍ deben ir a GitHub Pages
+!index.html
+!manifest.json
+!sw.js
+!robots.txt
+!sitemap.xml
+!_config.yml
+!LICENSE
+!README.md
+
+# Directorios principales
+!css/
+!js/
+!assets/
+!data/
+!.github/
+
+# Archivos específicos del proyecto
+!css/*.css
+!js/*.js
+!assets/**/*
+!data/*.json
+
+# ===========================================
+# Archivos de documentación opcionales
+# ===========================================
+
+# Mantener documentación importante
+!SECURITY_FIXES.md
+
+# Ignorar documentación de desarrollo
+docs/development/
+CONTRIBUTING.md
+CHANGELOG.md
+
+# ===========================================
+# Archivos de testing (opcionales)
+# ===========================================
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Test results
+test-results/
+reports/
+
+# ===========================================
+# NOTA IMPORTANTE para GitHub Pages:
+# ===========================================
+
+# GitHub Pages necesita:
+# ✅ index.html (punto de entrada)
+# ✅ Todos los archivos CSS, JS, assets
+# ✅ manifest.json (para PWA)
+# ✅ sw.js (Service Worker)
+# ✅ robots.txt y sitemap.xml (SEO)
+# ✅ _config.yml (configuración Jekyll)
+
+# GitHub Pages automáticamente:
+# - Sirve archivos estáticos
+# - Habilita HTTPS
+# - Configura CDN
+# - Detecta index.html como página principal

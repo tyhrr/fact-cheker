@@ -1,0 +1,53 @@
+# Configuración GitHub Pages
+# Croatian Labor Law Fact Checker
+
+# Información del sitio
+title: "Croatian Labor Law Fact Checker"
+description: "Comprehensive tool for checking Croatian workers' rights and labor laws. Search, translate, and understand Croatian labor legislation."
+url: "https://tyhrr.github.io"
+baseurl: "/fact-cheker"
+
+# GitHub Pages automáticamente sirve archivos desde la rama main
+# No se requiere configuración adicional para Jekyll
+
+# Archivos que GitHub Pages incluirá automáticamente:
+include:
+  - .htaccess
+  - manifest.json
+  - sw.js
+  - robots.txt
+  - sitemap.xml
+
+# Archivos que GitHub Pages excluirá:
+exclude:
+  - node_modules/
+  - .git/
+  - .gitignore
+  - .eslintrc.json
+  - .stylelintrc.json
+  - .htmlhintrc
+  - package.json
+  - package-lock.json
+  - SECURITY_FIXES.md
+  - docs/
+
+# Plugins de GitHub Pages (automáticos):
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Configuración SEO
+title: "Croatian Labor Law Fact Checker"
+description: "Comprehensive tool for checking Croatian workers' rights and labor laws"
+url: "https://yourusername.github.io"
+baseurl: "/croatian-labor-law-checker"
+
+# Autor
+author:
+  name: "Your Name"
+  email: "your.email@example.com"
+
+# Configuración de dominio personalizado (opcional)
+# domain: your-custom-domain.com
+# url: https://your-custom-domain.com

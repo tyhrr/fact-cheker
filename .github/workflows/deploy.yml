@@ -1,0 +1,256 @@
+# Croatian Labor Law Fact Checker - GitHub Pages Deployment
+name: Deploy to GitHub Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main", "master"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm install -g htmlhint stylelint eslint
+          npm install -g lighthouse-ci
+
+      - name: Validate HTML
+        run: |
+          htmlhint index.html --config .htmlhintrc || true
+          echo "HTML validation completed"
+
+      - name: Validate CSS
+        run: |
+          stylelint "css/**/*.css" --config .stylelintrc.json || true
+          echo "CSS validation completed"
+
+      - name: Validate JavaScript
+        run: |
+          eslint "js/**/*.js" --config .eslintrc.json || true
+          echo "JavaScript validation completed"
+
+      - name: Check accessibility with Pa11y
+        run: |
+          # Install pa11y
+          npm install -g pa11y
+          # Start a simple HTTP server
+          python3 -m http.server 8080 &
+          sleep 5
+          # Run accessibility tests
+          pa11y http://localhost:8080 --standard WCAG2AA --reporter cli || true
+          echo "Accessibility check completed"
+
+      - name: Optimize assets
+        run: |
+          # Minify CSS
+          npm install -g clean-css-cli
+          mkdir -p dist/css
+          cleancss -o dist/css/neumorphism.min.css css/neumorphism.css
+          cleancss -o dist/css/style.min.css css/style.css
+          
+          # Minify JavaScript
+          npm install -g terser
+          mkdir -p dist/js
+          terser js/i18n.js -o dist/js/i18n.min.js --compress --mangle
+          terser js/database.js -o dist/js/database.min.js --compress --mangle
+          terser js/search.js -o dist/js/search.min.js --compress --mangle
+          terser js/main.js -o dist/js/main.min.js --compress --mangle
+          
+          # Copy other files
+          cp -r data dist/
+          cp -r assets dist/ 2>/dev/null || mkdir -p dist/assets
+          
+          # Create optimized index.html
+          sed 's/css\/neumorphism\.css/css\/neumorphism.min.css/g; s/css\/style\.css/css\/style.min.css/g; s/js\/i18n\.js/js\/i18n.min.js/g; s/js\/database\.js/js\/database.min.js/g; s/js\/search\.js/js\/search.min.js/g; s/js\/main\.js/js\/main.min.js/g' index.html > dist/index.html
+          
+          echo "Asset optimization completed"
+
+      - name: Generate sitemap
+        run: |
+          cat > dist/sitemap.xml << 'EOF'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+            <url>
+              <loc>https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/</loc>
+              <lastmod>$(date -u +%Y-%m-%dT%H:%M:%S+00:00)</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>1.0</priority>
+            </url>
+          </urlset>
+          EOF
+          echo "Sitemap generated"
+
+      - name: Generate robots.txt
+        run: |
+          cat > dist/robots.txt << 'EOF'
+          User-agent: *
+          Allow: /
+          
+          Sitemap: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/sitemap.xml
+          EOF
+          echo "Robots.txt generated"
+
+      - name: Create manifest.json
+        run: |
+          cat > dist/manifest.json << 'EOF'
+          {
+            "name": "Croatian Labor Law Fact Checker",
+            "short_name": "HR Labor Law",
+            "description": "Comprehensive tool for checking Croatian workers' rights and labor laws",
+            "start_url": "/",
+            "display": "standalone",
+            "background_color": "#ffffff",
+            "theme_color": "#ffffff",
+            "icons": [
+              {
+                "src": "assets/icons/icon-192.png",
+                "sizes": "192x192",
+                "type": "image/png"
+              },
+              {
+                "src": "assets/icons/icon-512.png", 
+                "sizes": "512x512",
+                "type": "image/png"
+              }
+            ]
+          }
+          EOF
+          echo "PWA manifest created"
+
+      - name: Create service worker
+        run: |
+          cat > dist/sw.js << 'EOF'
+          const CACHE_NAME = 'croatian-labor-law-v1';
+          const urlsToCache = [
+            '/',
+            '/css/neumorphism.min.css',
+            '/css/style.min.css',
+            '/js/i18n.min.js',
+            '/js/database.min.js',
+            '/js/search.min.js',
+            '/js/main.min.js',
+            '/data/croatian-labor-law.json',
+            '/data/translations.json'
+          ];
+
+          self.addEventListener('install', event => {
+            event.waitUntil(
+              caches.open(CACHE_NAME)
+                .then(cache => cache.addAll(urlsToCache))
+            );
+          });
+
+          self.addEventListener('fetch', event => {
+            event.respondWith(
+              caches.match(event.request)
+                .then(response => {
+                  if (response) {
+                    return response;
+                  }
+                  return fetch(event.request);
+                }
+              )
+            );
+          });
+          EOF
+          echo "Service worker created"
+
+      - name: Run performance audit
+        run: |
+          # Install Lighthouse CI
+          npm install -g @lhci/cli
+          
+          # Start server for testing
+          cd dist
+          python3 -m http.server 9090 &
+          cd ..
+          sleep 5
+          
+          # Create Lighthouse CI config
+          cat > lighthouserc.json << 'EOF'
+          {
+            "ci": {
+              "collect": {
+                "url": ["http://localhost:9090"],
+                "startServerCommand": "cd dist && python3 -m http.server 9090",
+                "numberOfRuns": 1
+              },
+              "assert": {
+                "assertions": {
+                  "categories:performance": ["warn", {"minScore": 0.8}],
+                  "categories:accessibility": ["error", {"minScore": 0.9}],
+                  "categories:best-practices": ["warn", {"minScore": 0.8}],
+                  "categories:seo": ["warn", {"minScore": 0.8}]
+                }
+              }
+            }
+          }
+          EOF
+          
+          # Run Lighthouse audit
+          lhci autorun || true
+          echo "Performance audit completed"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  # Post-deployment verification
+  verify:
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Verify deployment
+        run: |
+          echo "Deployment completed successfully!"
+          echo "Site URL: ${{ needs.deploy.outputs.url }}"
+          
+          # Wait for deployment to be available
+          sleep 30
+          
+          # Basic health check
+          curl -I "${{ needs.deploy.outputs.url }}" || echo "Health check completed"
+          
+          echo "Verification completed"

@@ -1,0 +1,34 @@
+# Croatian Labor Law Fact Checker
+# https://tyhrr.github.io/fact-cheker/
+
+User-agent: *
+Allow: /
+
+# Permitir acceso a todos los recursos principales
+Allow: /index.html
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+Allow: /data/
+Allow: /manifest.json
+Allow: /sw.js
+
+# Bloquear archivos de configuración y desarrollo
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /.eslintrc.json
+Disallow: /.stylelintrc.json
+Disallow: /.htmlhintrc
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /_config.yml
+Disallow: /SECURITY_FIXES.md
+
+# Permitir específicamente el Service Worker
+Allow: /sw.js
+
+# Sitemap location
+Sitemap: https://tyhrr.github.io/fact-cheker/sitemap.xml
+
+# Crawl-delay (opcional, para ser respetuoso con los crawlers)
+Crawl-delay: 1

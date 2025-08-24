@@ -1,0 +1,416 @@
+<!DOCTY    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; 
+                   script-src 'self' 'unsafe-inline'; 
+                   style-src 'self' 'unsafe-inline'; 
+                   font-src 'self'; 
+                   img-src 'self' data:; 
+                   connect-src 'self' https://formspree.io;
+                   base-uri 'self';"">
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; 
+                   script-src 'self' 'unsafe-inline'; 
+                   style-src 'self' 'unsafe-inline'; 
+                   font-src 'self'; 
+                   img-src 'self' data:; 
+                   connect-src 'self';
+                   base-uri 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <meta name="description" content="Croatian Labor Law Fact Checker - Comprehensive tool for checking Croatian workers' rights and labor laws">
+    <meta name="keywords" content="Croatian labor law, workers rights, fact checker, employment law, Croatia">
+    <meta name="author" content="Croatian Labor Law Fact Checker">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Croatian Labor Law Fact Checker">
+    <meta property="og:description" content="Comprehensive tool for checking Croatian workers' rights and labor laws">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Croatian Labor Law Fact Checker">
+    <meta property="twitter:description" content="Comprehensive tool for checking Croatian workers' rights and labor laws">
+    
+    <title>Croatian Labor Law Fact Checker</title>
+    
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="css/neumorphism.css" as="style">
+    <link rel="preload" href="css/style.css" as="style">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/neumorphism.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="alternate icon" href="assets/icons/favicon.ico">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Preconnect for performance -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+</head>
+<body class="theme-light">
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo and Title -->
+                <div class="logo-section">
+                    <div class="logo-icon" aria-hidden="true">⚖️</div>
+                    <h1 class="site-title">
+                        <span data-i18n="site-title">Croatian Labor Law Fact Checker</span>
+                    </h1>
+                </div>
+                
+                <!-- Controls -->
+                <div class="header-controls">
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <label for="language-select" class="visually-hidden" data-i18n="select-language">Select Language</label>
+                        <select id="language-select" class="language-select neumorphic-inset" aria-label="Language">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="hr">Hrvatski</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="theme-toggle neumorphic-button" 
+                            aria-label="Toggle dark mode" 
+                            data-i18n-aria="toggle-theme">
+                        <span class="theme-icon light-icon" aria-hidden="true">☀️</span>
+                        <span class="theme-icon dark-icon" aria-hidden="true">🌙</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero-section" aria-labelledby="hero-heading">
+                <h2 id="hero-heading" class="hero-title" data-i18n="hero-title">
+                    Search Croatian Labor Laws & Workers' Rights
+                </h2>
+                <p class="hero-description" data-i18n="hero-description">
+                    Find accurate information about Croatian employment law, workers' rights, and labor regulations. 
+                    Search through comprehensive legal database with multilingual support.
+                </p>
+            </section>
+
+            <!-- Search Section -->
+            <section class="search-section" aria-labelledby="search-heading">
+                <h2 id="search-heading" class="visually-hidden" data-i18n="search-heading">Search Legal Database</h2>
+                
+                <div class="search-container neumorphic-container">
+                    <!-- Search Form -->
+                    <form class="search-form" role="search" aria-label="Search Croatian labor laws">
+                        <div class="search-input-container">
+                            <label for="search-input" class="visually-hidden" data-i18n="search-label">
+                                Enter your question about Croatian labor law
+                            </label>
+                            <input 
+                                type="search" 
+                                id="search-input" 
+                                class="search-input neumorphic-inset" 
+                                placeholder="Ask about workers' rights, employment contracts, vacation days..."
+                                data-i18n-placeholder="search-placeholder"
+                                autocomplete="off"
+                                aria-describedby="search-help"
+                                aria-expanded="false"
+                                aria-haspopup="listbox"
+                            >
+                            <button type="submit" class="search-button neumorphic-button primary" aria-label="Search">
+                                <span class="search-icon" aria-hidden="true">🔍</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Search Help -->
+                        <div id="search-help" class="search-help" data-i18n="search-help">
+                            Try searching for: "vacation days", "overtime pay", "termination notice", "maternity leave"
+                        </div>
+                        
+                        <!-- Search Suggestions -->
+                        <div id="search-suggestions" class="search-suggestions neumorphic-container" role="listbox" aria-label="Search suggestions">
+                            <!-- Dynamically populated suggestions -->
+                        </div>
+                    </form>
+
+                    <!-- Advanced Search Toggle -->
+                    <button id="advanced-search-toggle" class="advanced-search-toggle neumorphic-button secondary" data-i18n="advanced-search">
+                        Advanced Search Options
+                    </button>
+                    
+                    <!-- Advanced Search Panel -->
+                    <div id="advanced-search-panel" class="advanced-search-panel" aria-hidden="true">
+                        <div class="advanced-search-content neumorphic-inset">
+                            <h3 data-i18n="filter-by">Filter by:</h3>
+                            <div class="filter-grid">
+                                <div class="filter-group">
+                                    <label for="section-filter" data-i18n="section">Section:</label>
+                                    <select id="section-filter" class="filter-select neumorphic-inset">
+                                        <option value="" data-i18n="all-sections">All Sections</option>
+                                        <option value="general" data-i18n="general-provisions">General Provisions</option>
+                                        <option value="contracts" data-i18n="employment-contracts">Employment Contracts</option>
+                                        <option value="working-time" data-i18n="working-time">Working Time</option>
+                                        <option value="leave" data-i18n="leave-vacation">Leave & Vacation</option>
+                                        <option value="termination" data-i18n="termination">Termination</option>
+                                        <option value="safety" data-i18n="workplace-safety">Workplace Safety</option>
+                                    </select>
+                                </div>
+                                <div class="filter-group">
+                                    <label for="article-type-filter" data-i18n="article-type">Article Type:</label>
+                                    <select id="article-type-filter" class="filter-select neumorphic-inset">
+                                        <option value="" data-i18n="all-types">All Types</option>
+                                        <option value="rights" data-i18n="rights">Rights</option>
+                                        <option value="obligations" data-i18n="obligations">Obligations</option>
+                                        <option value="procedures" data-i18n="procedures">Procedures</option>
+                                        <option value="penalties" data-i18n="penalties">Penalties</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loading State -->
+            <div id="loading-state" class="loading-state" aria-hidden="true" role="status" aria-live="polite">
+                <div class="loading-spinner neumorphic-container">
+                    <div class="spinner" aria-hidden="true"></div>
+                    <p data-i18n="searching">Searching legal database...</p>
+                </div>
+            </div>
+
+            <!-- Search Results -->
+            <section id="search-results" class="search-results" aria-labelledby="results-heading" aria-live="polite">
+                <h2 id="results-heading" class="results-heading" data-i18n="search-results">Search Results</h2>
+                
+                <!-- Results Info -->
+                <div id="results-info" class="results-info">
+                    <span id="results-count">0</span> <span data-i18n="results-found">results found</span>
+                    <span id="search-query-display"></span>
+                </div>
+                
+                <!-- Results Container -->
+                <div id="results-container" class="results-container">
+                    <!-- Results will be dynamically inserted here -->
+                </div>
+                
+                <!-- No Results Message -->
+                <div id="no-results" class="no-results neumorphic-container" aria-hidden="true">
+                    <div class="no-results-content">
+                        <div class="no-results-icon" aria-hidden="true">📋</div>
+                        <h3 data-i18n="no-results-title">No results found</h3>
+                        <p data-i18n="no-results-description">
+                            Try different keywords or check the spelling of your search terms.
+                        </p>
+                        <div class="no-results-suggestions">
+                            <h4 data-i18n="suggestions">Suggestions:</h4>
+                            <ul data-i18n="no-results-tips">
+                                <li>Use simpler terms (e.g., "vacation" instead of "annual leave entitlement")</li>
+                                <li>Try searching in Croatian: "godišnji odmor", "radno vrijeme"</li>
+                                <li>Check our advanced search options</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Access Section -->
+            <section class="quick-access" aria-labelledby="quick-access-heading">
+                <h2 id="quick-access-heading" data-i18n="popular-topics">Popular Topics</h2>
+                <div class="quick-access-grid">
+                    <button class="quick-access-item neumorphic-button" data-query="vacation days" data-i18n="vacation-days">
+                        <span class="quick-icon" aria-hidden="true">🏖️</span>
+                        <span>Vacation Days</span>
+                    </button>
+                    <button class="quick-access-item neumorphic-button" data-query="overtime pay" data-i18n="overtime-pay">
+                        <span class="quick-icon" aria-hidden="true">⏰</span>
+                        <span>Overtime Pay</span>
+                    </button>
+                    <button class="quick-access-item neumorphic-button" data-query="maternity leave" data-i18n="maternity-leave">
+                        <span class="quick-icon" aria-hidden="true">👶</span>
+                        <span>Maternity Leave</span>
+                    </button>
+                    <button class="quick-access-item neumorphic-button" data-query="termination notice" data-i18n="termination-notice">
+                        <span class="quick-icon" aria-hidden="true">📝</span>
+                        <span>Termination Notice</span>
+                    </button>
+                    <button class="quick-access-item neumorphic-button" data-query="workplace safety" data-i18n="workplace-safety">
+                        <span class="quick-icon" aria-hidden="true">🛡️</span>
+                        <span>Workplace Safety</span>
+                    </button>
+                    <button class="quick-access-item neumorphic-button" data-query="employment contract" data-i18n="employment-contract">
+                        <span class="quick-icon" aria-hidden="true">📄</span>
+                        <span>Employment Contract</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Search History -->
+            <section id="search-history" class="search-history" aria-labelledby="history-heading">
+                <h2 id="history-heading" data-i18n="recent-searches">Recent Searches</h2>
+                <div id="history-container" class="history-container">
+                    <!-- Search history items will be inserted here -->
+                </div>
+                <button id="clear-history" class="clear-history-button" data-i18n="clear-history">
+                    Clear History
+                </button>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-i18n="about">About</h3>
+                    <p data-i18n="footer-description">
+                        This tool provides information about Croatian labor laws for educational purposes. 
+                        Always consult with legal professionals for specific legal advice.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-i18n="legal">Legal</h3>
+                    <ul>
+                        <li><a href="./privacy-policy.html" data-i18n="privacy-policy">Privacy Policy</a></li>
+                        <li><a href="./terms-of-use.html" data-i18n="terms-of-use">Terms of Use</a></li>
+                        <li><a href="./disclaimer.html" data-i18n="disclaimer">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-i18n="sources">Sources</h3>
+                    <ul>
+                        <li><a href="https://www.zakon.hr" target="_blank" rel="noopener" data-i18n="official-gazette">Official Gazette of Croatia</a></li>
+                        <li><a href="https://www.gov.hr" target="_blank" rel="noopener" data-i18n="government-portal">Government Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-i18n="site-title">Croatian Labor Law Fact Checker</span>. <span data-i18n="all-rights-reserved">All rights reserved.</span></p>
+                <p class="last-updated" data-i18n="last-updated">Last updated: <time datetime="2025-08-24">August 24, 2025</time></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Result Template (Hidden) -->
+    <template id="result-template">
+        <article class="result-item neumorphic-container" tabindex="0" role="article">
+            <header class="result-header">
+                <h3 class="result-title">
+                    <span class="article-number"></span>
+                    <span class="article-title"></span>
+                </h3>
+                <div class="result-meta">
+                    <span class="result-section"></span>
+                    <span class="result-relevance"></span>
+                </div>
+            </header>
+            
+            <div class="result-content">
+                <!-- Two-Column Layout for Croatian and Translation -->
+                <div class="result-dual-view">
+                    <div class="result-column croatian-column">
+                        <div class="column-header">
+                            <h4 data-i18n="croatian-original">Hrvatski (Originalni tekst)</h4>
+                            <span class="language-flag">🇭🇷</span>
+                        </div>
+                        <div class="column-content">
+                            <div class="text-content croatian-text"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-column translation-column">
+                        <div class="column-header">
+                            <h4 class="translation-title" data-i18n="translation">Prijevod</h4>
+                            <span class="translation-flag"></span>
+                        </div>
+                        <div class="column-content">
+                            <div class="text-content translation-text"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="result-actions">
+                    <button class="action-button bookmark-button neumorphic-button" aria-label="Bookmark this article">
+                        <span aria-hidden="true">🔖</span>
+                        <span data-i18n="bookmark">Bookmark</span>
+                    </button>
+                    <button class="action-button share-button neumorphic-button" aria-label="Share this article">
+                        <span aria-hidden="true">📤</span>
+                        <span data-i18n="share">Share</span>
+                    </button>
+                    <button class="action-button expand-button neumorphic-button" aria-label="View full article">
+                        <span aria-hidden="true">📖</span>
+                        <span data-i18n="read-more">Read More</span>
+                    </button>
+                </div>
+            </div>
+            
+            <footer class="result-footer">
+                <div class="result-tags"></div>
+                <div class="result-updated">
+                    <span data-i18n="updated">Updated:</span> <time class="update-date"></time>
+                </div>
+            </footer>
+        </article>
+    </template>
+
+    <!-- Error Modal Template -->
+    <div id="error-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="error-title" aria-describedby="error-message">
+        <div class="modal-overlay"></div>
+        <div class="modal-content neumorphic-container">
+            <header class="modal-header">
+                <h2 id="error-title" data-i18n="error-title">Something went wrong</h2>
+                <button class="modal-close" aria-label="Close error message">&times;</button>
+            </header>
+            <div class="modal-body">
+                <p id="error-message" data-i18n="error-message">An error occurred while searching. Please try again.</p>
+            </div>
+            <footer class="modal-footer">
+                <button class="modal-button neumorphic-button" data-i18n="try-again">Try Again</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/security.js"></script>
+    <script src="js/gdpr.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/feedback.js"></script>
+    <script src="js/tests.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(registration => {
+                        console.log('SW registered:', registration.scope);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed:', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

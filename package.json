@@ -1,0 +1,57 @@
+{
+    "name": "croatian-labor-law-fact-checker",
+    "version": "2.1.0",
+    "description": "A comprehensive web application for searching and verifying Croatian labor laws and workers' rights",
+    "main": "index.html",
+    "scripts": {
+        "start": "python -m http.server 8000",
+        "dev": "python -m http.server 8000",
+        "validate": "npm run validate:html && npm run validate:css && npm run validate:js",
+        "validate:html": "htmlhint index.html",
+        "validate:css": "stylelint \"css/**/*.css\"",
+        "validate:js": "eslint \"js/**/*.js\"",
+        "test": "npm run validate && npm run test:a11y && npm run test:performance",
+        "test:a11y": "pa11y http://localhost:8000",
+        "test:performance": "lhci autorun --upload.target=temporary-public-storage",
+        "build": "echo 'No build process needed for vanilla JavaScript app'",
+        "deploy": "echo 'Deployment handled by GitHub Actions'"
+    },
+    "keywords": [
+        "croatian",
+        "labor-law",
+        "fact-checker",
+        "workers-rights",
+        "legal",
+        "search",
+        "multilingual",
+        "accessibility",
+        "progressive-web-app"
+    ],
+    "author": "Your Name <your.email@example.com>",
+    "license": "MIT",
+    "homepage": "https://your-username.github.io/fact-checker-2.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/your-username/fact-checker-2.1.git"
+    },
+    "bugs": {
+        "url": "https://github.com/your-username/fact-checker-2.1/issues"
+    },
+    "devDependencies": {
+        "htmlhint": "^1.1.4",
+        "stylelint": "^15.11.0",
+        "stylelint-config-standard": "^34.0.0",
+        "eslint": "^8.50.0",
+        "pa11y": "^6.2.3",
+        "@lhci/cli": "^0.12.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead",
+        "not ie 11"
+    ],
+    "engines": {
+        "node": ">=14.0.0"
+    }
+}
