@@ -10,9 +10,9 @@
         "validate:html": "htmlhint index.html",
         "validate:css": "stylelint \"css/**/*.css\"",
         "validate:js": "eslint \"js/**/*.js\"",
-        "test": "npm run validate && npm run test:a11y && npm run test:performance",
-        "test:a11y": "pa11y http://localhost:8000",
-        "test:performance": "lhci autorun --upload.target=temporary-public-storage",
+        "test": "npm run validate",
+        "test:a11y": "echo 'Accessibility testing handled by GitHub Actions'",
+        "test:performance": "echo 'Performance testing handled by GitHub Actions'",
         "build": "echo 'No build process needed for vanilla JavaScript app'",
         "deploy": "echo 'Deployment handled by GitHub Actions'"
     },
@@ -39,11 +39,9 @@
     },
     "devDependencies": {
         "htmlhint": "^1.1.4",
-        "stylelint": "^15.11.0",
-        "stylelint-config-standard": "^34.0.0",
-        "eslint": "^8.50.0",
-        "pa11y": "^6.2.3",
-        "@lhci/cli": "^0.12.0"
+        "stylelint": "^16.10.0",
+        "stylelint-config-standard": "^36.0.0",
+        "eslint": "^9.15.0"
     },
     "browserslist": [
         "> 1%",

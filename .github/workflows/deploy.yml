@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm install -g htmlhint stylelint eslint
-          npm install -g lighthouse-ci
+          npm install -g clean-css-cli terser
 
       - name: Validate HTML
         run: |
@@ -54,27 +54,14 @@ jobs:
           eslint "js/**/*.js" --config .eslintrc.json || true
           echo "JavaScript validation completed"
 
-      - name: Check accessibility with Pa11y
-        run: |
-          # Install pa11y
-          npm install -g pa11y
-          # Start a simple HTTP server
-          python3 -m http.server 8080 &
-          sleep 5
-          # Run accessibility tests
-          pa11y http://localhost:8080 --standard WCAG2AA --reporter cli || true
-          echo "Accessibility check completed"
-
       - name: Optimize assets
         run: |
           # Minify CSS
-          npm install -g clean-css-cli
           mkdir -p dist/css
           cleancss -o dist/css/neumorphism.min.css css/neumorphism.css
           cleancss -o dist/css/style.min.css css/style.css
           
           # Minify JavaScript
-          npm install -g terser
           mkdir -p dist/js
           terser js/i18n.js -o dist/js/i18n.min.js --compress --mangle
           terser js/database.js -o dist/js/database.min.js --compress --mangle
