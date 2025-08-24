@@ -3,6 +3,8 @@
  * User feedback and error reporting system
  */
 
+console.log('📧 Loading feedback.js...');
+
 class FeedbackSystem {
     constructor() {
         this.modal = null;
@@ -23,6 +25,7 @@ class FeedbackSystem {
     }
 
     createModal() {
+        console.log('Creating feedback modal and button...');
         // Create modal structure
         const modalHTML = `
             <div id="feedbackModal" class="feedback-modal">
@@ -75,6 +78,7 @@ class FeedbackSystem {
 
         // Add to DOM
         document.body.insertAdjacentHTML('beforeend', modalHTML);
+        console.log('Modal HTML added to DOM');
         
         // Create floating button
         const buttonHTML = `
@@ -88,8 +92,10 @@ class FeedbackSystem {
         `;
         
         document.body.insertAdjacentHTML('beforeend', buttonHTML);
+        console.log('Feedback button added to DOM');
         
         this.modal = document.getElementById('feedbackModal');
+        console.log('Modal element:', this.modal);
     }
 
     bindEvents() {
@@ -300,8 +306,23 @@ Sent from: Croatian Labor Law Fact Checker v1.0
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM Content Loaded - Initializing feedback system...');
     window.feedbackSystem = new FeedbackSystem();
 });
 
-// Also create global instance for use from other scripts
-window.feedbackSystem = window.feedbackSystem || new FeedbackSystem();
+// Also create global instance for use from other scripts - with delay
+window.addEventListener('load', () => {
+    console.log('Window load event - Ensuring feedback system exists...');
+    if (!window.feedbackSystem) {
+        console.log('Creating fallback feedback system instance...');
+        window.feedbackSystem = new FeedbackSystem();
+    }
+});
+
+// Immediate fallback if DOM is already loaded
+if (document.readyState === 'loading') {
+    console.log('Document is still loading, waiting for DOMContentLoaded...');
+} else {
+    console.log('Document already loaded, initializing feedback system immediately...');
+    window.feedbackSystem = new FeedbackSystem();
+}
