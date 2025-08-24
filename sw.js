@@ -3,9 +3,9 @@
    Croatian Labor Law Fact Checker v2.1.0
    ========================================= */
 
-const CACHE_NAME = 'croatian-law-checker-v2.1.0';
-const STATIC_CACHE = 'static-cache-v2.1.0';
-const DYNAMIC_CACHE = 'dynamic-cache-v2.1.0';
+const CACHE_NAME = 'croatian-law-checker-v2.1.1';
+const STATIC_CACHE = 'static-cache-v2.1.1';
+const DYNAMIC_CACHE = 'dynamic-cache-v2.1.1';
 
 // Files to cache immediately
 const STATIC_FILES = [
@@ -137,8 +137,8 @@ self.addEventListener('push', event => {
     
     const options = {
         body: event.data ? event.data.text() : 'New update available',
-        icon: '/assets/icons/android-chrome-192x192.png',
-        badge: '/assets/icons/favicon-32x32.png',
+        icon: '/assets/icons/favicon-32x32.png',
+        badge: '/assets/icons/favicon-16x16.png',
         vibrate: [100, 50, 100],
         data: {
             dateOfArrival: Date.now(),

@@ -197,7 +197,7 @@ class FeedbackSystem {
 
         try {
             // Send using Formspree (free form service)
-            const response = await fetch('https://formspree.io/f/alangabrielsalva@gmail.com', {
+            const response = await fetch('https://formspree.io/alangabrielsalva@gmail.com', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -230,7 +230,18 @@ class FeedbackSystem {
             
         } catch (error) {
             console.error('Error sending feedback:', error);
-            this.showStatus('error', '❌ Error sending feedback. Please try again later.');
+            
+            // Fallback: Open email client
+            this.showStatus('error', '❌ Error with online form. Opening email client as fallback...');
+            
+            setTimeout(() => {
+                const subject = encodeURIComponent(`[Croatian Labor Law] ${this.getFeedbackTypeLabel(feedbackData.type)}`);
+                const body = encodeURIComponent(this.formatMessage(feedbackData));
+                const mailtoLink = `mailto:alangabrielsalva@gmail.com?subject=${subject}&body=${body}`;
+                window.open(mailtoLink, '_blank');
+                
+                this.showStatus('success', '✅ Email client opened. Please send the pre-filled email.');
+            }, 2000);
         } finally {
             // Restore button
             submitBtn.disabled = false;
