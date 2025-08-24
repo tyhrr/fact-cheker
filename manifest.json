@@ -22,31 +22,10 @@
       "type": "image/png"
     },
     {
-      "src": "assets/icons/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "assets/icons/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+      "src": "assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ],
-  "categories": ["legal", "reference", "utilities"],
-  "screenshots": [
-    {
-      "src": "assets/icons/screenshot-wide.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "assets/icons/screenshot-mobile.png", 
-      "sizes": "360x640",
-      "type": "image/png",
-      "form_factor": "narrow"
-    }
-  ]
+  "categories": ["legal", "reference", "utilities"]
 }

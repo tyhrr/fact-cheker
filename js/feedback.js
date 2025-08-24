@@ -3,8 +3,6 @@
  * User feedback and error reporting system
  */
 
-console.log('📧 Loading feedback.js...');
-
 class FeedbackSystem {
     constructor() {
         this.modal = null;
@@ -25,7 +23,6 @@ class FeedbackSystem {
     }
 
     createModal() {
-        console.log('Creating feedback modal and button...');
         // Create modal structure
         const modalHTML = `
             <div id="feedbackModal" class="feedback-modal">
@@ -78,7 +75,6 @@ class FeedbackSystem {
 
         // Add to DOM
         document.body.insertAdjacentHTML('beforeend', modalHTML);
-        console.log('Modal HTML added to DOM');
         
         // Create floating button
         const buttonHTML = `
@@ -93,19 +89,8 @@ class FeedbackSystem {
         `;
         
         document.body.insertAdjacentHTML('beforeend', buttonHTML);
-        console.log('Feedback button added to DOM');
-        
-        // Verify button was created
-        const button = document.querySelector('.feedback-btn-main');
-        if (button) {
-            console.log('✅ Feedback button found in DOM:', button);
-            console.log('Button styles:', window.getComputedStyle(button).display, window.getComputedStyle(button).visibility);
-        } else {
-            console.error('❌ Feedback button NOT found in DOM after creation!');
-        }
         
         this.modal = document.getElementById('feedbackModal');
-        console.log('Modal element:', this.modal);
     }
 
     bindEvents() {
@@ -212,7 +197,7 @@ class FeedbackSystem {
 
         try {
             // Send using Formspree (free form service)
-            const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+            const response = await fetch('https://formspree.io/f/alangabrielsalva@gmail.com', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -220,7 +205,7 @@ class FeedbackSystem {
                 body: JSON.stringify({
                     subject: `[Croatian Labor Law] ${this.getFeedbackTypeLabel(feedbackData.type)}`,
                     message: this.formatMessage(feedbackData),
-                    _replyto: 'noreply@croatian-labor-law.app' // Generic reply email
+                    _replyto: 'alangabrielsalva@gmail.com'
                 })
             });
 
@@ -316,23 +301,19 @@ Sent from: Croatian Labor Law Fact Checker v1.0
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM Content Loaded - Initializing feedback system...');
     window.feedbackSystem = new FeedbackSystem();
 });
 
 // Also create global instance for use from other scripts - with delay
 window.addEventListener('load', () => {
-    console.log('Window load event - Ensuring feedback system exists...');
     if (!window.feedbackSystem) {
-        console.log('Creating fallback feedback system instance...');
         window.feedbackSystem = new FeedbackSystem();
     }
 });
 
 // Immediate fallback if DOM is already loaded
 if (document.readyState === 'loading') {
-    console.log('Document is still loading, waiting for DOMContentLoaded...');
+    // Document is still loading, waiting for DOMContentLoaded
 } else {
-    console.log('Document already loaded, initializing feedback system immediately...');
     window.feedbackSystem = new FeedbackSystem();
 }
