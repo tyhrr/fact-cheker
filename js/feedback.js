@@ -1,6 +1,6 @@
 /**
  * Feedback System
- * Sistema de envío de sugerencias y reporte de errores
+ * User feedback and error reporting system
  */
 
 class FeedbackSystem {
@@ -14,7 +14,7 @@ class FeedbackSystem {
     init() {
         if (this.isInitialized) return;
         
-        // Crear el modal al cargar la página
+        // Create modal on page load
         this.createModal();
         this.bindEvents();
         this.isInitialized = true;
@@ -23,35 +23,35 @@ class FeedbackSystem {
     }
 
     createModal() {
-        // Crear la estructura del modal
+        // Create modal structure
         const modalHTML = `
             <div id="feedbackModal" class="feedback-modal">
                 <div class="feedback-modal-content">
                     <button class="feedback-close" onclick="window.feedbackSystem.closeModal()">&times;</button>
                     
                     <form class="feedback-form" id="feedbackForm">
-                        <h3>📧 Enviar Feedback</h3>
+                        <h3>📧 Send Feedback</h3>
                         
                         <div id="feedbackStatus" class="feedback-status"></div>
                         
                         <div class="form-group">
-                            <label for="feedbackType">Tipo de feedback:</label>
+                            <label for="feedbackType">Feedback type:</label>
                             <select id="feedbackType" name="feedbackType" required>
-                                <option value="">Seleccione una opción</option>
-                                <option value="error">🐛 Reporte de error</option>
-                                <option value="suggestion">💡 Sugerencia de mejora</option>
-                                <option value="content">📝 Error en contenido/traducción</option>
-                                <option value="feature">✨ Solicitud de nueva función</option>
-                                <option value="other">❓ Otro</option>
+                                <option value="">Select an option</option>
+                                <option value="error">🐛 Bug report</option>
+                                <option value="suggestion">💡 Improvement suggestion</option>
+                                <option value="content">📝 Content/translation error</option>
+                                <option value="feature">✨ Feature request</option>
+                                <option value="other">❓ Other</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <label for="feedbackMessage">Mensaje (máximo ${this.maxCharacters} caracteres):</label>
+                            <label for="feedbackMessage">Message (max ${this.maxCharacters} characters):</label>
                             <textarea 
                                 id="feedbackMessage" 
                                 name="feedbackMessage" 
-                                placeholder="Describe tu sugerencia o el problema que encontraste. Sé específico para ayudarnos a mejorar la aplicación."
+                                placeholder="Describe your suggestion or the problem you found. Be specific to help us improve the application."
                                 maxlength="${this.maxCharacters}"
                                 required
                             ></textarea>
@@ -62,10 +62,10 @@ class FeedbackSystem {
                         
                         <div class="feedback-actions">
                             <button type="button" class="btn-feedback secondary" onclick="window.feedbackSystem.closeModal()">
-                                Cancelar
+                                Cancel
                             </button>
                             <button type="submit" class="btn-feedback primary" id="submitFeedback">
-                                📧 Enviar Feedback
+                                📧 Send Feedback
                             </button>
                         </div>
                     </form>
@@ -73,15 +73,15 @@ class FeedbackSystem {
             </div>
         `;
 
-        // Añadir al DOM
+        // Add to DOM
         document.body.insertAdjacentHTML('beforeend', modalHTML);
         
-        // Crear el botón flotante
+        // Create floating button
         const buttonHTML = `
             <button 
                 class="feedback-btn-main" 
                 onclick="window.feedbackSystem.openModal()"
-                title="Enviar feedback o reportar errores"
+                title="Send feedback or report errors"
             >
                 📧 Feedback
             </button>
@@ -97,12 +97,12 @@ class FeedbackSystem {
         const messageTextarea = document.getElementById('feedbackMessage');
         const charCount = document.getElementById('charCount');
 
-        // Contador de caracteres
+        // Character counter
         messageTextarea.addEventListener('input', (e) => {
             const count = e.target.value.length;
             charCount.textContent = count;
             
-            // Cambiar color según límite
+            // Change color based on limit
             const counter = charCount.parentElement;
             counter.classList.remove('warning', 'error');
             
@@ -114,20 +114,20 @@ class FeedbackSystem {
             }
         });
 
-        // Submit del formulario
+        // Form submission
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             this.submitFeedback();
         });
 
-        // Cerrar modal con ESC
+        // Close modal with ESC
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && this.modal.classList.contains('show')) {
                 this.closeModal();
             }
         });
 
-        // Cerrar modal clickeando fuera
+        // Close modal by clicking outside
         this.modal.addEventListener('click', (e) => {
             if (e.target === this.modal) {
                 this.closeModal();
@@ -139,7 +139,7 @@ class FeedbackSystem {
         this.modal.classList.add('show');
         document.body.style.overflow = 'hidden';
         
-        // Focus en el primer campo
+        // Focus on first field
         setTimeout(() => {
             document.getElementById('feedbackType').focus();
         }, 300);
@@ -159,7 +159,7 @@ class FeedbackSystem {
         status.style.display = 'none';
         status.className = 'feedback-status';
         
-        // Resetear contador
+        // Reset counter
         document.getElementById('charCount').textContent = '0';
         document.querySelector('.char-counter').classList.remove('warning', 'error');
     }
@@ -168,7 +168,7 @@ class FeedbackSystem {
         const submitBtn = document.getElementById('submitFeedback');
         const status = document.getElementById('feedbackStatus');
         
-        // Obtener datos del formulario
+        // Get form data
         const formData = new FormData(document.getElementById('feedbackForm'));
         const feedbackData = {
             type: formData.get('feedbackType'),
@@ -176,26 +176,26 @@ class FeedbackSystem {
             timestamp: new Date().toISOString(),
             userAgent: navigator.userAgent,
             url: window.location.href,
-            language: document.documentElement.lang || 'es'
+            language: document.documentElement.lang || 'en'
         };
 
-        // Validar datos
+        // Validate data
         if (!feedbackData.type || !feedbackData.message.trim()) {
-            this.showStatus('error', 'Por favor completa todos los campos.');
+            this.showStatus('error', 'Please complete all fields.');
             return;
         }
 
         if (feedbackData.message.length > this.maxCharacters) {
-            this.showStatus('error', `El mensaje no puede exceder ${this.maxCharacters} caracteres.`);
+            this.showStatus('error', `Message cannot exceed ${this.maxCharacters} characters.`);
             return;
         }
 
-        // Deshabilitar botón durante envío
+        // Disable button during submission
         submitBtn.disabled = true;
-        submitBtn.textContent = '📤 Enviando...';
+        submitBtn.textContent = '📤 Sending...';
 
         try {
-            // Enviar usando Formspree (servicio gratuito de formularios)
+            // Send using Formspree (free form service)
             const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
                 method: 'POST',
                 headers: {
@@ -204,19 +204,19 @@ class FeedbackSystem {
                 body: JSON.stringify({
                     subject: `[Croatian Labor Law] ${this.getFeedbackTypeLabel(feedbackData.type)}`,
                     message: this.formatMessage(feedbackData),
-                    _replyto: 'noreply@croatian-labor-law.app' // Email de respuesta genérico
+                    _replyto: 'noreply@croatian-labor-law.app' // Generic reply email
                 })
             });
 
             if (response.ok) {
-                this.showStatus('success', '✅ ¡Feedback enviado correctamente! Gracias por ayudarnos a mejorar.');
+                this.showStatus('success', '✅ Feedback sent successfully! Thank you for helping us improve.');
                 
-                // Cerrar modal después de 3 segundos
+                // Close modal after 3 seconds
                 setTimeout(() => {
                     this.closeModal();
                 }, 3000);
                 
-                // Track evento (si hay analytics)
+                // Track event (if analytics available)
                 if (typeof gtag !== 'undefined') {
                     gtag('event', 'feedback_sent', {
                         feedback_type: feedbackData.type
@@ -224,28 +224,28 @@ class FeedbackSystem {
                 }
                 
             } else {
-                throw new Error('Error en el servidor');
+                throw new Error('Server error');
             }
             
         } catch (error) {
             console.error('Error sending feedback:', error);
-            this.showStatus('error', '❌ Error al enviar el feedback. Por favor intenta más tarde.');
+            this.showStatus('error', '❌ Error sending feedback. Please try again later.');
         } finally {
-            // Restaurar botón
+            // Restore button
             submitBtn.disabled = false;
-            submitBtn.textContent = '📧 Enviar Feedback';
+            submitBtn.textContent = '📧 Send Feedback';
         }
     }
 
     getFeedbackTypeLabel(type) {
         const labels = {
-            'error': 'Reporte de Error',
-            'suggestion': 'Sugerencia de Mejora',
-            'content': 'Error en Contenido',
-            'feature': 'Solicitud de Función',
-            'other': 'Otro Feedback'
+            'error': 'Bug Report',
+            'suggestion': 'Improvement Suggestion',
+            'content': 'Content Error',
+            'feature': 'Feature Request',
+            'other': 'Other Feedback'
         };
-        return labels[type] || 'Feedback General';
+        return labels[type] || 'General Feedback';
     }
 
     formatMessage(data) {
@@ -253,20 +253,20 @@ class FeedbackSystem {
 FEEDBACK - Croatian Labor Law Fact Checker
 ==========================================
 
-Tipo: ${this.getFeedbackTypeLabel(data.type)}
-Fecha: ${new Date(data.timestamp).toLocaleString('es-ES')}
+Type: ${this.getFeedbackTypeLabel(data.type)}
+Date: ${new Date(data.timestamp).toLocaleString('en-US')}
 URL: ${data.url}
-Idioma: ${data.language}
+Language: ${data.language}
 
-MENSAJE:
+MESSAGE:
 ${data.message}
 
-INFORMACIÓN TÉCNICA:
+TECHNICAL INFORMATION:
 User Agent: ${data.userAgent}
 Timestamp: ${data.timestamp}
 
 ==========================================
-Enviado desde: Croatian Labor Law Fact Checker v1.0
+Sent from: Croatian Labor Law Fact Checker v1.0
         `.trim();
     }
 
@@ -276,15 +276,15 @@ Enviado desde: Croatian Labor Law Fact Checker v1.0
         status.textContent = message;
         status.style.display = 'block';
         
-        // Scroll al status si es necesario
+        // Scroll to status if needed
         status.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
-    // Método para integración con otros sistemas
+    // Method for integration with other systems
     sendFeedback(type, message) {
         this.openModal();
         
-        // Pre-llenar formulario si se llama programáticamente
+        // Pre-fill form if called programmatically
         setTimeout(() => {
             if (type) {
                 document.getElementById('feedbackType').value = type;
@@ -292,16 +292,16 @@ Enviado desde: Croatian Labor Law Fact Checker v1.0
             if (message) {
                 const textarea = document.getElementById('feedbackMessage');
                 textarea.value = message;
-                textarea.dispatchEvent(new Event('input')); // Trigger contador
+                textarea.dispatchEvent(new Event('input')); // Trigger counter
             }
         }, 300);
     }
 }
 
-// Inicializar cuando el DOM esté listo
+// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     window.feedbackSystem = new FeedbackSystem();
 });
 
-// También crear instancia global para uso desde otros scripts
+// Also create global instance for use from other scripts
 window.feedbackSystem = window.feedbackSystem || new FeedbackSystem();
