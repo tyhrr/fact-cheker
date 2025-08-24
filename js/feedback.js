@@ -86,6 +86,7 @@ class FeedbackSystem {
                 class="feedback-btn-main" 
                 onclick="window.feedbackSystem.openModal()"
                 title="Send feedback or report errors"
+                style="position: fixed !important; bottom: 2rem !important; right: 2rem !important; z-index: 9999 !important; display: block !important; visibility: visible !important;"
             >
                 📧 Feedback
             </button>
@@ -93,6 +94,15 @@ class FeedbackSystem {
         
         document.body.insertAdjacentHTML('beforeend', buttonHTML);
         console.log('Feedback button added to DOM');
+        
+        // Verify button was created
+        const button = document.querySelector('.feedback-btn-main');
+        if (button) {
+            console.log('✅ Feedback button found in DOM:', button);
+            console.log('Button styles:', window.getComputedStyle(button).display, window.getComputedStyle(button).visibility);
+        } else {
+            console.error('❌ Feedback button NOT found in DOM after creation!');
+        }
         
         this.modal = document.getElementById('feedbackModal');
         console.log('Modal element:', this.modal);
