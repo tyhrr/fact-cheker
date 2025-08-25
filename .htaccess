@@ -99,20 +99,18 @@
     AddType image/svg+xml .svg
 </IfModule>
 
-# Security: Prevent access to sensitive files
-<FilesMatch "^\.">
-    Require all denied
-</FilesMatch>
-
-# Protect specific file types
-<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|env)$">
-    Require all denied
-</FilesMatch>
-
-# Protect backup and temporary files
-<FilesMatch "\.(bak|backup|swp|tmp|temp)$">
-    Require all denied
-</FilesMatch>
+# Security: Deny access to sensitive files using RedirectMatch
+RedirectMatch 403 /\..*$
+RedirectMatch 403 /.*\.htaccess$
+RedirectMatch 403 /.*\.htpasswd$
+RedirectMatch 403 /.*\.env$
+RedirectMatch 403 /.*\.ini$
+RedirectMatch 403 /.*\.log$
+RedirectMatch 403 /.*\.bak$
+RedirectMatch 403 /.*\.backup$
+RedirectMatch 403 /.*\.tmp$
+RedirectMatch 403 /.*\.temp$
+RedirectMatch 403 /.*\.swp$
 
 # Enhanced error pages (optional)
 # ErrorDocument 404 /404.html
