@@ -46,34 +46,54 @@ jobs:
 
       - name: Validate CSS
         run: |
-          stylelint "css/**/*.css" --config .stylelintrc.json || true
+          stylelint "src/styles/**/*.css" --config .stylelintrc.json || true
           echo "CSS validation completed"
 
       - name: Validate JavaScript
         run: |
-          eslint "js/**/*.js" --config .eslintrc.json || true
+          eslint "src/scripts/**/*.js" --config .eslintrc.json || true
           echo "JavaScript validation completed"
 
       - name: Optimize assets
         run: |
           # Minify CSS
-          mkdir -p dist/css
-          cleancss -o dist/css/neumorphism.min.css css/neumorphism.css
-          cleancss -o dist/css/style.min.css css/style.css
+          mkdir -p dist/src/styles
+          cleancss -o dist/src/styles/neumorphism.min.css src/styles/neumorphism.css
+          cleancss -o dist/src/styles/style.min.css src/styles/style.css
+          cleancss -o dist/src/styles/enhanced.min.css src/styles/enhanced.css
           
           # Minify JavaScript
-          mkdir -p dist/js
-          terser js/i18n.js -o dist/js/i18n.min.js --compress --mangle
-          terser js/database.js -o dist/js/database.min.js --compress --mangle
-          terser js/search.js -o dist/js/search.min.js --compress --mangle
-          terser js/main.js -o dist/js/main.min.js --compress --mangle
+          mkdir -p dist/src/scripts
+          mkdir -p dist/src/core
+          mkdir -p dist/src/utils
+          terser src/scripts/i18n.js -o dist/src/scripts/i18n.min.js --compress --mangle
+          terser src/scripts/search.js -o dist/src/scripts/search.min.js --compress --mangle
+          terser src/scripts/main.js -o dist/src/scripts/main.min.js --compress --mangle
+          terser src/scripts/security.js -o dist/src/scripts/security.min.js --compress --mangle
+          terser src/scripts/gdpr.js -o dist/src/scripts/gdpr.min.js --compress --mangle
+          terser src/scripts/feedback.js -o dist/src/scripts/feedback.min.js --compress --mangle
+          terser src/scripts/tests.js -o dist/src/scripts/tests.min.js --compress --mangle
+          terser src/core/LegalDatabase.js -o dist/src/core/LegalDatabase.min.js --compress --mangle
+          terser src/core/SearchEngine.js -o dist/src/core/SearchEngine.min.js --compress --mangle
+          terser src/utils/TextProcessor.js -o dist/src/utils/TextProcessor.min.js --compress --mangle
+          terser src/utils/CacheManager.js -o dist/src/utils/CacheManager.min.js --compress --mangle
+          terser src/utils/ExportManager.js -o dist/src/utils/ExportManager.min.js --compress --mangle
+          terser src/utils/Validator.js -o dist/src/utils/Validator.min.js --compress --mangle
           
-          # Copy other files
-          cp -r data dist/
-          cp -r assets dist/ 2>/dev/null || mkdir -p dist/assets
+          # Copy data files
+          mkdir -p dist/src/data
+          cp -r src/data/* dist/src/data/
+          
+          # Copy assets
+          mkdir -p dist/public
+          cp -r public/* dist/public/ 2>/dev/null || mkdir -p dist/public/assets
+          
+          # Copy other important files
+          cp manifest.json dist/ 2>/dev/null || true
+          cp sw.js dist/ 2>/dev/null || true
           
           # Create optimized index.html
-          sed 's/css\/neumorphism\.css/css\/neumorphism.min.css/g; s/css\/style\.css/css\/style.min.css/g; s/js\/i18n\.js/js\/i18n.min.js/g; s/js\/database\.js/js\/database.min.js/g; s/js\/search\.js/js\/search.min.js/g; s/js\/main\.js/js\/main.min.js/g' index.html > dist/index.html
+          sed 's/src\/styles\/neumorphism\.css/src\/styles\/neumorphism.min.css/g; s/src\/styles\/style\.css/src\/styles\/style.min.css/g; s/src\/styles\/enhanced\.css/src\/styles\/enhanced.min.css/g; s/src\/scripts\/i18n\.js/src\/scripts\/i18n.min.js/g; s/src\/scripts\/search\.js/src\/scripts\/search.min.js/g; s/src\/scripts\/main\.js/src\/scripts\/main.min.js/g; s/src\/scripts\/security\.js/src\/scripts\/security.min.js/g; s/src\/scripts\/gdpr\.js/src\/scripts\/gdpr.min.js/g; s/src\/scripts\/feedback\.js/src\/scripts\/feedback.min.js/g; s/src\/scripts\/tests\.js/src\/scripts\/tests.min.js/g; s/src\/core\/LegalDatabase\.js/src\/core\/LegalDatabase.min.js/g; s/src\/core\/SearchEngine\.js/src\/core\/SearchEngine.min.js/g; s/src\/utils\/TextProcessor\.js/src\/utils\/TextProcessor.min.js/g; s/src\/utils\/CacheManager\.js/src\/utils\/CacheManager.min.js/g; s/src\/utils\/ExportManager\.js/src\/utils\/ExportManager.min.js/g; s/src\/utils\/Validator\.js/src\/utils\/Validator.min.js/g' index.html > dist/index.html
           
           echo "Asset optimization completed"
 
