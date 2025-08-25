@@ -3,9 +3,9 @@
    Croatian Labor Law Fact Checker v2.1.0
    ========================================= */
 
-const CACHE_NAME = 'croatian-law-checker-v2.1.1';
-const STATIC_CACHE = 'static-cache-v2.1.1';
-const DYNAMIC_CACHE = 'dynamic-cache-v2.1.1';
+const CACHE_NAME = 'croatian-law-checker-v2.1.2';
+const STATIC_CACHE = 'static-cache-v2.1.2';
+const DYNAMIC_CACHE = 'dynamic-cache-v2.1.2';
 
 // Files to cache immediately
 const STATIC_FILES = [

@@ -57,7 +57,7 @@ class EnhancedFactChecker {
      * @param {string|Object} dataSource - Data URL or data object
      * @returns {Promise<void>}
      */
-    async initialize(dataSource = './data/croatian-labor-law.json') {
+    async initialize(dataSource = './src/data/croatian-labor-law.json') {
         try {
             console.log('🚀 Initializing Enhanced Croatian Labor Law Database...');
             
