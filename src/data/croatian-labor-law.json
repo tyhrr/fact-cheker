@@ -5,7 +5,8 @@
     "source": "Zakon o radu 2023 B.pdf",
     "language": "multi",
     "totalArticles": 436,
-    "description": "Croatian Labor Law - Complete Articles Database extracted from official PDF"
+    "description": "Croatian Labor Law - Complete Articles Database extracted from official PDF",
+    "fixNote": "Fixed 210 duplicate IDs"
   },
   "articles": [
     {
@@ -422,7 +423,7 @@
       "language": "hr"
     },
     {
-      "id": "art_017",
+      "id": "art_017_01",
       "title": "a (NN 93/14 , 151/22 ) (1) Ugovor o radu na izdvojenom mjestu rada sklopljen u pisanom obliku odnosn",
       "content": "a (NN 93/14 , 151/22 ) (1) Ugovor o radu na izdvojenom mjestu rada sklopljen u pisanom obliku odnosno potvrda o sklopljenom ugovoru o radu na izdvojen om mjestu, osim poda taka iz članka 15. stavka 1. ovoga Zakona, mora sadržavati i dodatne podatke o: 1. organi zaciji rada koja omogućava dostupnost radnika i njegov neometani pristup poslovnom prostoru te informacijama i profesionalnoj komunikaciji s ostali m radnicima i poslod avcem, kao i trećima u poslovnom procesu 2. načinu evidentiranja radnog vrem ena 3. sredst vima rada za obavljanje poslova koje je poslodavac dužan nabaviti, instalirati i održavati odnosno uporabi vlastitih sredstava rada radnika, ako ih koristi, te naknadi troškova u vezi s tim 4. naknadi troškova nastalih zbog obavljanja posla, k oje je poslod avac dužan naknaditi radniku ako je rad ugovoren kao stalan ili kada razdoblje rada tijekom jednog kalendarskog mjeseca traje duže od sedam radnih dana, osim ako kolek tivnim ugovorom ili ugovorom o radu nije ugovoreno povoljnije 5. načinu ostv arivanja prav a na sudjelovanje radnika u odlučivanju, jednako kao i za ostale zaposlene kod toga poslodavca 6. trajanju rada odnosno o načinu utvrđivanja trajan ja takvog rada. (2) Ugovor o radu na daljinu sklopljen u pisanom obliku odnosno potvrda o sklopl jenom ugovoru o radu na daljinu mora sadržavati: 1. podatke iz članka 15. stavka 1. ovoga Zakona 2. podatak o pravu radnika da slobodno određuje gdje će obavlja ti rad 3. podatke iz stavka 1. ovoga članka, osim točaka 3. i 4. čiju primjenu radnik i poslodav ac mogu ugovo riti. (3) Odredbe ovoga Zakona o rasporedu radnog vremena, prekovremenom radu, preraspodjeli radnog vremena, noćnom radu i stanci primjenjuju se na ugovor o radu na izdvojenom mjestu rada i na ugovor o radu na daljinu, ako to nije drukčije ure đeno ovim Zak onom, posebni m propisom, kolektivnim ugovorom, sporazumom sklopljenim između radničkog vijeća i poslodavca ili ugovorom o radu. Obveze i prava poslodavca prema radnicima koji rade na izdvojenom mjestu rada ili rade na daljinu",
       "category": "contracts",
@@ -447,7 +448,7 @@
       "language": "hr"
     },
     {
-      "id": "art_017",
+      "id": "art_017_02",
       "title": "b (NN 93/14 , 151/22 ) (1) Plaća i druga materijalna prava radnika koji rade na izdvojenom mjestu ra",
       "content": "b (NN 93/14 , 151/22 ) (1) Plaća i druga materijalna prava radnika koji rade na izdvojenom mjestu rada ili rade na daljin u ne smije biti utvrđena u manjem iznosu od plaće radnika koji u prostoru poslodavca radi na ist im ili slični m poslovima, niti njihova druga prava iz radnog odnosa ili u vezi s radnim odnosom koja radnik ostvaruje smiju biti utvrđena u manjem opsegu od onoga koji je utvrđen za radnika koji u prostoru posl odavca radi na istim ili sličnim poslovima. NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . (2) Prilikom po bližeg određivanja načina obavljanja poslova na izdvojenom mjestu rada ili rada na daljinu poslodavac je dužan prilagoditi količinu i rokove izvrše nja poslova na način koji radniku ne uskraćuje kor ištenje prava na dnevni, tjedni i godišnji odm or u utvrđeno m opsegu. (3) Poslodavac je dužan radniku koji radi na izdvojenom mjestu rada nadoknaditi troškove iz članka 17.a stavka 1. točke 4. ovoga Zakona u iznosu utvrđenom kolektivnim ugovorom ili ugovoro m o radu. (4) Poslodavac ima pravo ući u prost or doma radni ka ili u neki drugi prostor koji nije prostor poslodavca radi održavanja opreme ili provođenja unaprijed utvrđenog nadzora vezanog uz uvjete rada r adnika, ako je to ugovoreno između radnika i poslo davca i samo u vrijeme k oje je dogovorio s rad nikom. (5) Po slodavac je radniku koji radi na izdvojenom mjestu rada dužan osigurati zaštitu privatnosti te osigurati rad na siguran način i način koji ne ugrož ava sigurnost i zdravlje radnika, kada je prema na ravi posla i veličini ri zika za život i zdravl je radnika pr ocijenjen og u skladu s propisima o zaštiti na radu na izdvojenom mjestu rada to moguće. (6) Poslodavac je radniku koji radi na daljinu dužan osigur ati zaštitu privatnosti te je dužan radniku osigur ati potre bne pisane uput e u vezi sa zaštitom z dravlja i sig urnosti na radu. Obveze i prava radnika koji rade na izdvojenom mjestu rada",
       "category": "contracts",
@@ -475,7 +476,7 @@
       "language": "hr"
     },
     {
-      "id": "art_017",
+      "id": "art_017_03",
       "title": "c (NN 93/14 , 151/22 ) (1) Radnik koji radi na izdvojenom mjestu rada dužan je pridržavati se sigurn",
       "content": "c (NN 93/14 , 151/22 ) (1) Radnik koji radi na izdvojenom mjestu rada dužan je pridržavati se sigurnosnih i zdr avstvenih mje ra u skladu s posebnim propisima . (2) Radnik koji radi u prostoru poslodavca može, radi usklađivanja radnih i obiteljskih obveza te oso bnih potreba , zatražiti od poslodavca izmjenu ugovora o radu kojim bi se na određeno vrijeme ugovorio rad na izdvojenom m jestu rada, i to u slučaju: 1. zaštite zdravlja uslijed dijagnosticirane bolesti ili utvrđenog invaliditeta 2. trudnoće ili roditeljski h obveza pre ma djeci do navršene osme godine života 3. pružanja osobne skrbi koja je, zbog ozbiljnog zdravst venog razloga , potrebna članu uže obitelji il i je potrebna osobi koja s radnikom živi u istom kućanstvu. (3) Radnik koji je s poslodavcem ugovorio i zmjenu ugovo ra o radu privremenog trajanja iz stavka 2. ovoga članka može zatražiti od poslodavca da prije i steka vremena na koji je sklopljen izmijenjen i ugovor o radu poslove ponovno obavlja u prostoru poslodavca. (4) U slučaju iz stavaka 2. i 3. ovoga č lanka, poslo davac je dužan zahtjev radnika razmotriti, uzimajući u obzir potrebe radnika i potrebe organizac ije rada, te je u slučaju odbijanja ili njego va usvajanja s odgodnim početkom primjene, dužan radniku u razumnom roku, a najkasnije u roku od 15 dan a od dana po dnesenog zahtjeva, dostaviti obrazloženi pisani odgovor. (5) Ako poslodavac prihvati zahtjev iz stavka 3. ovo ga članka, poslodavac i radnik ć e ugovoriti rad u prostoru poslodavca . Upućivanje radnika u inozemstvo",
       "category": "contracts",
@@ -530,7 +531,7 @@
       "language": "hr"
     },
     {
-      "id": "art_018",
+      "id": "art_018_01",
       "title": "a (NN 93/14 , 151/22 ) (1) Radnik koji je zaposlen i radi u punom radnom vremenu kod jednog poslodav",
       "content": "a (NN 93/14 , 151/22 ) (1) Radnik koji je zaposlen i radi u punom radnom vremenu kod jednog poslodavca (u daljnjem tekstu: matični poslodavac), odnosno radi u nepunom radnom vremenu kod više matičnih poslodavaca, tako da je njegovo ukupno radno vrijeme 40 sati tjed no, može do datno raditi na temelju ugovora o dodatnom radu za drugog poslodavca. (2) S radnikom koji radi na poslovima s posebnim uvjetima rada u s kladu s propisima o zaštiti na radu, radnikom koji radi u skraćenom radnom vremenu iz članka 64. ovoga Zakona te radniko m kojem se prema propisu o mirovinskom osiguranju staž osiguranja računa s povećanim trajanjem ne može se sklopiti ugovor o dodatnom rad u za obavljanje takvih poslova. (3) Radnik iz stavka 1. ovoga članka dužan je prije početka rada kod drugog p oslodavca p isanim putem obavijestiti svakog matičnog poslodavca o sklopljenom ugovoru o dodatnom radu s drugim poslodavcem. (4) Matični poslodavac može pisanim putem zatr ažiti od radnika da prestane obavljati dodatan rad kod drugog poslodavca, ako za to po stoje objek tivni razlozi, osobito ako je to protivno zakonskoj zabrani natjecanja ili ako se obavlja unutar rasporeda radnog vremena radnika kod ma tičnog poslodavca. (5) Ako je zahtjev matičnog poslodavca postavljen zbog postupanja protivnog z akonskoj zabr ani natjeca nja radnika s poslodavcem, na prava i obveze radnika i poslodavca na odgovarajući će se način primijeniti odredbe ovoga Zakona kojima se uređuje zakonska zabrana natjecanja. (6) Ako je zahtjev matičnog poslodavca postavljen zbog oba vljanja dodat nog rada un utar rasporeda radnog vremena radnika kod matičnog poslodavca, radnik je dužan najkasnije u roku od tri dana prilagoditi radno vrijeme k od drugog poslodavca. (7) Poslodavac kod kojeg je radnik zaposlen u dodatnom radu dužan je, na z ahtjev radnik a, omogućit i korištenje godišnjeg odmora toga radnika u istom tjednu u kojem godišnji odmor koristi kod matičnog poslodavca. Ugovor o dodatnom radu",
       "category": "contracts",
@@ -558,7 +559,7 @@
       "language": "hr"
     },
     {
-      "id": "art_018",
+      "id": "art_018_02",
       "title": "b (NN 93/14 , 151/22 ) (1) Ugovor o dod atnom radu sk lopljen u pisanom obliku, odnosno potvrda o sk",
       "content": "b (NN 93/14 , 151/22 ) (1) Ugovor o dod atnom radu sk lopljen u pisanom obliku, odnosno potvrda o sklopljenom ugovoru o dodatnom radu mora sadržavati podatke iz članka 15. stavka 1. ovoga Zakona. (2) U govor o dodatnom radu može se sklopiti na određeno ili na neodređeno vrijeme. (3) Na ugovor o do datnom radu s klopljenom na određeno vrijeme ne primjenjuju se odredbe članka 12. ovoga Zakona. (4) Ugovorom o dodatnom radu ne smije se ugovoriti radno vrijeme u trajanju dužem od osam sati tjedno. (5) Ako je raspored radnog vremena u dodatnom radu utvrđen kao nejednak i, tjedno radno vrijeme u dodatnom radu smije biti duže od osam sati tjedno, ali ne duže od 16 sati tjedno, uključujući i prekovremeni rad kada je ovim Zakonom dozvoljen. (6) Ako je radno vrijeme iz ugovor a o dodatnom radu nejednako raspoređen o, razdoblje takvog rasporeda ne može biti kraće od mjesec dana niti duž e od jedne godine te t ijekom tako utvrđenog rasporeda radno vrijeme mora odgovarati radnikovu ugovorenom radnom vremenu. (7) Ako je radno vrijeme iz ugovora o dodatnom radu nejednako r aspoređeno, r adnik u dodat nom radu u svakom razdoblju od četiri uzastopna mjeseca ne smije rad iti duže od prosječno osam sati tjedno, uključujući i prekovremeni rad kada je ovim Zakonom dozvoljen. (8) Razdoblje iz stav ka 7. ovoga članka može se kolektivnim ugovorom ugo voriti za razdoblje od šest mjeseci. NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . (9) Razdoblja godišnjeg odmora i privremene nesposobnosti za rad ne uračunavaju se u razdoblje od četiri mjese ca, odnosno šest mjeseci iz stavaka 7. i 8. ovoga članka. (10) Nejednaki raspored radnog vremena u dodatnom r adu dozvoljen je pod uvjetom da je radnik dostavio poslodavcu pisanu izjavu o dob rovoljnom pristanku za takav rad duži od osam sati tjedno. (11) Ra dnik koji u nejednakom rasporedu radnog vremena ne pristan e na rad duži od osam sati tjedno, ne smije zbog toga trpjeti štetne posljedice. (12) Poslodavac je dužan inspektoru rada, na njegov zahtjev, dostaviti popis radnika koji su dali pisanu izjavu iz st avka 10. ovoga članka. (13) Na ugovor o dodatnom radu na o dgovarajući se način primjenjuju odred be članka 66. stavaka 7., 8. i 9. ovoga Zakona. (14) Na ugovor o dodatnom radu ne primjenjuju se odredbe članka 67. ovoga Zakona. Uvjeti rada radnika koji rade u dodatnom radu",
       "category": "contracts",
@@ -585,7 +586,7 @@
       "language": "hr"
     },
     {
-      "id": "art_018",
+      "id": "art_018_03",
       "title": "c (NN 93/14 , 151/22 ) (1) Ako je za stjecanje prava iz radnog odnosa važno prethodno trajanje radno",
       "content": "c (NN 93/14 , 151/22 ) (1) Ako je za stjecanje prava iz radnog odnosa važno prethodno trajanje radnog odnosa s istim poslodavcem, razd oblja rada u dodatnom radu smatrat će se radom u punom radnom vremenu. (2) Plaća i druga materijalna prava radnika (jubilarna nagrada, regres, bož ićnica i sl.) utvrđuju se i isplaćuju razmjerno ugovorenom radnom vremenu s drugim poslodavcem, osim ako kolek tivnim ugovorom, pravilnikom o radu ili ugovor om o radu nije drukčije uređeno. (3) Na radnika koji na temelju ugovora o dodatnom radu radi za drug og poslodavca , radi osiguranja uvjeta rada, na odgovarajući se način primjenjuje odredba članka 63. stavaka 1. , 2. i 3. ovoga Zakona . Najniža dob za zaposle nje Članak 1 9. Osoba mlađa od petnaest godina ili osoba s petnaest i starija od petnaest, a mlađa od osamnaest go dina koja pohađa obvezno osnovno obrazovanje, ne smije se zaposliti. Posebna zaštita djeteta i maloljetnika",
       "category": "contracts",
@@ -635,7 +636,7 @@
       "language": "hr"
     },
     {
-      "id": "art_019",
+      "id": "art_019_01",
       "title": "b (NN 93/14 , 151/22 ) (1) Poslodavac koji zapošljava maloljetnika ili prov odi učenje temeljeno na ",
       "content": "b (NN 93/14 , 151/22 ) (1) Poslodavac koji zapošljava maloljetnika ili prov odi učenje temeljeno na radu , povremeni r ad redovitog uč enika prema posebnom propisu, odnosno koji je organizator aktivnosti u kojima sudjeluju djeca i maloljetnici u skladu s člankom 19.a ovoga Zakona dužan je pritom voditi računa o tome da kod osobe koja je u redovitom kontaktu s d jetetom i mal oljetnikom ne posto ji neka od sljedećih zapreka: NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . 1. pravomoćno je osuđena za neko od kaznenih djela protiv spolne slobode, spolnog zlostavljanja i iskorištavanja djeteta, a koja su, prije nego što su počinjena, bila propisana zakonom ili međun arodnim pravo m 2. protiv nje se vodi kazneni postupak za neko od kaznenih djela navedenih u točki 1. ovoga stavka. (2) U svrhu ispunjavanja dužnosti iz stavka 1 . ovoga članka poslodavac je ovlašten: 1. uz suglasnost osobe za koj u se traži, zatražiti od nad ležnog suda d okaz da kandi dat za radno mjesto ili radnik zaposlen kod poslodavca nije pravomoćno osuđen 2. od kandidata za radno mjesto ili od radnika zaposleno g kod poslodavca zatražiti da dostavi dokaz da se protiv njega ne vo di kazneni postupak za kazne no djelo iz s tavka 1. točke 1. o voga članka. (3) Poslodavac koji zapošljava maloljetnika ili provodi učenje temeljeno na radu, povremeni rad redovitog učenika prema posebnom propisu, odnosno organizator je provođenja aktivnosti u kojima sudjeluju djeca i m aloljetnici d užan je onemogućiti osobi za koju ima saznanja da postoji zapreka iz stavka 1. ovoga Zakona kontakt s djetetom ili maloljetnikom . Poslovna sposobno st maloljetnika za sklapanje ugovora o radu",
       "category": "contracts",
@@ -1647,7 +1648,7 @@
       "language": "hr"
     },
     {
-      "id": "art_060",
+      "id": "art_060_01",
       "title": "a (NN 93/14 , 151/22 ) (1) Raspored radnog vremena je raspored trajanja rada radnika kojim se utvrđu",
       "content": "a (NN 93/14 , 151/22 ) (1) Raspored radnog vremena je raspored trajanja rada radnika kojim se utvrđuju da ni i sati kada obavljanje posla u tim danima počinje i završava. (2) Raspored radnog vremena može biti jednak ili nejednak, ovisno o tome je li trajanje rada jedna ko ili neje dnako raspodijeljeno po danima, tjednima ili mjesecima. (3) Raspored radnog vremen a utvrđuje se propisom, kolektivnim ugovorom, sporazumom sklopljenim između radničkog vijeća i poslodavca, pravilnikom o radu ili ugovorom o radu. (4) Ako raspored radnog vre mena nije utvrđen na način iz stavka 3. ovoga članka, o rasporedu radnog vremena o dlučuje poslodavac pisanom odlukom. (5) Poslodavac mora, najmanje tjedan dana unaprijed, obavijestiti radnika o njegovu rasporedu ili promjeni njegova rasporeda ra dnog vremen a koji mora sadržavati podatke u skladu sa stavcima 1. i 2. ovoga članka. (6) Izni mno od stavka 5. ovoga članka, kada je u slučaju nastanka prijeke potrebe za radom radnika potrebno izmijeniti raspored radnog vremena, poslodavac je u razumnom ro ku, do poče tka obavljanja posla, dužan obavijestiti radnika o takvom rasporedu radnog vremena ili o njegovoj promjeni. NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . (7) Pod prijekom potrebom se, u smislu ovoga Zakona, podrazumijevaju one okolnosti koje poslodavac nije mogao predvidjeti niti izbjeći, a koje promj enu rasporeda radnog vremena radnika čine nužnom. (8) Tijekom korištenja prava na odmore i dopuste propisane odredbama ovoga Zakona radnik i poslodavac moraju voditi računa o ravnoteži između privatnog i poslovnog života i načelu nedostupnosti u profesiona lnoj komunikaciji, osim ako se radi o prijekoj potrebi, odnosno kada se zbog priro de posla komunikacija s radnikom ne može isključiti ili kada je kolektivnim ugovorom ili ugovorom o radu ugovoreno drukčije . Puno radno vrijeme",
       "category": "contracts",
@@ -1885,7 +1886,7 @@
       "language": "hr"
     },
     {
-      "id": "art_068",
+      "id": "art_068_01",
       "title": "a (NN 93/14 , 151/22 ) (1) U okviru učenja temeljenog na radu u skladu s propisom o strukovnom obraz",
       "content": "a (NN 93/14 , 151/22 ) (1) U okviru učenja temeljenog na radu u skladu s propisom o strukovnom obrazovanju, dijete s navršenih 14 godina koje više ne pohađa obvezn o osn ovno obrazovanje ne smije obavljati poslov e duže od osam sati dnevno i 40 sat i tjedno, neovisno o tome obavlja l i rad kod jednog ili više poslodavaca. (2) U okviru obavljanja povremenog rada redovitog učenika u skladu s propisom o obavljanju djelatnos ti u svezi sa zapošljavanjem, dijete s navršeni h 14 godina koje viš e ne pohađa obv ezno osnovno obrazovanje ne smije o bavljati poslove duže od sedam sati dnevno i 35 sati tjedno za poslove koji u razdoblju kada nema nastave traju duže od tjedan dana. (3) Og ranič enje trajanja rada iz stavka 2. ovoga član ka povećava se na os am sati dnevno i 40 sati tjedno u slučaju rada maloljetnika, neovisno o tome obavlja li rad kod jednog ili više poslodavaca. (4) Osobe iz stavaka 1. i 2. ovoga članka imaju pravo na dnevni odmor od najmanje 14 sati neprekidno tijekom vremenskog razdoblja o d 24 sata. (5) Pravo na stanku i tjedni odmor propisano za maloljetnika člancima 73. i 75. ovoga Zakona na odgovarajući se način primjenjuje i na dijete. (6) Zabrana i ograničenja noćnog ra da pr opisana za maloljetnika članci ma 69. i 70. ovoga Zakona na odg ovarajući s e način primjenjuju i na dijete . Noćni rad",
       "category": "working-time",
@@ -2364,7 +2365,7 @@
       "language": "hr"
     },
     {
-      "id": "art_087",
+      "id": "art_087_01",
       "title": "a (NN 93/14 , 151/22 ) (1) Radnik ima pravo na odsutnost s posla jedan dan u kalendarskoj godini ka ",
       "content": "a (NN 93/14 , 151/22 ) (1) Radnik ima pravo na odsutnost s posla jedan dan u kalendarskoj godini ka da je zbog osobito važnog i hitnog obiteljskog razloga uzrokovanog bolešću ili nesretnim slučajem prijeko potrebna njeg ova t renutačna nazočnost. NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . (2) Za stjecanje prava iz radnog odnosa ili u vezi s radnim odnosom, razdoblje odsutnosti s posla iz stavka 1. ovoga člank a smatra se vremenom provedenim na radu. (3) Duže trajanje odsutnos ti iz stavka 1. ovoga članka, kao i nakna da pl aće za to vrijeme mogu se utvrditi k olektivnim ugovorom, pravilnikom o radu ili ugovorom o radu . 10. MOGUĆNOST DRUKČIJEG UREĐENJA RA DNOG VREMEN A, NOĆNOG RADA I ODMORA Mogućnost drukčijeg uređenja za određene kategorije radnika",
       "category": "contracts",
@@ -2447,7 +2448,7 @@
       "language": "hr"
     },
     {
-      "id": "art_090",
+      "id": "art_090_01",
       "title": "b (NN 93/14 , 151/22 ) (1) Plaća mora biti ugovorena, utvrđena ili propisana u brutoiznosu",
       "content": "b (NN 93/14 , 151/22 ) (1) Plaća mora biti ugovorena, utvrđena ili propisana u brutoiznosu. NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . (2) Ako osnove i mjerila za ispla tu plaće nisu uređeni kolektivnim ugovorom, poslodavac koji zapošljava najmanje 20 radnika dužan ih je utvrditi pravilnikom o radu, a poslodavac koji nije u obvezi donošenja pravilnika ili pravilnikom o radu osnove i mj erila nije utvrdio, dužan ih je ugovo riti ugovorom o radu sklopljenim s radn ikom. (3) Ako plaća nije određena posebnim propisom, kolektivnim ugovoro m ili pravilnikom o radu u skladu sa stavkom 2. ovoga članka, a ug ovor o radu ne sadrži dovoljno podataka na tem elju kojih bi se ona mogla odredi ti, poslodavac je dužan radniku isplatiti primjerenu plaću. (4) Pod primjerenom plaćom iz stavka 3. ovoga člank a sma tra se plaća koja se redovito isplaćuje za jed naki rad, a ako takvu plaću nije moguće utvrditi, plaća koju odredi sud prema okolnostima sluč aja. (5) Osnove i mjerila za isplatu plaće radnika ne mogu biti poslovna tajna. (6) Odredba ugovora o radu, kol ektiv nog ugovora, pravilnika o radu ili drugog pravnog akta protivna stavku 5. ovoga članka ništetna je . Jednakost plaća žena i muškaraca",
       "category": "contracts",
@@ -5516,7 +5517,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_01",
       "title": "a ( ) Ovom se glavom Zakona uređuje rad koji se obavlja kori štenjem digitalnih radnih platformi, od",
       "content": "a ( ) Ovom se glavom Zakona uređuje rad koji se obavlja kori štenjem digitalnih radnih platformi, određuju se pojmovi i propisuju posebna prava i obveze koje nastaju između poslodavca i radnika, propisuje se minimalna razina prava i radnih uvjeta kada takav rad obavljaju druge fizičke osobe te prava i odgovornosti d igitalnih radnih pla tformi radi osiguranja njihova transparentnog rada. Rad koji se obavlja korištenjem digitalne radne platforme",
       "category": "other",
@@ -5539,7 +5540,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_02",
       "title": "b ( ) Rad koji se obavlja korištenjem digitalne radne platforme je, u smislu ovoga Zakona, naplatni ",
       "content": "b ( ) Rad koji se obavlja korištenjem digitalne radne platforme je, u smislu ovoga Zakona, naplatni rad koji na temelju ugovornog odnosa fizička osoba obavlja za digitalnu radnu platformu ili za agregatora, kor ištenjem digitalne tehnologije odnosno na daljinu pomoću elektroničkog s redstva (internetska stranica, mobilna aplikacija i sl.) ili izravno na određenoj lokaciji izme đu sudionika određenog posla. Digitalna radna platforma",
       "category": "contracts",
@@ -5562,7 +5563,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_03",
       "title": "c ( ) (1) Digitalna radna platforma je , u smislu ovoga Zakona, fizička ili pravna osoba koja pruža ",
       "content": "c ( ) (1) Digitalna radna platforma je , u smislu ovoga Zakona, fizička ili pravna osoba koja pruža usluge koje se na zahtjev primatelja usluge pružaju korišt enjem digitalne tehnologije, a u okviru organizacije rada u kojem fizičke osobe posao obavljaju na dalji nu pomoću elektroničk og sredstva (internetska stranica, mobilna aplikacija i sl.) ili izravno na određenoj lokaciji. (2) Agregator je, u smislu ovoga Zakona, fizička ili pravna osoba koja obavlja djelatnost zastupanja ili posredovanja za jednu ili više dig italnih radnih platfo rmi iz stavk a 1. ovoga članka. (3) Odredbe ovoga Zakona primjenjuju se na digitalne radne platforme iz stavka 1. ovoga članka i na agregatore iz stavka 2. ovoga članka koji na taj način organiziraju rad koji se obavlja na području Euro pske unije, neovisno o mjestu njihova poslovnog nastana i prava koje se inače primjenjuje. (4) Digitalna radna platforma iz stavka 1. ovoga članka i agregator iz stavka 2. ovoga članka dužni su, pod uvjetima propisanim ovim Zakonom, upisati se u evidenciju ministarstva. (5) Di gitalna radn a platforma iz stavka 1. ovoga članka i agregator iz stavka 2. ovoga članka ne smiju na tržištu obavljati registriranu djelatnost ako nisu upisani u evidenciju ministarstva. (6) Pri obavljanju poslova posredovanja za digita lnu radnu platformu a gregator ne smije radniku naplatiti naknadu za posredovanje. (7) Digitalna radna platforma iz stavka 1. ovoga članka ne odnosi se na pružatelje usluga čija je primarna svrha dijeljenje resursa ili preprodaja robe ili usluga. Poslodavac za kojeg radnik posao obavlja putem digitalne radne platforme",
       "category": "other",
@@ -5586,7 +5587,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_04",
       "title": "d ( ) (1) Di gitalna radna platforma iz članka 221",
       "content": "d ( ) (1) Di gitalna radna platforma iz članka 221.c stavka 1. ov oga Zakona ili agregator iz č lanka 221.c stavka 2. ovoga Zakona je poslodavac radniku koji rad obavlja osobno korištenjem digitalne radne platforme. (2) Ako je agregator radniku poslodavac, digitalna radn a platforma solidarno odgovara za obveze koje taj ag regator, kao njezin posrednik na tržištu, ima prema radniku kojeg zapošljava radi obavljanja poslova za digitalnu radnu platformu. (3) Iznimno od stavka 2. ovoga članka, digitalna radna platforma može se osloboditi solidarne odgovornosti ako dokaže da agre gator koji je registriran pre ma posebnom propisu i s kojim je sklopila ugovor uredno izvršava obvezu prijave na mirovinsko i zdravstveno osiguranje radnika, da redovito podmiruje trošak plaće radnika i da nema utvrđen porezni dug. (4) U svrhu dokazivanja č injenica iz stavka 3. ovoga č lanka, digitalna radna platforma može prije sklapanja ugovora s agregatorom, odnosno jedno m mjesečno tijekom trajanja toga ugovora, od agregatora zatražiti: 1. potvrdu nadležn og poreznog tijela o nepostojanju poreznog duga agre gatora 2. izjavu agregatora d a je za sve radnike izvršio prijavu na obvezno mirovinsko i zdravstveno osiguranje prema posebnom propisu 3. dokaz da agregator za sve radnike redovito podmiruje ukupan trošak plaće. NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . Radnik koji rad obavlja korištenjem digitaln e radne platforme",
       "category": "contracts",
@@ -5611,7 +5612,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_05",
       "title": "e ( ) Radnik koji rad obavlja korištenjem digitalne radne platforme je, u sm islu ovoga Zakona, fizi",
       "content": "e ( ) Radnik koji rad obavlja korištenjem digitalne radne platforme je, u sm islu ovoga Zakona, fizička osoba koja na temelju sklopljenog ugovora o radu, u radnom odnos u obavlja po slove za digitalnu radnu platformu ili za agregatora. Ostale osobe koje rad obavljaju korištenjem digitalne radne platforme",
       "category": "contracts",
@@ -5635,7 +5636,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_06",
       "title": "f ( ) (1) Fizičke os obe koje na temelju ugovornog odnosa koji nije nastao sklapanjem ugovora o radu",
       "content": "f ( ) (1) Fizičke os obe koje na temelju ugovornog odnosa koji nije nastao sklapanjem ugovora o radu osobno obavljaju poslov e za digitalnu radnu platformu ili za agregatora iz članka 221.c ovoga Zakona u smislu ovoga Zakona smatraju se ostalim osobama koje rad obavljaju korišt enjem digitalne radne platforme, ako se na takav ugovorni odnos ne mogu primijeniti zakonske pretpostav ke o postojanju radnog odnosa propisane člankom 221.m ovoga Zakona. (2) Odredbe ovoga članka ne primjenjuju se na fizič ke osobe koje se u smislu Uredbe ( EU) 2019/1150 Europskog parlamenta i Vijeća od 20. lipnja 2019. o promicanju pravednosti i transparentn osti za poslovne korisnike usluga internetskog posredovanja (Tekst značajan za EGP) (SL L 186, 11. 7. 2019.) smatraju poslovnim korisnikom. 2. UPOTREBA A UTOMATIZIRANOG SUSTAVA UPRAVLJANJA U ORGANIZACIJI RADA KOJI SE OBAVLJA KORIŠTENJEM DIGITALNIH RADNIH PL ATFORMI Prava i obveze poslodavca",
       "category": "contracts",
@@ -5658,7 +5659,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_07",
       "title": "g ( ) (1) Poslodava c iz članka 221",
       "content": "g ( ) (1) Poslodava c iz članka 221.d stavka 1. ovoga Zakona, koji u organizaciji rada koristi digitalnu tehnologiju i infrastrukturu u okviru automatiziranog sustava upravljanja utemeljenog na algoritmima, obvezan je u skladu s odredbama ovoga Zakona, radi ostva rivanja prava propisanih ovim ili drugim propisom: 1. upoznati radnika s organizacijom rada digitalne radne platforme i načinom donošenja odluka u automatiziranom sustavu up ravljanja 2. osigurati dostupnost i transparentnost podataka o radu koji se obavlja korištenjem digitalnih radnih platformi 3. imenovati ovlaštenu osobu koja će nadzirati sigurnost i radno opterećenje rada radnika koji rad obavljaju korištenjem digitalnih radnih platformi 4. imenovati ovlaštenu osobu koja povodom zahtjeva radnika provodi postupak pre ispitivanja odluka donesenih u automatizi ranom sustavu upravljanja i koja o njima odlučuje 5. osigurati mogućnost uspostave profesionalne komunikacije s ostalim radnicima i sudionicima poslovnog procesa te poslodavcem i ovlaštenim osobama posl odavca. (2) P rije početka rada koji se obavlja korište njem digitalne radne platforme poslodavac iz članka 221.d stavka 1. ovoga Zakona dužan je omogućiti radniku da se upozna s načinom na koji će dodjeljivati poslove odnosno radne zadatke, nadzirati radnik a te ocjenjiv ati njegov rad. (3) Prije početka rada ko ji se obavlja korištenjem digitalne radne platforme poslodavac iz članka 221.d stavka 1. ovoga Zakona dužan je omogućit i radniku da se upozna sa svim pravima iz radnog odnosa, a osobito informacijama ve zanim za pris tup poslovima i radnim zadacima, za radno vrijeme i uvjete rada, za sigurnost i zdravlje na radu, za mogućnost napredovanja i osposobljavanja te za donošenje odluka vezanih za obračun i isplatu plaće te naknada. (4) Ugovorom o radu iz članka 2 21.l ovoga Za kona ugovara se obveza poslodavca da radn iku dostavi podatke iz stavka 1. ovoga članka. (5) Poslodavac iz članka 221.d stavka 1. ovoga Zakona dužan je na zahtje v radnika učiniti dostupnima podatke vezane uz obveze iz stavka 1. ovoga članka. (6) Poslodavac iz članka 221.d stavka 1. ovoga Zakona du žan je, na zahtjev sindikalnog povjerenika, odnosno sindikalnog predstavnika te inspekcije u području rada, tijekom provođenja nadzora omogućiti dostupnost podataka iz stavka 1. ovoga članka. Obveza ljudskog nadzora u automatiziranom sustavu upravljanja radi zaštite sigurnosti i zdravlja radnika",
       "category": "contracts",
@@ -5687,7 +5688,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_08",
       "title": "h ( ) (1) Poslodavac iz članka 221",
       "content": "h ( ) (1) Poslodavac iz članka 221.d stavka 1. ovoga Zakona dužan je proci jeniti rizike rada i njihova utjecaja na sigurnost i zdravlje radnika koji rad o bavlja korištenjem digitalne radne platforme. (2) Poslodavac iz članka 221.d stavka 1. ovoga Zakona ne smije dopustiti intenzitet rada koji ugrožava fizičk o, odnosno mentalno z dravlje radnika koji rad obavlja korištenjem digitalne radne platforme. NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . (3) Radn ik koji smatra da mu je zbog okolnosti nastalih radom korištenjem digitalne radne platforme povrijeđeno pravo na sigurnost i zdravlje na radu ima pravo zat ražiti od poslodavca zaštitu svoga prava odnosno pisano obrazloženje i preispitivanje pojedine mjere ili odluke. (4) Nadzor nad donošenjem odluka vezanih za sigurnost i zdravlje radnika i ovlaštenje za preispitivanje i ocjenu mjere ili odluke o zaštiti na radu te odlučivanje o tome ima osoba iz članka 221.g stavka 1. točke 3. ovoga Zakona. Obveza ljudskog nadzora u praćenj u rada i odluka donesenih u automatiziranom sustavu upravljanja",
       "category": "leave",
@@ -5713,7 +5714,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_09",
       "title": "i ( ) (1) Radnik koji smatra da mu je odlukom donesenom u automatiziranom sustavu upravljanja, a oso",
       "content": "i ( ) (1) Radnik koji smatra da mu je odlukom donesenom u automatiziranom sustavu upravljanja, a osobito odlukom vezanom za pristup radnim zadacima, o radnom vremenu, o mogućnosti napredovanja i osposobljavanja te odlukom vezanom za obračun i isplatu plaće te naknada povrijeđeno pravo iz radnog odnosa ima pravo u rokovima propisanima člankom 133. ovoga Zakona zatražiti od poslodavca zaštitu svojih prava te zatražiti pis ano obrazloženje, kao i preispitivanje pojedine odluke. (2) Ovlaštenje za stručno o brazloženje odluke te odlučivanje nakon preispitivanja odluke ima osoba iz članka 221.g stavka 1. točke 4. ovoga Zakona. Zaštita privatnosti i obrada osobnih podataka radnik a koji rade korištenjem digitalne radne platforme",
       "category": "salary",
@@ -5740,7 +5741,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_10",
       "title": "j ( ) Digitalna radna platforma i agregator, radi zaštite privatnosti radnika u skladu s člankom 29",
       "content": "j ( ) Digitalna radna platforma i agregator, radi zaštite privatnosti radnika u skladu s člankom 29. ovoga Zakona, pri obradi osobnih podataka ne smije: 1. obrađivati podatke o privatnim ra zgovorima 2. obrađivati podatke o emocionalnom odnosno psihološkom stanju radnika 3. obrađivati podatke o zdrav lju radnika, osim u slučajevima predviđenim propisom o zaštiti osobnih podataka 4. prikupljati osobne podatke u razdobl ju u kojem radnik ne obavl ja rad niti ga nudi. Obveza uspostave kanala za profesionalnu komu nikaciju s ostalim radnicima i poslodavcem te trećima u poslovnom procesu",
       "category": "other",
@@ -5764,7 +5765,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_11",
       "title": "k ( ) Poslodavac iz članka 221",
       "content": "k ( ) Poslodavac iz članka 221.d stavka 1. ovoga Zakona dužan je, radi neometane profesionalne komunikacije odnosno povezivanja i razmjene informacija u poslovnom procesu s os talim rad nicima i sudionicima poslovnog procesa te poslodavcem i ovlaštenim osobama poslodavca, o sobama koje kod njega obavljaju poslove osigurati mogućnost uspostave kontakata. 3. PRAVA RADNIKA KOJI RAD OBAVLJA PUTEM DIGITALNIH RADNIH PLATFORMI Obvezni sadržaj pisanog ugovora o radu putem digitalne radne platforme",
       "category": "contracts",
@@ -5789,7 +5790,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_12",
       "title": "l ( ) (1) Ugovor o radu sklopljen u pisano m obliku, odnosno potvrda o sklopljenom ugovoru o radu, k",
       "content": "l ( ) (1) Ugovor o radu sklopljen u pisano m obliku, odnosno potvrda o sklopljenom ugovoru o radu, kojim se između poslodavca i radnika ugovara rad korištenjem digitalne radne pla tforme, osim p odataka iz članka 15. stavka 1. točaka 1. do 11. ovoga Zakona, mora sadržavati i dodatne podatke o: 1. načinu dodjele poslova, radnih zadataka i uputa za rad te ocjenjivanja rada prema određenim kriterijima 2. načinu donošenja odluka vezanih za radno vrije me i uvjete rada, za sigurnost i zdravlje na radu, za mogućnost napredovanja te za donošenje odluka vezani h za obračun i isplatu plaće i naknade plaće 3. obvezi poslodavca da informira radnika o osobi koja je kod poslodavca ovlaštena za nadzo r praćenja rad a u automatiziranom sustavu upravljanja 4. elektroničkoj i drugoj opremi i sredstvima rada koji su potrebni za obavljanje posla 5. mogućnosti za neometanu profesionalnu komunikaciju odnosno povezivanje i razmjenu informacija s ostalim radnicim a i njihovim predstavnicima, poslodavcem te trećima u poslovnom procesu 6. sredstvima rada za obavljanje poslova koje j e poslodavac dužan nab aviti, instalirati i održavati, odnosno uporabi vlastitih sredstava rada radnika 7. naknadi troškova radniku vezani h uz obavljan je poslova te amortizaciji troškova vlastitih vozila i druge opreme, ako ih koristi NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . 8. obvezi ugovaranja osiguranja od nesretnog slučaja i osiguranja od odgovornosti na teret poslodavca ako ugovorene poslove obavlja sudjelovanjem u prometu sre dstvom koje s e u smislu propisa o sigurnosti prometa na cestama smatra vozilom i koje ne podliježe obvezi registracije 9. načinu osposobljava nja i stručnog usavršavanja radnika 10. načinu ostvarivanja prava na informiranje i sudjelovanje u odlučivanju. (2) Ako se radi nepredvidivog obrasca rada ugovara rad po pozivu poslodavca, ugovor o radu sklopljen u pisanom obliku, odnosno potvrda o skloplj enom ugovoru o radu iz stavka 1. ovoga članka mora sadržavati i dodatne podatke o: 1. promjenjivom rasporedu rada s obzirom na o rganizaciju radnog vremena radnika koja je u potpunosti ili uglavnom nepredvidiva 2. referentnom razdoblju u danima i satima unu tar kojeg poslodavac ima pravo zatražiti, a radnik ima dužnost obavljati posao 3. najmanjem broju radnih sati unuta r razdoblja i z točke 2. ovoga stavka koje je poslodavac dužan platiti radniku, neovisno o tome je li zatražio od radnika obavljanje posla, os im ako je poslodavac zatražio obavljanje posla, a radnik ga je bez opravdanog razloga odbio obaviti 4. pravu radnik a da bez štet nih posljedica odbije radni zadatak, ako je obavijest o potrebi njegova izvršenja dana u roku unutar kojeg a ga nije moguće izvrš iti 5. roku u kojemu je moguć opoziv radnog zadatka koji je radnik prihvatio, čije neispunjenje daje radniku pravo na isplatu na knade plaće kao da je radio. (3) Nepredvidiv obrazac rada iz stavka 2. ovoga članka, u smislu ovoga Zakona, je oblik organizacij e rada i radnog vremena koji u potpunosti ili uglavnom nastaje prema nepredvidivim potrebama za radom, uslijed čega se ne može unaprijed utvrditi početak i završetak radnog dana niti tjedna radnika, već ga, prema prirodi stvari, određ uje poslodavac. (4) U slučaju sklapanja ugovora iz stavka 2. ovoga članka najmanji broj zajamčenih plaćenih radnih sati ne može biti manj i od pet sati tjedno. Pretpostavka postojanja radnog odnosa u radu korištenjem digitalne radne platforme",
       "category": "contracts",
@@ -5816,7 +5817,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_13",
       "title": "m (NN 93/14 , 151/22 – na snazi od 01",
       "content": "m (NN 93/14 , 151/22 – na snazi od 01.01.2024. ) (1) Ako digitalna radna platforma ili agregator iz članka 221.c ovoga Zakona s fizičkom osobom sklopi ugovor za obavljanje posla korištenjem digitalne radne platforme koji, s obzirom na narav i vrstu rada te ovlasti digitalne radne platfor me ili agregatora, ima obilježja posla z a koji se zasniva radni odnos, smat ra se da je ta digitalna radna platforma ili taj agregator, kao poslodavac s radnikom sklopio ugovor o radu, osim ako se ne dokaže suprotno. (2) Činjenice na temelju kojih se može u smislu stavka 1. ovoga članka pretposta viti postojanje radnog odnosa su: 1. osobno obavljanje naplatnog posla 2. davan je naloga i uputa za obavljanje posla fizičkoj osobi, u okvirima organizacije rada i subordinacije posla 3. ograničavanje slobode odbijan ja izvršavanja naloga ili njezino uvjeto vanje zapriječenim sankcijama ili d rugim mjerama 4. pobliže određivanje vremena, mjesta i načina obavljanja posla fizičkoj osobi, neovisno o tome koristi li vlastita sredstva rada 5. nadziranje obavljanja posla i pra ćenje učinaka fizičke osobe, radi ocjene njezina rada te mogućnosti napredo vanja 6. zabra na sklapanja poslova za svoj i li tuđi račun korištenjem usluga drugih platformi. (3) Teret dokaza je na onoj digitalnoj radnoj platformi ili na agregatoru koji osporav a zakonsku pretpostavku iz stavka 1. ovoga članka. (4) Fizička osoba koja s matra da nije radnik u smislu ovoga Zakona može osporavati zakonsku pretpostavku postojanja radnog odnosa iz stavka 1. ovoga članka, pri čemu je digitalna radna platforma, odnosno a gregator, u svrhu dokazivanja i radi pravilnog rješavanja pokrenutog postup ka, dužan dati sve potrebne podatke. Rad putem digitalnih radnih platformi ovisno o opsegu ostvarenih primitaka",
       "category": "contracts",
@@ -5841,7 +5842,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_14",
       "title": "n ( ) (1) Iznimno od članka 221",
       "content": "n ( ) (1) Iznimno od članka 221.m ovoga Zako na, pretpostavka postojanja radnog odnosa ne odnosi se na fizičku osobu koja radom putem digitalnih radnih platformi u pojedinom kvartalu kalendarske godine nije ostvarila primitak veći od 60 % brutoiznosa tri mjesečne minimalne plaće utv rđenog posebnim pr opisom. (2) Digitalna radna platforma ili agregator dužan je izvršiti provjeru od nadležnog tijela koje put em sustava e Porezna vodi službenu evidenciju o svim isplatiteljima i o isplaćenim primicima radi pribavljanja dokaza o stanju isplaćenih NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . primitaka od kojih se utvrđuje drugi dohodak koji je fizička osoba kojoj dodjeljuje posao ostvarila radom putem digital nih radnih p latformi. (3) Nadležno tijelo koje putem sustava ePorezna vodi službenu evidenciju o svim isplatiteljima i o isplaćenim primicima može di gitalnoj radnoj platformi ili agregatoru omogućiti uvid u podatke o stanju isplaćenih primitaka od kojih se utvrđuje dr ugi dohodak fizičke osobe kojoj se dodjeljuje, a koje je ta fizička osoba ostvarila radom putem digitalnih radnih platformi. (4) Ako je d igitalnoj radnoj platformi ili agregatoru omogućeno da na temelju izvršene provjere iz stavka 2. ovoga članka utvrdi da je primitak za obavljeni rad fizičke osobe iz stavka 1. ovoga članka u pojedinom kvartalu kalendarske godine veći od l imitirane visine o d 60 % brutoiznosa tri mjesečne minimalne plaće utvrđenog posebnim propisom, fizička osoba kod tog poslodav ca, nakon iz vršene provjere, može posao obavljati samo na temelju sklopljenog ugovora o radu. (5) Radi provjere stanja isplaćenih primitaka fizičke o sobe iz stavka 1. ovoga članka, digitalna radna platforma ili agregator ovlašten je dobiti samo podatak o i znosu neispl aćenog dijela limitirane visine iznosa primitaka iz stavka 2. ovoga članka. (6) Način i rokove provođenja uvida i provj ere iz stavaka 2. i 3. ovoga članka ministar, uz suglasnost ministra nadležnog za financije, propisuje pravilnikom. Prava i uvjeti rada ostalih osoba koje rade na digitalnim radnim platformama",
       "category": "contracts",
@@ -5865,7 +5866,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_15",
       "title": "o ( ) (1) Na osobu iz članka 221",
       "content": "o ( ) (1) Na osobu iz članka 221.f sta vka 1. ovoga Zakona na odgovarajući se način primjenjuju odredbe članaka 221.g do 221.k ovoga Zakona. (2) Digitalna rad na platforma ili agregat or dužan je za osobu iz članka 221.f stavka 1. ovoga Zak ona ugovoriti osiguranje od nesretnog slučaja i osiguranj e od odgovornosti ako ugovorene poslove obavlja sudjelovanjem u prometu sredstvom koje se u smislu propisa o sigurnosti prometa na cestama smat ra vozilom i koje ne podliježe obvezi registracije. (3) Osoba iz članka 221.f stavka 1. ovoga Zakona ima pravo na zaštitu prava u skladu s utvrđenim ugovornim odnosom s digitalnom radnom platformom ili agregatorom. 4. TRANSPARENTNOS T RADA KORIŠTENJEM DIGIT ALNIH RADNIH PLATFORMI Evidencija o radu korištenjem digitalnih radnih platformi",
       "category": "contracts",
@@ -5889,7 +5890,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_16",
       "title": "p ( ) (1) Evidencija o radu korištenjem digitalnih radnih platformi, radi osiguranja transparentnost",
       "content": "p ( ) (1) Evidencija o radu korištenjem digitalnih radnih platformi, radi osiguranja transparentnosti rada digitalnih radnih platformi te jačanja odgovornosti i pravne sigurnosti između subjekata koji na tržištu obavljaju djelatnost i rad korišt enjem digitalnih radnih platformi, vodi i u elektroničkom obliku obrađuje ministarstvo. (2) U evidenciji iz stavka 1. ovoga članka prikup ljaju se i obrađuju podaci o digitalnim radnim platformama i agregatorima koji obavljaju djelatnosti kao pružatelji usluga na tržištu te se prikupljaju podaci o pokazateljima opsega rada korištenjem digitalnih radnih platformi. (3) Digitalna radna platform a iz članka 221.c stavka 1. ovoga Zakona i agregator iz članka 221.c stavka 2. ovoga Zakona, radi njihova upisa u evide nciju iz stavka 1 . ovoga članka, dužni su podnijeti zahtjev koji mora sadržavati: 1. naziv, sjedište i osobni identifikacijski broj digit alne radne platforme ili agregatora 2. ime, prezime i osobni identifikacijski broj osobe koja je ovlaštena za zastupanje digitalne radne platforme ili agregatora 3. adresu elektroničke pošte u svrhu izravnog i neometanog pristupa tijekom propisanih nadzorn ih po stupaka 4. pisanu izjavu o sklopljenom ugovoru o posredovanju na tržištu s digitalnom radnom platformom, ako je za htjev podnio agre gator. (4) Digitalna radna platforma iz članka 221.c stavka 1. ovoga Zakona i agregator iz članka 221.c stavka 2. ovoga Zakon a dužni su u pravnom prometu, u poslovnim ispravama, na svakom dopisu i ugovoru navesti broj pod kojim su upisani u evidenciju iz s tavka 1. ovoga članka. (5) Podaci o digitalnim radnim platformama i agregatorima prikupljaju se upisom iz stavka 3. ovog a članka i dostavom podataka o pokazateljima opsega rada korištenjem digitalnih radnih platformi. (6) Podaci o pokazate ljima opsega rada korištenjem digitalnih radnih platformi su osobito broj radnika i osoba iz članka 221.f stavka 1. ovoga Zakona koje rad e kor ištenjem platforme te broj i vrsta ugovornih odnosa na temelju kojih te osobe rade korištenjem platforme. NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . (7) Digitalna radna platf orma iz članka 221.c stavka 1. ovoga Zakona i agregator iz članka 221.c stavka 2. ovoga Zakona dužni su podatke iz stavk a 6. ovoga članka dostaviti u propisanom roku ministarstvu. (8) Oblik, sadržaj i način vođenja evidencije iz stavka 1. ovoga članka te r ok dostave podataka propisuje ministar pravilnikom .",
       "category": "contracts",
@@ -6015,7 +6016,7 @@
       "language": "hr"
     },
     {
-      "id": "art_006",
+      "id": "art_006_01",
       "title": "stavak 2",
       "content": "stavak 2.) 2. radniku omogući upoznavanje s propisima o radnim odnosima, odnosno s organizacijom rada i zaštitom zdra vlja i sigurnosti na radu (",
       "category": "general",
@@ -6038,7 +6039,7 @@
       "language": "hr"
     },
     {
-      "id": "art_008",
+      "id": "art_008_01",
       "title": "stavak 2",
       "content": "stavak 2.) 3. propise o sigurno sti i zaštiti zdravlja na radu te kolektivni ugovor i pravilnik o radu učini na prikladan način dostupnima radnicima (č lanak 8. stavak 3.) 4. radniku dostavi pisani i obrazloženi odgovor o mogućnosti sklapanja ugovora o radu na neodređeno vrijeme (",
       "category": "general",
@@ -6086,7 +6087,7 @@
       "language": "hr"
     },
     {
-      "id": "art_014",
+      "id": "art_014_01",
       "title": "stavak 6",
       "content": "stavak 6.) 6. pri na dležnom upravnom tijelu registrira ugovor o radu pomorca i radnika n a pomorskim ribarskim plovilima (",
       "category": "contracts",
@@ -6110,7 +6111,7 @@
       "language": "hr"
     },
     {
-      "id": "art_014",
+      "id": "art_014_02",
       "title": "stavak 7",
       "content": "stavak 7.) 7. radniku s kojim je sklopio pisani ugovor o radu koji ne sadrž i sve sastojke propisane ovim Zakonom ponudi izmjenu ugovora koji će sadržavati nedostajuće sastojke, odnosno da dopuni izdanu potvrdu o sklopljenom ugovoru o radu koja ne sadrži sastojke propisane ovim Zakonom (",
       "category": "contracts",
@@ -6134,7 +6135,7 @@
       "language": "hr"
     },
     {
-      "id": "art_015",
+      "id": "art_015_01",
       "title": ") 8",
       "content": ") 8. radniku s kojim je sklopio ugovor o radu za stalne sezonske poslove na određeno vrijeme koji ne sa drži sve sastojke propisane ovim Zakonom ponudi izmjenu ugovora koji će sadržavati nedostajuće sastojke, odnosno da dopuni izdanu potvrdu o sklopljenom ugovoru o radu koja ne sadrži sve s astojke propisane ovim Zakonom (",
       "category": "contracts",
@@ -6158,7 +6159,7 @@
       "language": "hr"
     },
     {
-      "id": "art_016",
+      "id": "art_016_01",
       "title": "stavak 7",
       "content": "stavak 7.) 9. radniku s ko jim je dogovorio rad na izdvojenom mjestu rada bez izmjene ugovora o radu, za rad duži od 30 dana ponudi sklapanje ugovora o radu s obveznim sadržajem ugovora o radu u slučaju rada na izdvojenom mjestu rada (",
       "category": "contracts",
@@ -6182,7 +6183,7 @@
       "language": "hr"
     },
     {
-      "id": "art_017",
+      "id": "art_017_04",
       "title": "stavak 6",
       "content": "stavak 6.) 10. radniku s kojim je skl opio ugovor o radu na izdvojenom mjestu rada ili na daljinu koji ne sadrži sve sastojke propisane ovim Zakonom ponudi izmjenu ugovora koji će sadržavati nedostajuće sastojke, odnosno da d opuni izdanu potvrdu o sklopljenom ugovoru o radu koja ne sadrži sve sastojke propisane ovim Zakonom (",
       "category": "contracts",
@@ -6206,7 +6207,7 @@
       "language": "hr"
     },
     {
-      "id": "art_017",
+      "id": "art_017_05",
       "title": "a stavci 1",
       "content": "a stavci 1. i 2.) NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . 11. rad niku koji radi na daljinu osigura zaštitu privatnosti te potrebne pisane upute u vezi sa zaštitom zdravlja i sigurnosti na radu (",
       "category": "contracts",
@@ -6227,7 +6228,7 @@
       "language": "hr"
     },
     {
-      "id": "art_017",
+      "id": "art_017_06",
       "title": "b stavak 6",
       "content": "b stavak 6.) 12. radniku dostavi pisano obrazlože nje o nemogućnosti izmjene ugovora o radu kojim bi se na određeno vr ijeme ugovorio rad na izdvojenom mjestu rada, odnosno o nemogućnosti ponovnog obavljanja poslova u prostoru poslodavca i prije isteka vremena na koji je sklopljen izmijenjen ugovor ili o m ogućnosti izmjene ugovora o radu s odgodnim početkom primjene (člana k 17.c stavak 4.) 13. radniku s kojim je sklopio ugovor odnosno kojem je izdao potvrdu o privremenom upućivanju na rad u inozemstvo, a koji ne sadrži sve sastojke propisane ovim Zakonom po nudi izmjenu ugovora koji će sadržavati nedostajuće sastojke, odnosn o da dopuni izdanu potvrdu o sklopljenom ugovoru o radu koja ne sadrži sve sastojke propisane ovim Zakonom, ili radniku uruči primjerak prijave na obvezno zdravstveno osiguranje prije upuć ivanja na rad u inozemstvo, ako ga je na to osiguranje dužan osigura ti (",
       "category": "contracts",
@@ -6251,7 +6252,7 @@
       "language": "hr"
     },
     {
-      "id": "art_018",
+      "id": "art_018_04",
       "title": "stavci 2",
       "content": "stavci 2. i 7.) 14. radniku u slučaju upućivanja u inozemstvo, u okviru privremenog i povremenog prekograničnog pružanja usluga, na rok kraći od četiri uzastopna tjedna, pri je početka upućivanja dostavi pisanu informaciju koja sadrži propisa ne podatke (",
       "category": "contracts",
@@ -6275,7 +6276,7 @@
       "language": "hr"
     },
     {
-      "id": "art_018",
+      "id": "art_018_05",
       "title": "stavak 4",
       "content": "stavak 4.) 15. radniku s kojim je sklopio ugovor o dodatnom radu koji ne sadrži sve sastojke pro pisane ovim Zakonom ponudi izmjenu ugovora koji će sadržavati nedosta juće sastojke, odnosno da dopuni izdanu potvrdu o sklopljenom ugovor u o radu koja ne sadrži sastojke propisane ovim Zakonom (",
       "category": "contracts",
@@ -6299,7 +6300,7 @@
       "language": "hr"
     },
     {
-      "id": "art_018",
+      "id": "art_018_06",
       "title": "b stavak 1",
       "content": "b stavak 1.) 16. maloljetnika uputi na pregled ovlaštenom liječniku ako su maloljetnik, njegov roditelj, odnosno skrbnik, radničko vijeće ili sindikat posumnjali da poslovi koje obavlja ugr ožavaju njegovu sigurnost, zdravlje, ćudoređe ili razvoj i podnijeli zahtjev poslodavcu da ovlašteni liječnik pregleda maloljetnika te da u nalazu i mišljenju ocijeni ugrožavaju li poslovi koje maloljetnik obavlja njegovu sigurnost, zdravlje, ćudoređe ili razvoj (",
       "category": "contracts",
@@ -6320,7 +6321,7 @@
       "language": "hr"
     },
     {
-      "id": "art_022",
+      "id": "art_022_01",
       "title": "stavak 1",
       "content": "stavak 1.) 17. maloljetniku ponudi sklapanje ugovora o radu za obavljanje drugih odgovarajućih poslova kada je to dužan učiniti na temelju nalaza i mišljenja ovlaštenoga liječnika (",
       "category": "contracts",
@@ -6343,7 +6344,7 @@
       "language": "hr"
     },
     {
-      "id": "art_022",
+      "id": "art_022_02",
       "title": "stavak 3",
       "content": "stavak 3.) 18. donese i objavi pravilnik o ra du ili da pravilnikom uredi pitanja koja pravilnikom moraju biti uređena (",
       "category": "contracts",
@@ -6364,7 +6365,7 @@
       "language": "hr"
     },
     {
-      "id": "art_026",
+      "id": "art_026_01",
       "title": "stavak 1",
       "content": "stavak 1.) 19. u propisanom sadrža ju, načinu i roku ministarstvu dostavi statističke podatke o obavljan ju poslova ustupanja radnika (",
       "category": "contracts",
@@ -6388,7 +6389,7 @@
       "language": "hr"
     },
     {
-      "id": "art_044",
+      "id": "art_044_01",
       "title": "stavak 7",
       "content": "stavak 7.) 20. korisnik i a gencija koji su sklopili ugovor o ustupanju radnika, koji ne sadrži sve sastojke propisane ovim Zakonom, izmijene ugovor koji će sadržavati nedostajuće sastojke (",
       "category": "contracts",
@@ -6412,7 +6413,7 @@
       "language": "hr"
     },
     {
-      "id": "art_045",
+      "id": "art_045_01",
       "title": "stavak 2",
       "content": "stavak 2.) 21. radniku s kojim je sklopio ugovor o radu za privremeno obavljanje po slova, koji ne sadrži sve podatke propisane ovim Zakonom, ponudi izmjenu ugovora koji će sadržavati nedostajuće sastojk e, odnosno da dopuni izdanu potvrdu o sklopljenom ugovoru o radu koja ne sadrži sve sastojke propisane ovim Zakonom (",
       "category": "contracts",
@@ -6436,7 +6437,7 @@
       "language": "hr"
     },
     {
-      "id": "art_046",
+      "id": "art_046_01",
       "title": "stavci 3",
       "content": "stavci 3. i 5.) 22. uputnicu ustupljenog radnika koja ne sadrži podatke propisane ovim Zakonom dopuni nedostajućim podacima (",
       "category": "contracts",
@@ -6459,7 +6460,7 @@
       "language": "hr"
     },
     {
-      "id": "art_049",
+      "id": "art_049_01",
       "title": "stavak 1",
       "content": "stavak 1.) 23. radničko vijeće obavijesti o broju i razlozima uzimanja na rad ustupljenih radnika ili da ustupljene radnike obavi jesti o slobodnim radnim mjestima za koja ispunjavaju uvjete (",
       "category": "contracts",
@@ -6482,7 +6483,7 @@
       "language": "hr"
     },
     {
-      "id": "art_050",
+      "id": "art_050_01",
       "title": "stavak 3",
       "content": "stavak 3.) 24. radniku dostavi pisani i obrazl oženi odgovor o nemogućnosti sklapanja ugovora o radu za puno radno v rijeme (",
       "category": "contracts",
@@ -6506,7 +6507,7 @@
       "language": "hr"
     },
     {
-      "id": "art_063",
+      "id": "art_063_01",
       "title": "stavci 6",
       "content": "stavci 6., 7. i 8.) 25. radniku dostavi pisani i obrazloženi odgovor o mogućnosti izmjene ugovora o radu, odnosno promjene ili prilagodbe rasporeda radnog vremena (",
       "category": "contracts",
@@ -6530,7 +6531,7 @@
       "language": "hr"
     },
     {
-      "id": "art_068",
+      "id": "art_068_02",
       "title": "stavci 5",
       "content": "stavci 5. i 7.) 26. utvrdi raspored korištenja godišnjeg odmor a u skladu s ovim Zakonom ili radnika obavijesti o trajanju i razdob lju korištenja godišnjeg odmora (",
       "category": "working-time",
@@ -6554,7 +6555,7 @@
       "language": "hr"
     },
     {
-      "id": "art_085",
+      "id": "art_085_01",
       "title": ") 27",
       "content": ") 27. radi ostvarivanja prava na jednakost plaća žena i muškaraca, dostavi r adniku podatke o kriterijima na temelju kojih je radnik koji obavlja pos love iste ili slične naravi ostvario plaću, ako takav radnik kod njega postoji (",
       "category": "leave",
@@ -6578,7 +6579,7 @@
       "language": "hr"
     },
     {
-      "id": "art_091",
+      "id": "art_091_01",
       "title": "stavak 6",
       "content": "stavak 6.) 28. dost avi radniku obračun iz kojeg je vidljivo kako je utvrđen iznos plaće, naknade plaće, otpremnine ili naknade za neiskorišteni godišnji odmor, ili o bračun s propisanim sadržajem (",
       "category": "leave",
@@ -6602,7 +6603,7 @@
       "language": "hr"
     },
     {
-      "id": "art_093",
+      "id": "art_093_01",
       "title": "stavci 1",
       "content": "stavci 1. i 6.) 29. dos tavi radniku, kojem na dan dospjelosti nije i splatio plaću, naknadu plaće, otpremninu ili naknadu za neiskorišteni godišnji odmor, ili ih nije isplatio u cijelosti, dva obračuna, od kojih je jedan obračun u kojem će biti iskazan ukupan iznos plaće, naknade plaće, otpremnine ili naknade za neiskorište ni godišnji odmor, a drugi obračun u kojem će biti iskazan iznos plaće ili dijela plaće, naknade plaće, otpremnine ili naknade za neiskorišteni go dišnji odmor koji je bio dužan isplatiti, sa sadržajem u skladu s pravilnikom iz članka 93. stavka 6. ovoga Za kona (",
       "category": "leave",
@@ -6626,7 +6627,7 @@
       "language": "hr"
     },
     {
-      "id": "art_093",
+      "id": "art_093_02",
       "title": "stavci 2",
       "content": "stavci 2. i 6.) NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . 30. radniku, na njegov zahtjev, izda potv rdu o vrsti poslova koje obavlja i trajanju radnog odnosa (",
       "category": "leave",
@@ -6649,7 +6650,7 @@
       "language": "hr"
     },
     {
-      "id": "art_130",
+      "id": "art_130_01",
       "title": "s tavak 1",
       "content": "s tavak 1.) 31. radniku nakon prestanka radnog odnosa vrati sve nje gove isprave i primjerak odjave s obveznoga m irovinskog i zdravstvenog osiguranja ili mu izda potvrdu o vrsti poslova koje je obavljao i trajanju radnog odnosa (stavak 130. stavak 2.) 32. ime nuje osobu koja je, osim njega, ovlaštena primati i rješavati pri tužbe vezane za zaštitu dostojanstva radnika te o imenovanju obavijesti radnike (",
       "category": "salary",
@@ -6672,7 +6673,7 @@
       "language": "hr"
     },
     {
-      "id": "art_134",
+      "id": "art_134_01",
       "title": "stavci 2",
       "content": "stavci 2. i 4.) 33. pisano i potpuno obavijesti radničko vijeće ili sve radnike koji su prijenosom obuhvaćeni o prijenosu poduzeća, dijela poduzeća, gospodarske dj elatnosti ili dijela gospodarske djelatnosti na novog poslodavca (",
       "category": "salary",
@@ -6719,7 +6720,7 @@
       "language": "hr"
     },
     {
-      "id": "art_201",
+      "id": "art_201_01",
       "title": "stavak 4",
       "content": "stavak 4.) 35. kolektivni ugovor objavi na propisani način (",
       "category": "contracts",
@@ -6742,7 +6743,7 @@
       "language": "hr"
     },
     {
-      "id": "art_202",
+      "id": "art_202_01",
       "title": "stavci 1",
       "content": "stavci 1. i 2 .) 36. radniku omogući da se upozna s načinom na koji će dodjeljivati posl ove odnosno radne zadatke, nadzirati radnika i ocjenjivati njegov rad te sa svim pravima iz radnog odnosa, a osobito informacijama vezani m za pristup poslovima i radnim zadacima, za radno vrijeme i uvjete rada, za sigurnost i zdravlje na radu, za mogućnost napredovanja i osposobljavanja te za donošenje odluka vezanih za obraču n i isplatu plaće te naknada (",
       "category": "working-time",
@@ -6767,7 +6768,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_17",
       "title": "g stavci 2",
       "content": "g stavci 2. i 3.) 37. ra dniku na njegov zahtjev učini dostupnima zatr ažene podatke (",
       "category": "other",
@@ -6788,7 +6789,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_18",
       "title": "g stavak 5",
       "content": "g stavak 5.) 38. radniku i osobama koje kod njeg a obavljaju poslove osigura neometanu profesionalnu komunikaciju odnosno povezivanje i razmjenu informacija u poslovnom procesu s ostalim sudionicima te poslodavcem i ovlaštenim osob ama poslodavca (",
       "category": "other",
@@ -6811,7 +6812,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_19",
       "title": "k) 39",
       "content": "k) 39. radniku s kojim je sklopio ugovor o radu putem digitalne radne platforme, a koji ne sadrži sve sastojke propisan e ovim Zakonom, ponudi izmjenu ugovora koji će sadržavati nedosta juće sastojke, odnosno da dopuni izdanu potvr du o sklopljenom ugovoru o radu koja ne sadrži sastojke propisane ovim Zak onom (",
       "category": "contracts",
@@ -6835,7 +6836,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_20",
       "title": "l stavak 1",
       "content": "l stavak 1.) 40. radniku s kojim je sklopio ugovor o ra du putem digitalne radne platforme kojim ugovara rad po pozivu po slodavca, a ne sadrži sve sastojke propisane ovim Zakonom, ponudi izmjenu ugovora koji će sadržavati nedostajuće sastojke, odnosno da dopuni izdanu potvrdu o sklopljenom ugovoru o radu koja n e sadrži sastojke propisane ovim Zakonom (",
       "category": "contracts",
@@ -6859,7 +6860,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_21",
       "title": "l stavak 2",
       "content": "l stavak 2.) 41. kao digitalna radna platforma ili agrega tor dostavi potrebne podatke ministarstvu (",
       "category": "other",
@@ -6880,7 +6881,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_22",
       "title": "p stavak 7",
       "content": "p stavak 7.). (2) U provedbi inspekcijskog nadzora u području rada inspektor će usmenim rješ enjem u zapisniku zabraniti: 1. dodatni rad radnika koji radi na poslovima s posebnim uvjetima rada u skladu s propisima zaštite na radu ili na poslovima u skraćenom radnom vremenu iz članka 64. ovoga Zakona ili radnika kojem se prema posebnom propisu o mirovinskom osiguranju staž osiguranja računa s povećanim trajanjem , ako takve poslove obavlja kod matičnog poslodavca (",
       "category": "supervision",
@@ -6903,7 +6904,7 @@
       "language": "hr"
     },
     {
-      "id": "art_018",
+      "id": "art_018_07",
       "title": "a stavak 2",
       "content": "a stavak 2.) 2. rad osobe mlađe od 15 godina ili osobe s 15 i starije od 15, a mlađe od 18 godina koja pohađa obvezno osnovno obrazovanje (",
       "category": "contracts",
@@ -6924,7 +6925,7 @@
       "language": "hr"
     },
     {
-      "id": "art_019",
+      "id": "art_019_02",
       "title": ") 3",
       "content": ") 3. rad i sudjelovanje djeteta i maloljetni ka u aktivnostima protivno posebnoj zaštiti (",
       "category": "contracts",
@@ -6945,7 +6946,7 @@
       "language": "hr"
     },
     {
-      "id": "art_019",
+      "id": "art_019_03",
       "title": "a stavci 3",
       "content": "a stavci 3., 5. i 8.) 4. kontakt s djetetom ili maloljetnikom osobi koja je pravomoćno osuđena ili protiv koje se vodi kazneni postupak za neko od kaznenih djela protiv spolne slobode, spolnog zlostavl janja i iskorištavanja djeteta (",
       "category": "contracts",
@@ -6969,7 +6970,7 @@
       "language": "hr"
     },
     {
-      "id": "art_019",
+      "id": "art_019_04",
       "title": "b s tavak 3",
       "content": "b s tavak 3.) 5. rad maloljetnika na poslovima koji mogu ugroziti njegovu sigu rnost, zdravlje, ćudoređe ili razvoj (",
       "category": "contracts",
@@ -6990,7 +6991,7 @@
       "language": "hr"
     },
     {
-      "id": "art_021",
+      "id": "art_021_01",
       "title": "stavak 1",
       "content": "stavak 1.) 6. rad malol jetnika bez prethodnog utvrđivanja zdravstvene sposobnosti (člana k 21. stavak 3.) 7. obavljanje poslova malolj etnika ako iz nalaza i mišljenja ovlaštenog liječnika proizlazi da poslovi koje maloljetnik obavlja ugrožavaju njegovu sigurnost, zdravlje, ćudore đe ili razvoj (",
       "category": "contracts",
@@ -7011,7 +7012,7 @@
       "language": "hr"
     },
     {
-      "id": "art_022",
+      "id": "art_022_03",
       "title": "stavak 1",
       "content": "stavak 1.) 8. agenciji obavljanje poslo va ustupanja radnika korisnicima, ako nije re gistrirana prema posebnom propisu, odnosno upisana u evidenciju ministarst va nadležnog za rad (",
       "category": "contracts",
@@ -7034,7 +7035,7 @@
       "language": "hr"
     },
     {
-      "id": "art_044",
+      "id": "art_044_02",
       "title": "stavak 3",
       "content": "stavak 3.) 9. rad radnika na poslovima n a kojima uz primjenu mjera zaštite zdravlja i sigurnosti na radu nije moguće zaštititi radnika od štetnih utje caja, a koji je duži od skraćenoga radnoga vremena (",
       "category": "contracts",
@@ -7057,7 +7058,7 @@
       "language": "hr"
     },
     {
-      "id": "art_064",
+      "id": "art_064_01",
       "title": "stavak 3",
       "content": "stavak 3.) 10. prekovremeni rad maloljetnika (",
       "category": "working-time",
@@ -7078,7 +7079,7 @@
       "language": "hr"
     },
     {
-      "id": "art_065",
+      "id": "art_065_01",
       "title": "stavak 5",
       "content": "stavak 5.) 11. prekovremen i rad trudnice, roditelja s djetetom do osam godina života te rad nika koji radi u nepunom radnom vremenu kod v iše poslodavaca, osim u slučaju više sile, ako nisu dostavili poslodavcu p isanu izjavu o dobrovoljnom pristanku na takav rad (",
       "category": "working-time",
@@ -7101,7 +7102,7 @@
       "language": "hr"
     },
     {
-      "id": "art_065",
+      "id": "art_065_02",
       "title": "stavak 6",
       "content": "stavak 6. ) NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . 12. prekovremeni rad radnika koji radi u dodatnom radu ako posl odavcu nije dostavio pisanu izjavu o dobrovoljnom pristanku na takav rad, osim u slučaju više sile (",
       "category": "working-time",
@@ -7124,7 +7125,7 @@
       "language": "hr"
     },
     {
-      "id": "art_065",
+      "id": "art_065_03",
       "title": "stavci 7",
       "content": "stavci 7. i 8.) 13. rad maloljetnika koji traje duže od osam sati tijekom razdob lja od 24 sata (",
       "category": "working-time",
@@ -7145,7 +7146,7 @@
       "language": "hr"
     },
     {
-      "id": "art_068",
+      "id": "art_068_03",
       "title": "stavak 1",
       "content": "stavak 1.) 14. rad u nejednakom raspor edu radnog vremena trudnice, roditelja s djetetom do osam godina života, rad roditelja koji radi s polovicom punog radn og vremena, radi s polovicom punog radnog vremena radi pojačane njege dj eteta ili radi s polovicom punog radnog vremena radi skrbi i njeg e djeteta s težim smetnjama u razvoju prema posebnom propisu, radnika koji radi u nepunom radnom vremenu kod više poslodavaca te radnika koji radi u dodatnom radu, ako nisu dostavili poslodav cu pisanu izjavu o dobrovoljnom pristanku na takav rad (članak 68 . stavak 2.) 15. obavljanje posla i aktivnosti djeteta i maloljetnika protivno propisanim ograničenjima (",
       "category": "working-time",
@@ -7169,7 +7170,7 @@
       "language": "hr"
     },
     {
-      "id": "art_068",
+      "id": "art_068_04",
       "title": "a) 16",
       "content": "a) 16. rad noćnog radnika koji obavlja noćni rad ako tijekom razdoblja od če tiri mjeseca u noćnom radu radi duže od prosječnih osam sati tije kom svakih 24 sata (",
       "category": "working-time",
@@ -7192,7 +7193,7 @@
       "language": "hr"
     },
     {
-      "id": "art_069",
+      "id": "art_069_01",
       "title": "stavak 6",
       "content": "stavak 6.) 17. noćnom radniku, koji je na temelju procjene opasnosti u radu izložen osobitoj opasnosti ili teškom fizičkom ili mentalnom naporu, noćni rad duži od osam sati u razdoblju od 24 sata (",
       "category": "working-time",
@@ -7215,7 +7216,7 @@
       "language": "hr"
     },
     {
-      "id": "art_069",
+      "id": "art_069_02",
       "title": "stavak 7",
       "content": "stavak 7.) 18. no ćni rad maloljetnika ako je protivan odredbama ovoga Zakona ili nije osigurano da se takav rad obavlja pod nadzorom pun oljetne osobe (",
       "category": "working-time",
@@ -7236,7 +7237,7 @@
       "language": "hr"
     },
     {
-      "id": "art_070",
+      "id": "art_070_01",
       "title": ") 19",
       "content": ") 19. noćni rad radnika kod poslodavca kod koje g je rad organiziran u smjenama, koje uključuju i noćni rad, a ko ji radi u noćnoj smjeni uzastopce duže od jednog tjedna (",
       "category": "working-time",
@@ -7259,7 +7260,7 @@
       "language": "hr"
     },
     {
-      "id": "art_071",
+      "id": "art_071_01",
       "title": "stavak 3",
       "content": "stavak 3.). (3) Žalba izjavljena protiv rješenja iz ovoga članka ne odgađa njegovo izvršenje .",
       "category": "working-time",
@@ -7304,7 +7305,7 @@
       "language": "hr"
     },
     {
-      "id": "art_053",
+      "id": "art_053_01",
       "title": "stavak 3",
       "content": "stavak 3.) 2. ako radniku ne om ogući osposobljavanje na način propisan ovim Zakonom (",
       "category": "working-time",
@@ -7327,7 +7328,7 @@
       "language": "hr"
     },
     {
-      "id": "art_054",
+      "id": "art_054_01",
       "title": "stavak 4",
       "content": "stavak 4.) 3. ako sklopi ugovor o radu u kojem je pripravnički staž ugovoren u trajanju dužem o d Zakonom propisanoga (",
       "category": "contracts",
@@ -7350,7 +7351,7 @@
       "language": "hr"
     },
     {
-      "id": "art_057",
+      "id": "art_057_01",
       "title": ")",
       "content": "). (2) Novčanom kaznom od 130,00 do 390,00 eura za prekršaj iz stavka 1. ovoga članka kaz nit će se poslodavac fizička osoba i odgovorna osoba pravne osobe. (3) Ako je prekršaj iz stavka 1. ovoga članka počinjen u odnosu na maloljetnika, iznos novčane kazne uvećava se dvostruko . Teži prekršaji poslodavca",
       "category": "working-time",
@@ -7398,7 +7399,7 @@
       "language": "hr"
     },
     {
-      "id": "art_012",
+      "id": "art_012_01",
       "title": "stavci 1",
       "content": "stavci 1., 2. i 3.) 2. ako s istim radnikom sklopi više uzastopnih ugovora o radu na određeno vrijeme čije je ukupno trajanje, uključ ujući i prvi ugovor o radu, neprekinuto du že od tri godine, osim ako je to potrebno zbog zamjene priv remeno nenazočnog radnika, zbog dovršetka rada na projektu k oji uključuje financiranje iz fondova Europske unije ili je zbog nekog drugog objektivnog razlo ga dopušteno posebnim zakonom ili kolektiv nim ugovorom (",
       "category": "contracts",
@@ -7422,7 +7423,7 @@
       "language": "hr"
     },
     {
-      "id": "art_012",
+      "id": "art_012_02",
       "title": "stavci 4",
       "content": "stavci 4. i 7.) 3. ako s radnikom sklopi ugovor o radu na određeno vrijeme za sezonske poslove protivno odredbama ovoga Zakona (",
       "category": "contracts",
@@ -7446,7 +7447,7 @@
       "language": "hr"
     },
     {
-      "id": "art_012",
+      "id": "art_012_03",
       "title": "stavak 11",
       "content": "stavak 11.) 4. ako s radnikom sklopi ugovor o radu za stalne sezonske poslove koji se u odre đenim dijelovima kalendarske godine obavljaju u godišnjim r azdobljima s ukupnim trajanjem dužim od devet mjeseci (člana k 16. stavci 1. i 3.) 5. ako sklopi ugovor o radu s radnikom koji ne udovoljava posebnim uvjetima za zasnivanje radnog odnosa propisanim zakonom, drugim propisom, kolektivnim ugovorom ili pravilni kom o radu (",
       "category": "contracts",
@@ -7470,7 +7471,7 @@
       "language": "hr"
     },
     {
-      "id": "art_023",
+      "id": "art_023_01",
       "title": ") NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14",
       "content": ") NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . 6. ako prilikom postupka odabira kandidata za radno mjesto (razgovor, testiranje, anketiranje i slično) i sklapanja ugovora o radu od radnika traži podatke koji nisu u nepos rednoj vezi s radnim odnosom (",
       "category": "contracts",
@@ -7518,7 +7519,7 @@
       "language": "hr"
     },
     {
-      "id": "art_030",
+      "id": "art_030_01",
       "title": "stavak 2",
       "content": "stavak 2.) 9. ako radnika nakon isteka rodiljnog, roditeljskog, posvojiteljskog i očinskog dopusta ili dopusta ko ji je po sadržaju i načinu korištenja istovjetan pravu na očinski dopust, dopusta trudne radnice, dopusta radnice k oja je rodila ili radnice koja doji dijete, dopusta radi sk rbi i njege djeteta s težim smetnjama u razvoju te mirovanja radnog odnosa do treć e godine života djeteta u skladu s posebnim propisom, pod uvjetima propisanim ovim Zakonom, ne vrati na poslove na kojima je radio prije korištenja tih prava ili mu ne ponudi sklapanje ugovora o radu za obavljanje drugih odgovarajućih poslova (",
       "category": "contracts",
@@ -7542,7 +7543,7 @@
       "language": "hr"
     },
     {
-      "id": "art_036",
+      "id": "art_036_01",
       "title": "s tavci 1",
       "content": "s tavci 1. i 3.) 10. ako radnika koji je bio privremeno nesposoban za rad zbog ozljede ili ozljede na radu, bolesti i li profesionalne bolesti ne vrati na poslove na kojima je p rethodno radio ili mu ne ponudi sklapanje ugovora o radu za obavljanje drugih odgo varajućih poslova (",
       "category": "contracts",
@@ -7566,7 +7567,7 @@
       "language": "hr"
     },
     {
-      "id": "art_040",
+      "id": "art_040_01",
       "title": "stavak 1",
       "content": "stavak 1.) 11. ako radniku kod kojeg postoji smanjenje radne sposobnosti uz preostalu radnu sposobnost, smanjenje radne sposobnosti uz djelomičn i gubitak radne sposobnosti ili neposredna opasnost od nasta nka smanjenja radne sp osobnosti, u pisanom obliku ne ponudi sklapanje ugovora o radu za obavljanje poslova za koje je sposoban, a u moguć nosti je radniku osigurati obavljanje takvih poslova (člana k 41. stavak 1.) 12. ako korisniku ustupi istog radnika za obavljanje istih poslov a u neprekinutom razdoblju dužem od tri godine, osim u propisanim slučajevima (",
       "category": "contracts",
@@ -7590,7 +7591,7 @@
       "language": "hr"
     },
     {
-      "id": "art_048",
+      "id": "art_048_01",
       "title": "stavak 1",
       "content": "stavak 1.) 13. ako u prav nom prometu, poslovnim ispravama, na svakom dopisu ili ugov oru ne navede broj pod kojim je agencija upisana u evidencij u ministarstva (",
       "category": "contracts",
@@ -7611,7 +7612,7 @@
       "language": "hr"
     },
     {
-      "id": "art_052",
+      "id": "art_052_01",
       "title": "stavak 4",
       "content": "stavak 4.) 14. ako s osobom koja se stručno osposobljava za rad ne sklopi ugovor u pisanom obliku (",
       "category": "contracts",
@@ -7634,7 +7635,7 @@
       "language": "hr"
     },
     {
-      "id": "art_059",
+      "id": "art_059_01",
       "title": "stavak 5",
       "content": "stavak 5.) 15. ako radniku ne omogući korištenje stanke na način i pod uvjetima propisanim ovim Zakonom (",
       "category": "working-time",
@@ -7657,7 +7658,7 @@
       "language": "hr"
     },
     {
-      "id": "art_073",
+      "id": "art_073_01",
       "title": ") 16",
       "content": ") 16. ako radniku ne omogu ći korištenje dnevnog odmora na način i pod uvjetima propisanim ovim Zakonom (",
       "category": "working-time",
@@ -7705,7 +7706,7 @@
       "language": "hr"
     },
     {
-      "id": "art_075",
+      "id": "art_075_01",
       "title": ") 18",
       "content": ") 18. ako radniku ne omogući kor ištenje godišnjeg odmo ra na način i pod uvjetima propisanim ovim Zakonom, osim u slučaju prestanka ugovora o radu (",
       "category": "contracts",
@@ -7729,7 +7730,7 @@
       "language": "hr"
     },
     {
-      "id": "art_018",
+      "id": "art_018_08",
       "title": "a stavak 7",
       "content": "a stavak 7., članci 77., 78., 83. i 84. te",
       "category": "contracts",
@@ -7750,7 +7751,7 @@
       "language": "hr"
     },
     {
-      "id": "art_085",
+      "id": "art_085_02",
       "title": "stavci 2",
       "content": "stavci 2. i 4.) 19. ako radniku ne omogući korištenje plaćenog dopusta na način i pod uvjetima prop isanim ovim Zakonom (",
       "category": "leave",
@@ -7773,7 +7774,7 @@
       "language": "hr"
     },
     {
-      "id": "art_086",
+      "id": "art_086_01",
       "title": ") 20",
       "content": ") 20. ako radniku ne omogući korištenje neplaćenog dopusta za pružanje osobne skrbi na način i pod uvjetima propisanim ovim Zakonom (",
       "category": "leave",
@@ -7796,7 +7797,7 @@
       "language": "hr"
     },
     {
-      "id": "art_087",
+      "id": "art_087_02",
       "title": "stavak 3",
       "content": "stavak 3.) 21. ako radniku ne omogući pravo na odsutnost s posla u skladu s ovim Zakonom (",
       "category": "leave",
@@ -7820,7 +7821,7 @@
       "language": "hr"
     },
     {
-      "id": "art_087",
+      "id": "art_087_03",
       "title": "a stavak 1",
       "content": "a stavak 1.) 22. ako bez suglasnosti radnika svoje potraživanje prema radniku naplati uskratom i splate plaće ili nekog njezina dijela, odnosno uskratom isp late naknade plaće ili dijela naknade plaće (",
       "category": "leave",
@@ -7843,7 +7844,7 @@
       "language": "hr"
     },
     {
-      "id": "art_096",
+      "id": "art_096_01",
       "title": "stavak 1",
       "content": "stavak 1.) 23. ako prije i steka roka od šest mjeseci od dana dostave odluke o otkazu na istim poslovima zaposli drugog radnika, a nije ponudi o sklapanje ugovora o radu radniku kojem je otkazao iz posl ovno uvjetovanih razloga (",
       "category": "contracts",
@@ -7869,7 +7870,7 @@
       "language": "hr"
     },
     {
-      "id": "art_115",
+      "id": "art_115_01",
       "title": "stavci 5",
       "content": "stavci 5. i 6.) 24. ak o s podacima utvrđenim u postupku zaštite dostojanstva radnika ne postupa kao s tajnima (",
       "category": "salary",
@@ -7892,7 +7893,7 @@
       "language": "hr"
     },
     {
-      "id": "art_134",
+      "id": "art_134_02",
       "title": "stavak 10",
       "content": "stavak 10.) 25. ako onemogući radnik e u izboru radničkog vijeća (",
       "category": "salary",
@@ -7938,7 +7939,7 @@
       "language": "hr"
     },
     {
-      "id": "art_146",
+      "id": "art_146_01",
       "title": "stavak 3",
       "content": "stavak 3.) 27. ako ne obavijesti radničko vijeće o pitanjima o kojima ga je dužan obav ijestiti na način propisan ovim Zakonom (",
       "category": "salary",
@@ -7959,7 +7960,7 @@
       "language": "hr"
     },
     {
-      "id": "art_149",
+      "id": "art_149_01",
       "title": ") 28",
       "content": ") 28. a ko se s radničkim vijećem ne savjetuje o pitanjima o kojima je dužan savjetovati s e na način propisan ovim Zakonom (",
       "category": "salary",
@@ -7980,7 +7981,7 @@
       "language": "hr"
     },
     {
-      "id": "art_150",
+      "id": "art_150_01",
       "title": ") 29",
       "content": ") 29. ako bez prethodne suglasnosti radničkog vijeća donese odluku koj u može donijeti samo uz suglasnost radničkog vijeća (",
       "category": "salary",
@@ -8001,7 +8002,7 @@
       "language": "hr"
     },
     {
-      "id": "art_151",
+      "id": "art_151_01",
       "title": "stavak 1",
       "content": "stavak 1.) 30. ako ne osigura uvjete za rad radničkog vijeća (",
       "category": "termination",
@@ -8022,7 +8023,7 @@
       "language": "hr"
     },
     {
-      "id": "art_156",
+      "id": "art_156_01",
       "title": ") NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14",
       "content": ") NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . 31. ako ne omogući imenovanom, odnosno izabranom predstavniku radnika članstvo u organu poslodavca, odnosno drugom o dgovarajućem tijelu trgovačkog društva, zadruge ili javne u stanove (",
       "category": "termination",
@@ -8045,7 +8046,7 @@
       "language": "hr"
     },
     {
-      "id": "art_164",
+      "id": "art_164_01",
       "title": ") 32",
       "content": ") 32. ako pokuša ostvariti ili ostvari z abranjeni nadzor nad utemeljenjem i djelovanjem sindikata ili udruge sindikata više razine (",
       "category": "termination",
@@ -8066,7 +8067,7 @@
       "language": "hr"
     },
     {
-      "id": "art_183",
+      "id": "art_183_01",
       "title": "stavak 1",
       "content": "stavak 1.) 33. ako ne obračuna, n e ustegne ili ne uplati sindikalnu članarinu (",
       "category": "termination",
@@ -8087,7 +8088,7 @@
       "language": "hr"
     },
     {
-      "id": "art_189",
+      "id": "art_189_01",
       "title": ") 34",
       "content": ") 34. ako, u slučaju kad a je to dužan učiniti, ne dostavi svaki kolektivni ugovor ili svaku promjenu kolektivnog ugovora ministarstvu ili ga ne dostavi u propisanom roku (",
       "category": "contracts",
@@ -8111,7 +8112,7 @@
       "language": "hr"
     },
     {
-      "id": "art_201",
+      "id": "art_201_02",
       "title": "stavak 1",
       "content": "stavak 1.) 35. a ko odbije sudjelovati u postupku mirenja predviđenim ovim Z akonom (",
       "category": "other",
@@ -8132,7 +8133,7 @@
       "language": "hr"
     },
     {
-      "id": "art_206",
+      "id": "art_206_01",
       "title": "st avak 1",
       "content": "st avak 1.) 36. ako radnika koji je organ izirao štrajk ili sudjelovao u štrajku organiziranom u skladu s odredbama zakona, kolektivnog ugovora i pravilima sindikata stavi u nepov oljniji položaj od drugih radnika (",
       "category": "contracts",
@@ -8156,7 +8157,7 @@
       "language": "hr"
     },
     {
-      "id": "art_215",
+      "id": "art_215_01",
       "title": "stavak 2",
       "content": "stavak 2.) 37. ako na zahtjev sind ikalnog povjerenika, odnosno sindikalnog predstavnika i inspekcije u području rada tijekom provođenja nadzora ne omogući dostupnost zatraženih podataka (",
       "category": "supervision",
@@ -8177,7 +8178,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_23",
       "title": "g stavak 6",
       "content": "g stavak 6. ) 38. ako pri obradi osobnih podataka radnika koji rade put em digitalne radne pla tforme obrađuje podatke koje ne smije obrađivati ili prikuplja podatke koje ne smije prikupljati (",
       "category": "other",
@@ -8200,7 +8201,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_24",
       "title": "j) 39",
       "content": "j) 39. ako radi neometane profesionalne komunikacije osobama koje kod njega obavljaju poslove ne osigura mogućnost uspostave kontakata (",
       "category": "other",
@@ -8221,7 +8222,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_25",
       "title": "k) 40",
       "content": "k) 40. ako s radnikom sklopi ugovor o radu putem digitalne radne platforme kojim se ugovara rad po pozivu poslodavca bez podatka o najmanjem broju zajamčenih plaćenih radnih s ati tjedno ili s brojem zajamčenih plaćenih radnih sati tjedno manjim od propisan og (",
       "category": "contracts",
@@ -8245,7 +8246,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_26",
       "title": "l stavci 2",
       "content": "l stavci 2. i 4.) 41. a ko digitalna radna platforma ili agregator ne provede provjeru na propisani način i u propisanim rokovima koju je omogućilo nadležno tije lo koje putem sustava ePorezna vodi službenu evidenciju o s vim isplatiteljima i o isplaćenim primicima ili ako fizičkoj osobi za koju je utvrdila da je imala primitak za obavljeni rad u pojedinom kvartalu kalendarske godine veći od limitirane visine ne pon udi sklapanje ugovora o radu (",
       "category": "contracts",
@@ -8269,7 +8270,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_27",
       "title": "n stavci 2",
       "content": "n stavci 2., 3., 4 . i 6.) 42. ako kao di gitalna radna platforma ili agregator u pravnom prometu, u poslovnim ispravama, ne navede broj pod kojim je upisana u evidenciju ministarstva (",
       "category": "other",
@@ -8290,7 +8291,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_28",
       "title": "p stavak 4",
       "content": "p stavak 4.) 43. ako kao digitalna radna platforma ili agregator ne dostavi poda tke u evidenciju minis tarstva (",
       "category": "other",
@@ -8311,7 +8312,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_29",
       "title": "p stavak 7",
       "content": "p stavak 7.). (2) Novčanom kaznom od 530,00 do 790,00 eura za prekršaj iz stavka 1. ovoga članka kaznit će se poslodavac fizička osoba i odgovorna osoba pr avne osobe. (3) Novčanom kaznom od 4110,00 do 7960,00 eura za prekršaj iz stavka 1. točke 1. ovoga članka kaznit će se korisnik pravna osoba koja je koristila rad istog ustupljenog radnika za obavljanje istih poslova u neprekinutom razdoblju dužem od tri g odine, osim u propisanim slučajevima (",
       "category": "violations",
@@ -8335,7 +8336,7 @@
       "language": "hr"
     },
     {
-      "id": "art_048",
+      "id": "art_048_02",
       "title": "stavak 1",
       "content": "stavak 1.) . (4) Novčanom kaznom od 530,00 do 790,00 eura za prekršaj iz stavka 1. točke 1. ovoga članka kaznit će se korisnik fizička osoba koja je koristila rad istog ustupljenog radnika za obavljanje istih poslova u neprekinutom razdoblju dužem od tri godine, osim u propisanim slučajev ima (",
       "category": "contracts",
@@ -8358,7 +8359,7 @@
       "language": "hr"
     },
     {
-      "id": "art_048",
+      "id": "art_048_03",
       "title": "stavak 1",
       "content": "stavak 1.). (5) Ako je prekršaj iz stavka 1. ovoga članka počinjen u odnosu na maloljetnika, iznos novčane kazne uvećava se dvostruko. (6) Za prekršaje iz stav ka 1. točke 29. ovoga članka poslodavac pravna osoba odgova ra i ako ne postoji pr ekršajna odgovornost odgovorne osobe . Najteži prekršaji poslodavca",
       "category": "contracts",
@@ -8404,7 +8405,7 @@
       "language": "hr"
     },
     {
-      "id": "art_005",
+      "id": "art_005_01",
       "title": ") 2",
       "content": ") 2. ako svog radnika privremeno ustupi u društvo koje s njim nije povezano u smislu posebnog propisa o trgovačkim društvima ili ga ustupi u tr ajanju dužem od neprekidno šest mjeseci, ili ga ust upi bez sklopljenog sporazuma i pisane suglasnosti radnika na sporazum (",
       "category": "general",
@@ -8427,7 +8428,7 @@
       "language": "hr"
     },
     {
-      "id": "art_010",
+      "id": "art_010_01",
       "title": "stavak 3",
       "content": "stavak 3.) 3. ako u slučaju kada ug ovor o radu nije sklopljen u pisanom obliku, prije početka rada ne izda radniku pisanu potvrdu o sklopljenom ugovoru (",
       "category": "general",
@@ -8451,7 +8452,7 @@
       "language": "hr"
     },
     {
-      "id": "art_014",
+      "id": "art_014_03",
       "title": "stavak 3",
       "content": "stavak 3. ) 4. ako radniku u propisanim rokovima ne dostavi primjerak ugovora o radu i primjerak prijave na obvezno mirovinsko i zdravstveno osiguranje (",
       "category": "contracts",
@@ -8476,7 +8477,7 @@
       "language": "hr"
     },
     {
-      "id": "art_014",
+      "id": "art_014_04",
       "title": "stavak 5",
       "content": "stavak 5.) NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . 5. ako sklopi ugovor o radu na izdvojenom mjestu rada za poslove za koje ga ne smije sklopi ti (",
       "category": "contracts",
@@ -8499,7 +8500,7 @@
       "language": "hr"
     },
     {
-      "id": "art_017",
+      "id": "art_017_07",
       "title": "stavak 4",
       "content": "stavak 4.) 6. ako svog radnika, kojeg u okviru privremenog i povremenog prekograničnog pružanja usluga, upućuje na rad u inozemstvo u društvo koje je s njim povezano u smislu posebnog propisa o trgovačkim društvima bez pisane suglasnosti radnika (",
       "category": "contracts",
@@ -8522,7 +8523,7 @@
       "language": "hr"
     },
     {
-      "id": "art_018",
+      "id": "art_018_09",
       "title": "stavak 5",
       "content": "stavak 5.) 7. ako radniku prije odlaska u inozemstvo ne dostavi primjerak prijave na obvezno zdravstv eno osiguranje tijekom trajanja rada u inozemst vu, ako ga je na to osiguranje dužan osigurati prema posebnom propisu (",
       "category": "contracts",
@@ -8545,7 +8546,7 @@
       "language": "hr"
     },
     {
-      "id": "art_018",
+      "id": "art_018_10",
       "title": "stavak 7",
       "content": "stavak 7. ) 8. ako ugovor o dodatnom radu sklopi s radnikom koji radi na poslovima s posebnim uvjetima rada u skladu s propisima zaštite na radu, radnikom koji radi u skraćeno m radnom vremenu iz članka 64. ovoga Zakona te radnikom kojemu se prema posebnom propisu o mirovinskom osiguranju staž osiguranja računa u povećanom trajanju (",
       "category": "contracts",
@@ -8569,7 +8570,7 @@
       "language": "hr"
     },
     {
-      "id": "art_018",
+      "id": "art_018_11",
       "title": "a stavak 2",
       "content": "a stavak 2.) 9. ako s radnikom sklopi ug ovor o dodatnom radu s ugovorenim radnim vremen om u trajanju dužem od propisanog (",
       "category": "contracts",
@@ -8593,7 +8594,7 @@
       "language": "hr"
     },
     {
-      "id": "art_018",
+      "id": "art_018_12",
       "title": "b stavak 4",
       "content": "b stavak 4.) 10. ako rad radnika koji obavlja dodatni rad, a raspored radnog vremena nije utvrđen kao nejednaki, traje duže od osam sati tjedno, uključujući prekovr emeni rad, ili ako rad radnika koji obavlja dod atni rad u nejednako utvrđenom rasporedu radnog vremena traje duže od 16 sati tjedno, uklju čujući prekovremeni rad (",
       "category": "contracts",
@@ -8616,7 +8617,7 @@
       "language": "hr"
     },
     {
-      "id": "art_018",
+      "id": "art_018_13",
       "title": "b stavak 5",
       "content": "b stavak 5.) 11. ako u razdoblju od četiri uzastopna mjeseca, odnosno šest mjeseci, ako je to ugovoreno kolektivnim ugovorom, utvrdi rad radnika u dodatnom radu koji bi trajao duže od prosječnih osam sati tjedno, uključuj ući i prekovremeni rad (",
       "category": "contracts",
@@ -8640,7 +8641,7 @@
       "language": "hr"
     },
     {
-      "id": "art_018",
+      "id": "art_018_14",
       "title": "b stavak 7",
       "content": "b stavak 7.) 12. ako utvrdi nejednaki raspored rada radnika u dodatnom radu bez njeg ove pisane suglasnosti o dobrovoljnom pristanku na rad duži od osam sati tjedno ili ako na zahtjev inspektora rada ne dostavi popis radnik a koji su dali pisanu izjavu o dobrovoljnom pristanku na takav rad (",
       "category": "contracts",
@@ -8663,7 +8664,7 @@
       "language": "hr"
     },
     {
-      "id": "art_018",
+      "id": "art_018_15",
       "title": "b stavci 10",
       "content": "b stavci 10. i 12.) 13. ako zaposli osob u mlađu od 15 godina ili osobu s 15 i stariju o d 15, a mlađu od 18 godina koja pohađa obvezno osnovno obrazovanje ili ako dozvoli rad djet eta i maloljetnika koji pohađa obvezno osnovno obrazovanje (",
       "category": "contracts",
@@ -8684,7 +8685,7 @@
       "language": "hr"
     },
     {
-      "id": "art_019",
+      "id": "art_019_05",
       "title": "a stavak 3",
       "content": "a stavak 3.) 14. ako na poslovima v ezanima za rad i provođenje aktivnosti s djetet om i maloljetnikom zaposli osobu koja je pravomoćno osuđena za neko od kaznenih djela proti v spolne slobode, spolnog zlostavljanja i iskorištavanja djeteta, a koja su prije nego što su počinjena, bila propisan a zakonom ili međunarodnim pravom, ili se proti v nje vodi kazneni postupak za navedena djela, ili ne onemogući kontakt s djetetom ili malo ljetnikom osobi za koju ima saznanja da postoji zapreka (",
       "category": "contracts",
@@ -8708,7 +8709,7 @@
       "language": "hr"
     },
     {
-      "id": "art_019",
+      "id": "art_019_06",
       "title": "b stavci 1",
       "content": "b stavci 1. i 3.) 15. ako zaposli maloljetnika bez pisanog ovlaštenja njegova zakonskog zastupnika ili odobrenja tijela nadležnog za poslove socijalne skrbi (",
       "category": "contracts",
@@ -8729,7 +8730,7 @@
       "language": "hr"
     },
     {
-      "id": "art_020",
+      "id": "art_020_01",
       "title": "stavci 1",
       "content": "stavci 1. i 2.) 16. ako zaposli maloljetnika na poslovima koji mogu ugroziti njegovu sigurnost, zdravlje, ćudoređe ili razvoj ili ga zapos li prije prethodnog utvrđivanja zdravstvene spo sobnosti (",
       "category": "contracts",
@@ -8750,7 +8751,7 @@
       "language": "hr"
     },
     {
-      "id": "art_021",
+      "id": "art_021_02",
       "title": "stavci 1",
       "content": "stavci 1. i 3.) 17. ako zbog trudnoće odbije zaposliti ženu ili joj, p rotivno odredbama ovoga Zakona, zbog trudnoće, rođenja ili dojenja djeteta u smislu posebnog propisa ponudi sklapanje izmijenjenog ugovora o radu pod nepovoljnijim u vjetima (",
       "category": "contracts",
@@ -8773,7 +8774,7 @@
       "language": "hr"
     },
     {
-      "id": "art_030",
+      "id": "art_030_02",
       "title": "stavak 1",
       "content": "stavak 1.) 18. ako za vrijeme trudnoće, korištenja rodiljnog, roditeljs kog, posvojiteljskog i očinskog dopusta ili dopusta koji je po sadržaju i načinu korištenja istovjetan pravu na očinsk i dopust, rada s polovicom punog radnog vremena , rada s polovicom punog radnog vremena radi pojačane njege djeteta, dopusta trudne radnice , dopusta radnice koja je rodila ili radnice koja doji dijete te dopusta ili rada s polovicom punog radnog vremena rad i skrbi i njege djeteta s težim smetnjama u raz voju u skladu s posebnim propisom, odnosno u roku od 15 dana od dana prestanka trudnoće ili prestanka korištenja tih prava, otkaže ugovor o radu trudnici ili radniku koji se koristi nekim od tih prava (",
       "category": "contracts",
@@ -8798,7 +8799,7 @@
       "language": "hr"
     },
     {
-      "id": "art_034",
+      "id": "art_034_01",
       "title": "stavak 1",
       "content": "stavak 1.) 19. ako radniku koji je zbog ozl jede na radu ili profesionalne bolesti privremeno nesposoban za rad, zbog liječenja ili oporavka, otkaže ugovor o radu u razdoblju te nesposobnosti (",
       "category": "contracts",
@@ -8822,7 +8823,7 @@
       "language": "hr"
     },
     {
-      "id": "art_038",
+      "id": "art_038_01",
       "title": "stavak 1",
       "content": "stavak 1.) 20. ako kao poslodavac obavlja poslove ustupanja radnika korisnicima, a nije kao agen cija upisan u evidenciju ministarstva (",
       "category": "contracts",
@@ -8846,7 +8847,7 @@
       "language": "hr"
     },
     {
-      "id": "art_044",
+      "id": "art_044_03",
       "title": "stavak 3",
       "content": "stavak 3.) 21. ako obavlja poslove ustupa nja radnika korisniku prije upisa u odgovarajuću evidenciju ministarstva ili pri obavljanju poslova ustupanja radniku naplati naknadu za njegovo ustupanje korisniku, odnosno naknadu u slučaju sklapanja ugovora o radu između ustup ljenog radnika i korisnika (",
       "category": "contracts",
@@ -8870,7 +8871,7 @@
       "language": "hr"
     },
     {
-      "id": "art_044",
+      "id": "art_044_04",
       "title": "stavci 5",
       "content": "stavci 5. i 6.) 22. ako ustupi radnika bez sklopljenog ugovora o ustupanju ili ga sklopi u slučajevima ka da ga ne može sklopiti (",
       "category": "contracts",
@@ -8894,7 +8895,7 @@
       "language": "hr"
     },
     {
-      "id": "art_045",
+      "id": "art_045_02",
       "title": "stavci 1",
       "content": "stavci 1. i 4.) NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . 23. ako radnika ne obavijesti o rasporedu ili promjeni rasporeda radnog vremena koji mo ra sadržavati podatak o radnom vremenu radnika iskazanom u danima i satima, odnosno danima, tjednima i mjesecima, najm anje tjedan dana unaprijed (",
       "category": "contracts",
@@ -8917,7 +8918,7 @@
       "language": "hr"
     },
     {
-      "id": "art_060",
+      "id": "art_060_02",
       "title": "a stavak 5",
       "content": "a stavak 5.) 24. ako sklopi ugovor o radu u kojem je puno radno vrijeme radnika ugovoreno u trajanju dužem od Zakonom dopuštenog (",
       "category": "contracts",
@@ -8942,7 +8943,7 @@
       "language": "hr"
     },
     {
-      "id": "art_061",
+      "id": "art_061_01",
       "title": "stavak 1",
       "content": "stavak 1.) 25. ako od radnika zahtijeva da na poslovima, na kojima uz primjen u mjera zaštite zdravlja i sigurnosti na radu n ije moguće zaštititi radnika od štetnih utjecaja, radi duže od skraćenoga radnoga vremena (",
       "category": "working-time",
@@ -8965,7 +8966,7 @@
       "language": "hr"
     },
     {
-      "id": "art_064",
+      "id": "art_064_02",
       "title": "stavak 3",
       "content": "stavak 3.) 26. ako rad radnika koji radi prekovremeno traje ukupno duže od 50 sati tjedno ili ako prekovrem eni rad pojedinog radnika traje duže od sto osa mdeset sati godišnje, ili ako traje duže od 250 sati godišnje kada je prekovremeni rad duži od 180 sati godišnje ugovoren kolektivnim ugovorom (",
       "category": "contracts",
@@ -8989,7 +8990,7 @@
       "language": "hr"
     },
     {
-      "id": "art_065",
+      "id": "art_065_04",
       "title": "stavci 3",
       "content": "stavci 3. i 4.) 27. ako naredi prekovremeni rad malolj etnika (",
       "category": "working-time",
@@ -9010,7 +9011,7 @@
       "language": "hr"
     },
     {
-      "id": "art_065",
+      "id": "art_065_05",
       "title": "stavak 5",
       "content": "stavak 5.) 28. ako trudnici, roditelju s djetetom do osam godina života te radniku koji radi u nepunom radnom vremenu k od više poslodavaca, bez njihove pisane izjave o dobrovoljnom pristanku na takav rad, naredi prekovremeni rad, osim u slučaju više sile (",
       "category": "working-time",
@@ -9034,7 +9035,7 @@
       "language": "hr"
     },
     {
-      "id": "art_065",
+      "id": "art_065_06",
       "title": "stavak 6",
       "content": "stavak 6.) 29. ak o radniku koji radi u dodatnom radu naloži prekovremeni rad bez njegove pisane izjave o dob rovoljnom pristanku na takav rad, osim u slučaju više sile (",
       "category": "working-time",
@@ -9057,7 +9058,7 @@
       "language": "hr"
     },
     {
-      "id": "art_065",
+      "id": "art_065_07",
       "title": "stavak 7",
       "content": "stavak 7.) 30. ako radniku koji kod njega obavl ja dodatan rad naloži prekovremeni rad, osim u slučaju više sile (",
       "category": "working-time",
@@ -9080,7 +9081,7 @@
       "language": "hr"
     },
     {
-      "id": "art_065",
+      "id": "art_065_08",
       "title": "stavak 8",
       "content": "stavak 8.) 31. ako u slučaju nejednakog rasporeda radnog vrem ena utvrdi rad radnika duži od 50 sati u tjednu, uključujući i prekovremeni rad, ili utvrdi rad radnika duži od 60 sat i u tjednu, uključujući i prekovremeni rad kada je to ugovoreno kolektivnim ugovorom, ili u razdoblju od četiri uzastopna mjeseca, odnosno šest mjeseci, ako je to ugovoreno kolektivnim ugovorom, utvrdi rad radnika duži od prosječno 48 sati tjedno, uključuj ući i prekovremeni rad (",
       "category": "contracts",
@@ -9104,7 +9105,7 @@
       "language": "hr"
     },
     {
-      "id": "art_066",
+      "id": "art_066_01",
       "title": "stavci 2",
       "content": "stavci 2., 3 . 4. i 6.) 32. ako u slučaju kada preraspodjela radnog vremena nije ugovorena i uređena kol ektivnim ugovorom, odnosno sporazumom sklopljenim između radničkog vijeća i poslodavca, ne utvrdi plan preraspodijelje nog radnog vremena s propisanim sadržajem, ili ako takav p lan preraspodjele prethodno ne dostavi inspektoru rada (",
       "category": "contracts",
@@ -9127,7 +9128,7 @@
       "language": "hr"
     },
     {
-      "id": "art_067",
+      "id": "art_067_01",
       "title": "stavak 2",
       "content": "stavak 2.) 33. ako rad radnika u preraspodijeljenom radnom vremenu traje duže od Zakonom dopuštenog (",
       "category": "working-time",
@@ -9150,7 +9151,7 @@
       "language": "hr"
     },
     {
-      "id": "art_067",
+      "id": "art_067_02",
       "title": "stavci 4",
       "content": "stavci 4., 5. i 8.) 34. ako na zahtjev inspektora rada ne dostavi popis radni ka koji su dali pisanu izjavu o dobrovoljnom pristanku na rad u preraspodijeljen om radnom vremenu (",
       "category": "working-time",
@@ -9171,7 +9172,7 @@
       "language": "hr"
     },
     {
-      "id": "art_067",
+      "id": "art_067_03",
       "title": "stavak 7",
       "content": "stavak 7.) 35. ako maloljetniku utvrdi raspored radnog vremena duže od osam sati tijekom razdoblja od 24 sata (",
       "category": "working-time",
@@ -9192,7 +9193,7 @@
       "language": "hr"
     },
     {
-      "id": "art_068",
+      "id": "art_068_05",
       "title": "stavak 1",
       "content": "stavak 1.) 36. ako trudn ici, roditelju s djetetom do osam godina života, radniku koji radi s polovicom p unog radnog vremena ili radi s polovicom punog radnog vremena radi pojačane njege djeteta ili radi s polovicom punog r adnog vremena radi skrbi i njege djeteta s težim smetnjama u razvoju prema posebnom propisu, radniku koji radi u nepunom radnom vremenu ko d više poslodavaca te radniku koji radi u dodatnom radu, bez njihove pisane izjave o dobrovoljnom pristanku na takav r ad, naredi rad u nejednakom rasporedu i prerasp odjeli radn og vremena (",
       "category": "working-time",
@@ -9216,7 +9217,7 @@
       "language": "hr"
     },
     {
-      "id": "art_068",
+      "id": "art_068_06",
       "title": "stavak 2",
       "content": "stavak 2.) 37. ako noćnom radniku koji obavlja noćni rad utvrdi tijekom razdoblja od četiri mjeseca rad duži od prosječno osam sati tijekom svakih 24 sata (",
       "category": "working-time",
@@ -9239,7 +9240,7 @@
       "language": "hr"
     },
     {
-      "id": "art_069",
+      "id": "art_069_03",
       "title": "stavak 6 ",
       "content": "stavak 6 .) 38. ako noćnom radniku koji je na temelju procjene opas nosti u radu izložen osobitoj opasnosti ili teškom fizičkom ili mentalnom naporu ne utvrdi raspored radnog vremena tako da ne radi više od osam sati u razdoblju od 24 sata u kojem radi noću (",
       "category": "working-time",
@@ -9262,7 +9263,7 @@
       "language": "hr"
     },
     {
-      "id": "art_069",
+      "id": "art_069_04",
       "title": "stavak 7",
       "content": "stavak 7.) 39. ako protivno odredbama ovoga Zakona mal oljetniku naredi noćni rad ili ne osigura da se noćni rad maloljetnika obavlja p od nadzorom punoljetne osobe (",
       "category": "working-time",
@@ -9283,7 +9284,7 @@
       "language": "hr"
     },
     {
-      "id": "art_070",
+      "id": "art_070_02",
       "title": "stavci 1",
       "content": "stavci 1. i 2.) 40. ako u slučaju kada je rad organiziran u smjenama koje ukl jučuju i noćni rad, ne osigura izmjenu smjena tako da radnik u noćnoj smjeni radi uzastopce najduže jedan tjedan (",
       "category": "working-time",
@@ -9306,7 +9307,7 @@
       "language": "hr"
     },
     {
-      "id": "art_071",
+      "id": "art_071_02",
       "title": "stavak 3",
       "content": "stavak 3.) 41. ako noćnom radniku prije početka ili redovito tijekom trajanja toga rada ne omogući zdravstveni pregled u skladu s posebnim propisom (",
       "category": "working-time",
@@ -9329,7 +9330,7 @@
       "language": "hr"
     },
     {
-      "id": "art_072",
+      "id": "art_072_01",
       "title": "stavak 3",
       "content": "stavak 3.) 42. ako noćnom rad niku za kojeg je zdravstvenim pregledom obavljenim prije početka toga rada ili r edovitim pregledom tijekom njegova trajanja utvrđeno da zbog takvog rada ima zdravstvenih problema, rasporedom radnog vremena ne osigura obavljanje istih poslova izvan noćnog r ada (",
       "category": "working-time",
@@ -9350,7 +9351,7 @@
       "language": "hr"
     },
     {
-      "id": "art_072",
+      "id": "art_072_02",
       "title": "stavak 6",
       "content": "stavak 6.) 43. ako noćnom radniku za kojeg je zdravstvenim pregl edom obavljenim prije početka toga rada ili redovitim pregledom tijekom njegova trajanja utvrđeno da zbog takvog rada ima zdravstvenih problema, a rasporedom radnog NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . vremena ne može osigurati obavljanje istih poslova izvan noćnog rada, ne ponudi sklapanje u govora o radu za obavljanje poslova izvan noćnog rada za koje je sposoban, a koji što je više moguće odgovaraju poslov ima na kojima je radnik prethodno radio (",
       "category": "contracts",
@@ -9373,7 +9374,7 @@
       "language": "hr"
     },
     {
-      "id": "art_072",
+      "id": "art_072_03",
       "title": "stavak 7",
       "content": "stavak 7.) 44. ako s radnikom sklopi sporazum o odricanju od prava na godišnji odmor, odnosno o isplati naknade umjesto korištenja godišnjeg odmora (",
       "category": "working-time",
@@ -9397,7 +9398,7 @@
       "language": "hr"
     },
     {
-      "id": "art_080",
+      "id": "art_080_01",
       "title": ") 45",
       "content": ") 45. ako plaću radnika ne ugovori ili ne utv rdi u brutoiznosu (",
       "category": "contracts",
@@ -9421,7 +9422,7 @@
       "language": "hr"
     },
     {
-      "id": "art_090",
+      "id": "art_090_02",
       "title": "b stavak 1",
       "content": "b stavak 1.) 46. a ko radniku kojem na dan dospjelosti nije isplatio plaću, naknadu plaće, otpremninu ili nakn adu za neiskorišteni godišnji odmor, ili ih nije isplatio u cijelosti, ne dostavi dva obračuna od kojih je jedan obrač un u kojem će biti iskazan ukupan iznos plaće, naknade pla će, otpremnine ili naknade za neiskorišteni godišnji odmor, a drugi obračun u ko jem će biti iskazan iznos plaće ili dijela plaće, naknade plaće, otpremnine ili naknade za neiskorišteni godišnji odmo r koji je bio dužan isplatiti, sa sadržajem u s kladu s pra vilnikom iz članka 93. stavka 6. ovoga Zakona (",
       "category": "leave",
@@ -9445,7 +9446,7 @@
       "language": "hr"
     },
     {
-      "id": "art_093",
+      "id": "art_093_03",
       "title": "stavci 2",
       "content": "stavci 2. i 6.) 47. ak o otkaz nije u pisanom obliku, nije obrazložen ili ako nije dostavljen radniku (",
       "category": "leave",
@@ -9469,7 +9470,7 @@
       "language": "hr"
     },
     {
-      "id": "art_120",
+      "id": "art_120_01",
       "title": ") 48",
       "content": ") 48. ako u potvrdi o zapos lenju, osim podataka o vrsti poslova i trajanju radnog odn osa, naznači nešto što bi radniku otežalo sklapanje novog ugovora o radu (",
       "category": "contracts",
@@ -9493,7 +9494,7 @@
       "language": "hr"
     },
     {
-      "id": "art_130",
+      "id": "art_130_02",
       "title": "stavak 3",
       "content": "stavak 3.) 49. ako u slučaju prenošenja ugovora o radu na novog poslodavca potpuno i istinito, pisano ne izvijes ti novog poslodavca o pravima radnika čiji se u govori o ra du prenose (",
       "category": "contracts",
@@ -9517,7 +9518,7 @@
       "language": "hr"
     },
     {
-      "id": "art_137",
+      "id": "art_137_01",
       "title": "stavak 4",
       "content": "stavak 4.) 50. ako se kao digitalna radna platforma ili agregator, pod uvjetima propisanim ovim Zakonom, ne upiše u evidenciju ministarstva (",
       "category": "salary",
@@ -9538,7 +9539,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_30",
       "title": "c stavak 4",
       "content": "c stavak 4.) 51. ako k ao agregator, pri obavljanju poslova posredovanja za digit alnu radnu platformu, radniku naplati naknadu za posredovanje (",
       "category": "other",
@@ -9561,7 +9562,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_31",
       "title": "c stav ak 6",
       "content": "c stav ak 6.). (2) Novčanom kaznom od 920,00 do 1320,00 eura za prekršaj iz stavka 1. ovoga članka kaznit će se poslodavac fi zička osoba i odgovorna osoba pravne osobe. (3) Novčanom k aznom od 8090,00 do 13.270,00 eura kaznit će se pravna osoba koja organizira sud jelovanje djeteta i maloljetnika koji pohađa obvezno osnovno obrazovanje uz naplatu u aktivnostima snimanja filmova, o glašavanja, pripremanja i izvođenja umjetničkih, scenskih ili sličnih kulturnih djela te sportskih natjecanja, na način i u opsegu koji ne ugrožava njegovo zdravlje, sigurnost, ćudoređe, školovanje ili razvoj bez prethodnog odobrenja tijela nadležnog za poslove socijalne skrbi (",
       "category": "violations",
@@ -9584,7 +9585,7 @@
       "language": "hr"
     },
     {
-      "id": "art_019",
+      "id": "art_019_07",
       "title": "a stavak 5",
       "content": "a stavak 5.). (4) Novčano m kaznom od 920,00 do 1320,00 eura kaznit će se fizička osoba koja organizira su djelovanje djeteta i maloljetnika koji pohađa obvezno osnovno obrazovanje uz naplatu u aktivnostima snimanja filmova, oglašavanja, pripremanja i izvođenja umjetničkih, scenskih ili sličnih kulturnih djela te sportskih natjecanja, na način i u opsegu koji ne ugrožava njegovo zdravlje, sigurnost, ćudoređe, školovanje ili razvoj bez prethodnog odobrenja tijela nadležnog za poslove socijalne skrbi (",
       "category": "contracts",
@@ -9605,7 +9606,7 @@
       "language": "hr"
     },
     {
-      "id": "art_019",
+      "id": "art_019_08",
       "title": "a stavak 5",
       "content": "a stavak 5.). (5) Novčan om kaznom od 8090,00 do 13.270,00 eura kaznit će se pravna osoba koja organizira aktivnosti u kojima sudjeluju djeca i maloljetnici i ne onemogući kontakt s djetetom ili maloljetnikom osobi za koju ima saznanja da postoji propisana zapreka (",
       "category": "contracts",
@@ -9626,7 +9627,7 @@
       "language": "hr"
     },
     {
-      "id": "art_019",
+      "id": "art_019_09",
       "title": "b sta vak 3",
       "content": "b sta vak 3.). (6) Novčanom kaznom od 920,00 do 1320,00 eura kaznit će se fizička osob a koja organizira aktivnosti u kojima sudjeluju djeca i maloljetnici i ne onemogući kontakt s djetetom ili maloljetnik om osobi za koju ima saznanja da postoji propis ana zapreka (",
       "category": "contracts",
@@ -9647,7 +9648,7 @@
       "language": "hr"
     },
     {
-      "id": "art_019",
+      "id": "art_019_10",
       "title": "b stavak 3",
       "content": "b stavak 3.). (7) Novčanom kaznom od 8090,00 do 13.270,00 eura za pr ekršaj iz stavka 1. točke 1. ovoga članka kaznit će se korisnik pravna osoba koja ne vodi evidenciju radnog vremena za ustupljene radnike za razdoblje u kojem su joj ustupljeni , ako je takvu obvezu preuzela ugovorom o ustupanju radnika, i odgovorna osoba p ravne osobe (",
       "category": "contracts",
@@ -9671,7 +9672,7 @@
       "language": "hr"
     },
     {
-      "id": "art_045",
+      "id": "art_045_03",
       "title": "stavak 5",
       "content": "stavak 5.). (8) Novčanom kaznom od 920,00 do 1320,00 eura kaznit će se korisnik fizička osoba koja ne vodi evidenciju radnog vremena za ustup ljene radni ke za razdoblje u kojem su joj ustupljeni, ako je takvu obvezu preuzela ugovorom o ustupanju radnika (",
       "category": "contracts",
@@ -9695,7 +9696,7 @@
       "language": "hr"
     },
     {
-      "id": "art_045",
+      "id": "art_045_04",
       "title": "stavak 5",
       "content": "stavak 5.). (9) Novčanom kaznom od 8090,00 do 13.270,00 eura kaznit će se korisnik pr avna osoba ako pri sklapanju ugovora iz članka 45. ovoga Zakona agenciju potpuno i istinito, pisano ne izvijesti o uvjetima rada radnika z aposlenih kod korisnika na poslovima koje će obavljati ustupljeni radnik (",
       "category": "contracts",
@@ -9719,7 +9720,7 @@
       "language": "hr"
     },
     {
-      "id": "art_050",
+      "id": "art_050_02",
       "title": "stavak 2",
       "content": "stavak 2.). (10) Novčanom kaznom od 920,00 do 1320,00 eura kaznit će se korisnik fizička osoba ako pri sklapanju ugovora iz članka 45. ovoga Zakona agenciju potpuno i isti nito, pisano ne izvijesti o uvjetima rada rad nika zaposlenih kod korisnika na poslovima koje će obavljati ustupljeni r adnik i odgovorna osoba pravne osobe (",
       "category": "contracts",
@@ -9742,7 +9743,7 @@
       "language": "hr"
     },
     {
-      "id": "art_050",
+      "id": "art_050_03",
       "title": "stavak 2",
       "content": "stavak 2.). (11) Novčanom kaznom od 8090,00 do 13.270,00 eura kaznit će se pravna osoba k od koje, u okviru provedbe učenja temeljenog na radu, dijete s navršenih 14 godina koje ne pohađa obvezno osnovno obra zovanje poslove obavlja duže od osam sati dnevn o i 40 sati tjedno, ili kod koje u okviru obavljanja povremenog rada redovitog učenika, u s kladu s NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . posebnim propisom, dijete s navršenih 14 godina koje ne pohađa obvezno osnovno obrazovanje poslove obavlja duž e od sedam sati dnevno i 35 sati tjedno, odnosno osam sati dnevno i 40 sati tjedno ako posao obavlja maloljetnik, ili ako im noćni rad i o dmore ne osigura na propisani način i u propi sanom trajanju (",
       "category": "contracts",
@@ -9763,7 +9764,7 @@
       "language": "hr"
     },
     {
-      "id": "art_068",
+      "id": "art_068_07",
       "title": "a)",
       "content": "a). (12) Novčanom kaznom od 920,00 do 1.320,00 eura kaznit će se fizička osoba kod koje, u okv iru provedbe učenja temeljenog na radu, dijete s navršenih 14 godina koje ne pohađa obvezno osnovno obrazovanje poslove obavlja duže od osam sati dnevno i 40 sati tjedno, ili kod koje u okviru obavljanja povre menog rada redovitog učenika, u skladu s posebnim propisom, dijete s navršenih 14 godina koje ne pohađa obvezno osnovno obrazovanje poslov e obavlja duže od sedam sati dnevno i 35 sati tjedno, odnosno osam sati dnevno i 40 sati tjedno ako posao obavlja malo ljetnik, ili ako im noćni rad i odmore ne osigu ra na propisani način i u propisanom trajanju (",
       "category": "working-time",
@@ -9786,7 +9787,7 @@
       "language": "hr"
     },
     {
-      "id": "art_068",
+      "id": "art_068_08",
       "title": "a)",
       "content": "a). (13) Novčanom kaznom od 8090,0 0 do 13.270,00 eura kaznit će se pravna osoba koja je digitalna radna platforma ili agregator ako ne ugovori osiguranj e od nesretnog slučaja i osiguranje od odgovornosti za osobu koja radi na digitalnoj radnoj platformi i ugovorne poslove obavlja sudjelova njem u prometu (",
       "category": "contracts",
@@ -9809,7 +9810,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_32",
       "title": "o stavak 2",
       "content": "o stavak 2.). 14) Novčanom kaznom od 920,00 do 1320,00 eura kaznit će se fizička osoba koja je digitalna radna platforma ili agregator ako ne ugovori osiguranje od nesretnog slučaja i osiguranje od odgovornosti za osobu koja radi na digitalnoj radnoj platformi i ugovorne po slove obavlja sudjelovanjem u prometu (",
       "category": "contracts",
@@ -9832,7 +9833,7 @@
       "language": "hr"
     },
     {
-      "id": "art_221",
+      "id": "art_221_33",
       "title": "o stavak 2",
       "content": "o stavak 2.). (15) Ako je prekršaj iz stavka 1. ovoga članka počinjen u odnosu na maloljetnika, iznos novčane kazne uvećava se dvostruko . Prekršaji sindikata i u druga sindikata više razine",
       "category": "violations",
@@ -9876,7 +9877,7 @@
       "language": "hr"
     },
     {
-      "id": "art_180",
+      "id": "art_180_01",
       "title": "stavak 2",
       "content": "stavak 2.) 2. ako ne dostavi tijel u nadležnom za registraciju izvješće o održavanju sjednice najvišeg tijela udruge ili po datak o ukupnom broju članova udruge (",
       "category": "termination",
@@ -9897,7 +9898,7 @@
       "language": "hr"
     },
     {
-      "id": "art_190",
+      "id": "art_190_01",
       "title": "stavak 2",
       "content": "stavak 2.) 3. ako svaki kolektivni ugovor te svaku promjenu kolektivnog ugovora, kao stranka koja je prva navedena u tom ugovoru, odn osno stranka koja otkazuje kolektivni ugovor ne dostavi ministarstvu u pr opisanom roku (",
       "category": "contracts",
@@ -9922,7 +9923,7 @@
       "language": "hr"
     },
     {
-      "id": "art_201",
+      "id": "art_201_03",
       "title": "stavci 1",
       "content": "stavci 1. i 2.) 4. ako ne najavi štrajk (",
       "category": "other",
@@ -9943,7 +9944,7 @@
       "language": "hr"
     },
     {
-      "id": "art_205",
+      "id": "art_205_01",
       "title": "stavak 3",
       "content": "stavak 3.) 5. ako započne štrajk prije provođenja postupka mirenja kada je takav postupa k predviđen ovi m Zakonom, odnosno prije provođenja drugog postupka mirnoga rješavanja sp ora o kojem su se stranke sporazumjele (",
       "category": "other",
@@ -9964,7 +9965,7 @@
       "language": "hr"
     },
     {
-      "id": "art_205",
+      "id": "art_205_02",
       "title": "stavak 4",
       "content": "stavak 4.) 6. ako u pismu kojim se štrajk najavljuje ne naznači razlog e za štrajk ili mjesto ili dan ili vrijeme početka štrajka te način njegova provođenja (",
       "category": "other",
@@ -9985,7 +9986,7 @@
       "language": "hr"
     },
     {
-      "id": "art_205",
+      "id": "art_205_03",
       "title": "stavak 6",
       "content": "stavak 6.) 7. ako odbije sudjelova ti u postupku mirenja predviđenom ovim Zakonom (",
       "category": "other",
@@ -10006,7 +10007,7 @@
       "language": "hr"
     },
     {
-      "id": "art_206",
+      "id": "art_206_02",
       "title": ") ",
       "content": ") . Prekršaji udruga poslodavaca i udruga poslodavaca više razine",
       "category": "collective",
@@ -10053,7 +10054,7 @@
       "language": "hr"
     },
     {
-      "id": "art_190",
+      "id": "art_190_02",
       "title": "stavak 2",
       "content": "stavak 2.) 3. ako svaki kolektivni ugovor te svaku promjenu kolektivnog ugovora, k ao stranka koja je prva na vedena u tom ugovoru, odnosno stranka koja otkazuje kolektivni ugovor ne dostavi ministarstvu u propisanom roku (",
       "category": "contracts",
@@ -10078,7 +10079,7 @@
       "language": "hr"
     },
     {
-      "id": "art_201",
+      "id": "art_201_04",
       "title": "stavci 1",
       "content": "stavci 1. i 2.) 4. ako ministarstvu ne dostavi popis p oslodavaca koje obvezuje kolektivni ugovor te sve p romjene u članstvu udruge nastale za vri jeme važenja kolektivnog ugovora (",
       "category": "contracts",
@@ -10101,7 +10102,7 @@
       "language": "hr"
     },
     {
-      "id": "art_201",
+      "id": "art_201_05",
       "title": "stavak 3",
       "content": "stavak 3.) 5. ako kolektivni ugovor ne objavi na propisani način (",
       "category": "contracts",
@@ -10124,7 +10125,7 @@
       "language": "hr"
     },
     {
-      "id": "art_202",
+      "id": "art_202_02",
       "title": "stavci 1",
       "content": "stavci 1. i 2.) 6. ako odbije sudjelovati u postupku mirenja predviđenom ovim Zakonom (",
       "category": "other",
@@ -10145,7 +10146,7 @@
       "language": "hr"
     },
     {
-      "id": "art_206",
+      "id": "art_206_03",
       "title": ") 7",
       "content": ") 7. ako organizira ili poduzme is ključenje s rada koje nije odgovor na već započeti štrajk (",
       "category": "other",
@@ -10166,7 +10167,7 @@
       "language": "hr"
     },
     {
-      "id": "art_213",
+      "id": "art_213_01",
       "title": "stavak 1",
       "content": "stavak 1.) NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . 8. ako isključenje radnika s rada započne prije roka propisanog ovim Zakonom (člana k 213. stavak 2.) 9. ako isključi s rada radnike u broju većem od dopuštenog ovim Zakonom (",
       "category": "other",
@@ -10190,7 +10191,7 @@
       "language": "hr"
     },
     {
-      "id": "art_213",
+      "id": "art_213_02",
       "title": "stavak 3",
       "content": "stavak 3.) 10. ako isključi radnike s rada pr otivno odredbama ovoga Zakona (",
       "category": "other",
@@ -10213,7 +10214,7 @@
       "language": "hr"
     },
     {
-      "id": "art_213",
+      "id": "art_213_03",
       "title": "stavak 5",
       "content": "stavak 5.) 11. ako za vrijeme isključenja s rada onemogući radnicima obavljanje poslova koji se ne smiju prekidati (",
       "category": "other",
@@ -10328,7 +10329,7 @@
       "language": "hr"
     },
     {
-      "id": "art_006",
+      "id": "art_006_02",
       "title": "Stupanjem na snagu ovoga Zakona prestaje važiti Pravilnik o načinu izbora arbitra i provođenju postu",
       "content": "Stupanjem na snagu ovoga Zakona prestaje važiti Pravilnik o načinu izbora arbitra i provođenju postupka arbitraže u postupcima nadomještanja suglasnosti (»Narodne novine«, br. 37 /16.). Član ak 7. (1) Postupci nadomještanja prethodne suglasnosti radničkog vijeća o otkazu ugovora o radu radniku, odnosno nadomještanja prethodne suglasnosti sindikata o otkazu ugovora o rad u sindikalnom povjereniku, koji su prema odredbama članka 41. stavka 5., čl anka 151. i članka 188. Zakona o ra du (»Narodne novine«, br. 93/14.) započeti prije stupanja na snagu ovoga Zakona, dovršit će se po odredbama toga Zakona. (2) Postupci nadomještanj a prethodne suglasnosti radničkog vijeća na otkaz ugovora o radu povjerenik u zaštite na radu odnosno za korištenje nadzornih uređaja kao sredstava zaštite na radu, koji su prema odredbama posebnih prop isa započeti sukladno odredbama Zakona o radu (»Narodne novine«, br. 93/14.) prije stupanja na snagu ovoga Zakona, dovršit će se p o odredbama toga Zakona.",
       "category": "general",
@@ -10353,7 +10354,7 @@
       "language": "hr"
     },
     {
-      "id": "art_008",
+      "id": "art_008_02",
       "title": "Ovaj Zakon stupa na snagu osmoga dana od dana objave u »Narodnim novinama«",
       "content": "Ovaj Zakon stupa na snagu osmoga dana od dana objave u »Narodnim novinama«. Prijelazne i za vršne odredbe i z NN 98/19",
       "category": "general",
@@ -10374,7 +10375,7 @@
       "language": "hr"
     },
     {
-      "id": "art_011",
+      "id": "art_011_01",
       "title": "Ministar će, u rok u od 30 da na od dana stupanja na snagu ovoga Zakona, s odredbama ovoga Zako na u",
       "content": "Ministar će, u rok u od 30 da na od dana stupanja na snagu ovoga Zakona, s odredbama ovoga Zako na uskladiti sljedeće pravilnike: 1) Pravilnik o načinu izbora miritelja i provođenju postupka mirenja u kolektivnim radnim sp orovima (»Narodne novine«, br. 130/15.) 2) Pravilnik o postupku r egistracije i sadržaju registra ugovora o radu pomoraca i radnika na pomorskim ribarskim plovilima ( »Narodne novine«, br. 32/15.) 3) Pravilnik o postupku dostave i načinu vođenja evidencije k olektivnih ugovora (»Narodne novine«, br. 32/15.) 4) Pr avilnik o sadržaju i načinu vođenja registra udruga (»Narodne no vine«, br. 32/15.).",
       "category": "contracts",
@@ -10399,7 +10400,7 @@
       "language": "hr"
     },
     {
-      "id": "art_012",
+      "id": "art_012_04",
       "title": "Ovaj Zakon objavit će se u »Narodnim novinama«, a stupa na snagu 1",
       "content": "Ovaj Zakon objavit će se u »Narodnim novinama«, a stupa na snagu 1. siječnja 2020. Prijelazne i završne od redbe iz NN 151/22",
       "category": "contracts",
@@ -10420,7 +10421,7 @@
       "language": "hr"
     },
     {
-      "id": "art_063",
+      "id": "art_063_02",
       "title": "Postupci ostvarivanja i zaštite prava radnika započeti prije stupanja na snagu ovoga Zakona dovršit ",
       "content": "Postupci ostvarivanja i zaštite prava radnika započeti prije stupanja na snagu ovoga Zakona dovršit će se prema odredbama Zakona o radu (»Narodne novine«, br. 93/14., 127/17. i 98/19.). (2) Postupci upisa u ev idenciju kolektivnih ugovora započeti prije stupanja na snagu čl anka 55. o voga Zakona dovršit će se prema odredbama Zakona o radu (»Narodne novine«, br. 93/14., 127/17. i 98/19.). NN 93/14 , 127/17 , 98/19 , 151/22 , 46/23 , 64/23 - na snazi od 14.06.2023 . Članak 6 4. Na ugovore o radu koji su sklopljeni na određeno vrijeme, a koji prije stupanja na snagu ovoga Zakona nisu prestali, neće se primjenjivati odredba članka 2. ovoga Zakona do isteka vremena na koje su sklopljeni.",
       "category": "contracts",
@@ -10444,7 +10445,7 @@
       "language": "hr"
     },
     {
-      "id": "art_065",
+      "id": "art_065_09",
       "title": "Poslodavci su dužni uskladi ti pravilnike o radu s odredbama ovoga Zakona, u roku od šest mj eseci o",
       "content": "Poslodavci su dužni uskladi ti pravilnike o radu s odredbama ovoga Zakona, u roku od šest mj eseci od dana stupanja na snagu ovoga Zakona. (2) Ministar će, u roku od šest mjeseci od dana stupanja na snagu ovoga Zakona, donijeti pr avilnik iz članka 21. stavka 4. koji je izmijenjen član kom 12. ovoga Zakona i pravilnik iz članka 93. stavka 6. koji je izmijenjen člankom 38. ovoga Zakona. (3) Mini star će, u roku od šest mjeseci od dana stupanja na snagu članka 55. ovoga Zakona, donijeti pravilnik iz članka 201. koji je izmijenjen člankom 55 . ovoga Zakona. (4) Do stupanja na snagu provedbenih propisa iz stavaka 2. i 3. ovoga članka ostaju na snazi sljedeći provedbeni propisi: 1. Pravilnik o poslovima na kojima maloljetnik može raditi i o aktivnostima u kojima smije sudjelovati (»Narodne novin e«, br. 62/10.), osim odredbe članka 7. 2. Pravilnik o sadržaju obračuna plaće, naknade plaće ili otpremnine ( »Narodne novine«, br. 32/15., 102/15. i 35/17.) 3. Pravilnik o postupku dostave i načinu vo đenja evidencije kolektivnih ugovora (»Narodne novine«, br. 32/15 i 13/20). (5) Ministar će, u roku od šest mjeseci od dana stupanja na snagu članka 56. ovoga Zakona, donijeti pravilnik iz članka 221.n stavka 6. i članka 221.p stavka 8., koji su dodani čla nkom 56. ovoga Zakona. (6) Poslodavci iz članka 56. ovo ga Zakona dužni su uskladiti svoje poslo vanje s odredbama ovoga Zakona u roku od šest mjeseci od dana stupanja na snagu pravilnika iz stavka 5. ovoga članka.",
       "category": "contracts",
@@ -10468,7 +10469,7 @@
       "language": "hr"
     },
     {
-      "id": "art_066",
+      "id": "art_066_02",
       "title": "Na dan stupanja na snagu ovoga Z akona prestaje va",
       "content": "Na dan stupanja na snagu ovoga Z akona prestaje važiti",
       "category": "working-time",
@@ -10489,7 +10490,7 @@
       "language": "hr"
     },
     {
-      "id": "art_007",
+      "id": "art_007_01",
       "title": "Pravilnika o poslovima na kojima maloljetnik može raditi i o ak tivnostima u kojima smij e sudjelova",
       "content": "Pravilnika o poslovima na kojima maloljetnik može raditi i o ak tivnostima u kojima smij e sudjelovati (»Narodne novine«, br. 62/10.).",
       "category": "general",
@@ -10510,7 +10511,7 @@
       "language": "hr"
     },
     {
-      "id": "art_067",
+      "id": "art_067_04",
       "title": "Ovaj Zakon objavit će se u »Narodnim novinama«, a stupa na snagu 1",
       "content": "Ovaj Zakon objavit će se u »Narodnim novinama«, a stupa na snagu 1. siječnja 202 3., osim članka 55. ovoga Zakona koji stupa na snagu 1. srpnja 2023. i članka 56. ovoga Zakona koji stupa na snagu 1. siječnja 2024.",
       "category": "working-time",

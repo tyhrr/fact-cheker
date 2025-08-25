@@ -210,10 +210,15 @@ export class SearchEngine {
     async indexText(text, articleId, field, weight = 1.0) {
         if (!text || typeof text !== 'string') return;
         
-        // Process text
-        const processedText = this.textProcessor.processText(text);
-        const terms = this.textProcessor.extractTerms(processedText);
-        const trigrams = this.textProcessor.generateTrigrams(processedText);
+        // Process text using analyzeText method
+        const analysis = this.textProcessor.analyzeText(text, {
+            includeStems: true,
+            includeTrigrams: true,
+            includeKeywords: true
+        });
+        
+        const terms = analysis.tokens || [];
+        const trigrams = analysis.trigrams || [];
         
         // Index individual terms
         for (const term of terms) {

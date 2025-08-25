@@ -3,9 +3,9 @@
    Croatian Labor Law Fact Checker v2.1.0
    ========================================= */
 
-const CACHE_NAME = 'croatian-law-checker-v3.0.0';
-const STATIC_CACHE = 'static-cache-v3.0.0';
-const DYNAMIC_CACHE = 'dynamic-cache-v3.0.0';
+const CACHE_NAME = 'croatian-law-checker-v3.0.1';
+const STATIC_CACHE = 'static-cache-v3.0.1';
+const DYNAMIC_CACHE = 'dynamic-cache-v3.0.1';
 
 // Files to cache immediately
 const STATIC_FILES = [
@@ -17,6 +17,7 @@ const STATIC_FILES = [
     './src/scripts/main.js',
     './src/core/LegalDatabase.js',
     './src/data/croatian-labor-law.json',
+    './src/data/translations.json',
     './src/scripts/search.js',
     './src/scripts/i18n.js',
     './src/scripts/security.js',
@@ -27,9 +28,7 @@ const STATIC_FILES = [
     './public/assets/icons/favicon.ico',
     './public/assets/icons/favicon-16x16.png',
     './public/assets/icons/favicon-32x32.png',
-    './manifest.json',
-    './src/data/croatian-labor-law.json',
-    './src/data/translations.json'
+    './manifest.json'
 ];
 
 // Install event - cache static files

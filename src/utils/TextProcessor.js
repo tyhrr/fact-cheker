@@ -307,6 +307,38 @@ export class TextProcessor {
     }
 
     /**
+     * Extract terms from text (alternative to analyzeText for simpler use cases)
+     * @param {string} text - Text to process
+     * @returns {string[]} Array of terms/tokens
+     */
+    extractTerms(text) {
+        if (!text || typeof text !== 'string') {
+            return [];
+        }
+        return this.tokenize(text);
+    }
+
+    /**
+     * Normalize text by removing diacritics and converting to lowercase
+     * @param {string} text - Text to normalize
+     * @returns {string} Normalized text
+     */
+    normalizeText(text) {
+        if (!text || typeof text !== 'string') {
+            return '';
+        }
+        
+        let normalized = text.toLowerCase();
+        
+        // Replace Croatian diacritics
+        for (const [accented, plain] of Object.entries(this.diacriticsMap)) {
+            normalized = normalized.replace(new RegExp(accented, 'g'), plain.toLowerCase());
+        }
+        
+        return normalized;
+    }
+
+    /**
      * Calculate similarity between two texts using trigrams
      * @param {string} text1 - First text
      * @param {string} text2 - Second text

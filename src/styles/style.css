@@ -1288,13 +1288,15 @@ a:hover, a:focus {
   }
   
   .search-input-container {
-    flex-direction: column;
+    flex-direction: row;
+    gap: var(--spacing-sm);
   }
   
   .search-button {
-    width: 100%;
+    width: 50px;
     height: 50px;
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--border-radius-round);
+    flex-shrink: 0;
   }
   
   .filter-grid {

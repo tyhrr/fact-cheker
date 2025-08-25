@@ -1321,81 +1321,35 @@ class SearchEngine {
     }
 
     setupBooleanSearchHelp() {
-        // Add help text for boolean search operators
+        // Create help container that shows only when needed
         const helpContainer = document.createElement('div');
         helpContainer.className = 'search-help-enhanced';
+        helpContainer.style.display = 'none'; // Hidden by default
         helpContainer.innerHTML = `
             <small class="search-operators-help">
-                <strong>Napredna pretraga:</strong> 
-                Koristite <code>AND</code>, <code>OR</code>, <code>NOT</code> ili <code>"exact phrase"</code>
+                <strong>Advanced Search:</strong> 
+                Use <code>AND</code>, <code>OR</code>, <code>NOT</code> or <code>"exact phrase"</code>
                 <br>
-                <strong>Primjeri:</strong> 
-                <code>radno AND vrijeme</code>, <code>"radni odnos"</code>, <code>plaća NOT minimalna</code>
+                <strong>Examples:</strong> 
+                <code>work AND time</code>, <code>"employment contract"</code>, <code>salary NOT minimum</code>
             </small>
         `;
         
         if (this.searchInput && this.searchInput.parentNode) {
             this.searchInput.parentNode.appendChild(helpContainer);
+            
+            // Show help when user starts typing complex queries
+            this.searchInput.addEventListener('input', (e) => {
+                const query = e.target.value;
+                const hasOperators = /\b(AND|OR|NOT)\b|".*"/.test(query);
+                helpContainer.style.display = hasOperators || query.length > 20 ? 'block' : 'none';
+            });
         }
     }
 
     enableAdvancedFeatures() {
-        // Enable fuzzy search toggle
-        this.createFuzzySearchToggle();
-        
-        // Enable category filter
-        this.createCategoryFilter();
-        
-        // Enable sort options
-        this.createSortOptions();
-    }
-
-    createFuzzySearchToggle() {
-        const toggle = document.createElement('label');
-        toggle.className = 'fuzzy-search-toggle';
-        toggle.innerHTML = `
-            <input type="checkbox" id="fuzzy-search-enhanced" checked>
-            <span>Neizravna pretraga (fuzzy)</span>
-        `;
-        
-        if (this.searchInput && this.searchInput.parentNode) {
-            this.searchInput.parentNode.appendChild(toggle);
-        }
-    }
-
-    createCategoryFilter() {
-        const filter = document.createElement('select');
-        filter.id = 'category-filter-enhanced';
-        filter.className = 'category-filter-enhanced';
-        filter.innerHTML = `
-            <option value="">Sve kategorije</option>
-            <option value="opce-odredbe">Opće odredbe</option>
-            <option value="radni-odnosi">Radni odnosi</option>
-            <option value="radno-vrijeme">Radno vrijeme</option>
-            <option value="place-i-naknade">Plaće i naknade</option>
-            <option value="sigurnost-rada">Sigurnost rada</option>
-            <option value="kolektivni-ugovori">Kolektivni ugovori</option>
-        `;
-        
-        if (this.searchInput && this.searchInput.parentNode) {
-            this.searchInput.parentNode.appendChild(filter);
-        }
-    }
-
-    createSortOptions() {
-        const sort = document.createElement('select');
-        sort.id = 'sort-filter-enhanced';
-        sort.className = 'sort-filter-enhanced';
-        sort.innerHTML = `
-            <option value="relevance">Relevantnost</option>
-            <option value="date">Datum</option>
-            <option value="title">Naslov</option>
-            <option value="importance">Važnost</option>
-        `;
-        
-        if (this.searchInput && this.searchInput.parentNode) {
-            this.searchInput.parentNode.appendChild(sort);
-        }
+        // Advanced features simplified - no unnecessary filters
+        console.log('Advanced search features ready');
     }
 
     preloadSuggestions() {
