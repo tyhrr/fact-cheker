@@ -1,12 +1,12 @@
 # Security Headers for Apache Server
-# Croatian Labor Law Fact Checker
+# Croatian Labor Law Fact Checker v2.1.0
 
 <IfModule mod_headers.c>
     # Prevent clickjacking attacks
     Header always set X-Frame-Options "DENY"
     
-    # Enhanced CSP with frame-ancestors
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self';"
+    # Enhanced CSP for ES6 modules and enhanced features
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; worker-src 'self';"
     
     # Prevent MIME type sniffing
     Header always set X-Content-Type-Options "nosniff"
@@ -33,6 +33,10 @@
     ExpiresByType application/javascript "access plus 1 month"
     ExpiresByType text/javascript "access plus 1 month"
     
+    # Cache ES6 modules
+    ExpiresByType application/ecmascript "access plus 1 month"
+    ExpiresByType text/ecmascript "access plus 1 month"
+    
     # Cache images for 3 months
     ExpiresByType image/png "access plus 3 months"
     ExpiresByType image/jpg "access plus 3 months"
@@ -40,6 +44,7 @@
     ExpiresByType image/gif "access plus 3 months"
     ExpiresByType image/svg+xml "access plus 3 months"
     ExpiresByType image/x-icon "access plus 3 months"
+    ExpiresByType image/webp "access plus 3 months"
     
     # Cache web fonts for 1 year
     ExpiresByType font/woff "access plus 1 year"
@@ -47,11 +52,17 @@
     ExpiresByType application/font-woff "access plus 1 year"
     ExpiresByType application/font-woff2 "access plus 1 year"
     
-    # Don't cache HTML files
+    # Cache JSON data for 1 hour (since it may update)
+    ExpiresByType application/json "access plus 1 hour"
+    
+    # Cache PDFs for 1 week
+    ExpiresByType application/pdf "access plus 1 week"
+    
+    # Don't cache HTML files for enhanced system
     ExpiresByType text/html "access plus 0 seconds"
 </IfModule>
 
-# Compression
+# Compression for enhanced performance
 <IfModule mod_deflate.c>
     # Compress HTML, CSS, JavaScript, JSON, XML
     AddOutputFilterByType DEFLATE text/plain
@@ -65,19 +76,67 @@
     AddOutputFilterByType DEFLATE application/javascript
     AddOutputFilterByType DEFLATE application/x-javascript
     AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/ecmascript
+    AddOutputFilterByType DEFLATE text/ecmascript
 </IfModule>
 
-# Security: Disable server signature
-ServerTokens Prod
+# MIME types for ES6 modules and enhanced features
+<IfModule mod_mime.c>
+    # JavaScript modules
+    AddType application/javascript .mjs
+    AddType text/javascript .js
+    AddType application/json .json
+    
+    # Enhanced CSS
+    AddType text/css .css
+    
+    # Web fonts
+    AddType font/woff .woff
+    AddType font/woff2 .woff2
+    
+    # Modern image formats
+    AddType image/webp .webp
+    AddType image/svg+xml .svg
+</IfModule>
 
-# Prevent access to sensitive files
-<Files ~ "^\.">
-    Order allow,deny
-    Deny from all
-</Files>
+# Security: Prevent access to sensitive files
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
 
 # Protect specific file types
-<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
-    Order Allow,Deny
-    Deny from all
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|env)$">
+    Require all denied
 </FilesMatch>
+
+# Protect backup and temporary files
+<FilesMatch "\.(bak|backup|swp|tmp|temp)$">
+    Require all denied
+</FilesMatch>
+
+# Enhanced error pages (optional)
+# ErrorDocument 404 /404.html
+# ErrorDocument 500 /500.html
+
+# Directory browsing protection
+Options -Indexes
+
+# Enable URL rewriting for SPA functionality (if needed)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Handle ES6 module imports
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} \.(js|mjs)$
+    RewriteRule ^(.*)$ - [L]
+    
+    # Redirect HTTP to HTTPS (uncomment if using SSL)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Remove .html extension from URLs (optional)
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteCond %{REQUEST_FILENAME} !-f
+    # RewriteRule ^([^\.]+)$ $1.html [NC,L]
+</IfModule>
