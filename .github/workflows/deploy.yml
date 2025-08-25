@@ -56,44 +56,50 @@ jobs:
 
       - name: Optimize assets
         run: |
-          # Minify CSS
-          mkdir -p dist/src/styles
-          cleancss -o dist/src/styles/neumorphism.min.css src/styles/neumorphism.css
-          cleancss -o dist/src/styles/style.min.css src/styles/style.css
-          cleancss -o dist/src/styles/enhanced.min.css src/styles/enhanced.css
+          # Create directory structure
+          mkdir -p dist/src/styles dist/src/scripts dist/src/core dist/src/utils dist/src/data dist/public
           
-          # Minify JavaScript
-          mkdir -p dist/src/scripts
-          mkdir -p dist/src/core
-          mkdir -p dist/src/utils
-          terser src/scripts/i18n.js -o dist/src/scripts/i18n.min.js --compress --mangle
-          terser src/scripts/search.js -o dist/src/scripts/search.min.js --compress --mangle
-          terser src/scripts/main.js -o dist/src/scripts/main.min.js --compress --mangle
-          terser src/scripts/security.js -o dist/src/scripts/security.min.js --compress --mangle
-          terser src/scripts/gdpr.js -o dist/src/scripts/gdpr.min.js --compress --mangle
-          terser src/scripts/feedback.js -o dist/src/scripts/feedback.min.js --compress --mangle
-          terser src/scripts/tests.js -o dist/src/scripts/tests.min.js --compress --mangle
-          terser src/core/LegalDatabase.js -o dist/src/core/LegalDatabase.min.js --compress --mangle
-          terser src/core/SearchEngine.js -o dist/src/core/SearchEngine.min.js --compress --mangle
-          terser src/utils/TextProcessor.js -o dist/src/utils/TextProcessor.min.js --compress --mangle
-          terser src/utils/CacheManager.js -o dist/src/utils/CacheManager.min.js --compress --mangle
-          terser src/utils/ExportManager.js -o dist/src/utils/ExportManager.min.js --compress --mangle
-          terser src/utils/Validator.js -o dist/src/utils/Validator.min.js --compress --mangle
-          
-          # Copy data files
-          mkdir -p dist/src/data
-          cp -r src/data/* dist/src/data/
-          
-          # Copy assets
-          mkdir -p dist/public
-          cp -r public/* dist/public/ 2>/dev/null || mkdir -p dist/public/assets
-          
-          # Copy other important files
+          # Copy original files first as fallback
+          cp -r src/* dist/src/
+          cp -r public/* dist/public/
           cp manifest.json dist/ 2>/dev/null || true
           cp sw.js dist/ 2>/dev/null || true
           
-          # Create optimized index.html
-          sed 's/src\/styles\/neumorphism\.css/src\/styles\/neumorphism.min.css/g; s/src\/styles\/style\.css/src\/styles\/style.min.css/g; s/src\/styles\/enhanced\.css/src\/styles\/enhanced.min.css/g; s/src\/scripts\/i18n\.js/src\/scripts\/i18n.min.js/g; s/src\/scripts\/search\.js/src\/scripts\/search.min.js/g; s/src\/scripts\/main\.js/src\/scripts\/main.min.js/g; s/src\/scripts\/security\.js/src\/scripts\/security.min.js/g; s/src\/scripts\/gdpr\.js/src\/scripts\/gdpr.min.js/g; s/src\/scripts\/feedback\.js/src\/scripts\/feedback.min.js/g; s/src\/scripts\/tests\.js/src\/scripts\/tests.min.js/g; s/src\/core\/LegalDatabase\.js/src\/core\/LegalDatabase.min.js/g; s/src\/core\/SearchEngine\.js/src\/core\/SearchEngine.min.js/g; s/src\/utils\/TextProcessor\.js/src\/utils\/TextProcessor.min.js/g; s/src\/utils\/CacheManager\.js/src\/utils\/CacheManager.min.js/g; s/src\/utils\/ExportManager\.js/src\/utils\/ExportManager.min.js/g; s/src\/utils\/Validator\.js/src\/utils\/Validator.min.js/g' index.html > dist/index.html
+          # Minify CSS (with error handling)
+          cleancss -o dist/src/styles/neumorphism.min.css src/styles/neumorphism.css || cp src/styles/neumorphism.css dist/src/styles/neumorphism.min.css
+          cleancss -o dist/src/styles/style.min.css src/styles/style.css || cp src/styles/style.css dist/src/styles/style.min.css
+          cleancss -o dist/src/styles/enhanced.min.css src/styles/enhanced.css || cp src/styles/enhanced.css dist/src/styles/enhanced.min.css
+          
+          # Minify JavaScript (with error handling)
+          terser src/scripts/i18n.js -o dist/src/scripts/i18n.min.js --compress --mangle || cp src/scripts/i18n.js dist/src/scripts/i18n.min.js
+          terser src/scripts/search.js -o dist/src/scripts/search.min.js --compress --mangle || cp src/scripts/search.js dist/src/scripts/search.min.js
+          terser src/scripts/main.js -o dist/src/scripts/main.min.js --compress --mangle || cp src/scripts/main.js dist/src/scripts/main.min.js
+          terser src/scripts/security.js -o dist/src/scripts/security.min.js --compress --mangle || cp src/scripts/security.js dist/src/scripts/security.min.js
+          terser src/scripts/gdpr.js -o dist/src/scripts/gdpr.min.js --compress --mangle || cp src/scripts/gdpr.js dist/src/scripts/gdpr.min.js
+          terser src/scripts/feedback.js -o dist/src/scripts/feedback.min.js --compress --mangle || cp src/scripts/feedback.js dist/src/scripts/feedback.min.js
+          terser src/scripts/tests.js -o dist/src/scripts/tests.min.js --compress --mangle || cp src/scripts/tests.js dist/src/scripts/tests.min.js
+          terser src/core/LegalDatabase.js -o dist/src/core/LegalDatabase.min.js --compress --mangle || cp src/core/LegalDatabase.js dist/src/core/LegalDatabase.min.js
+          terser src/core/SearchEngine.js -o dist/src/core/SearchEngine.min.js --compress --mangle || cp src/core/SearchEngine.js dist/src/core/SearchEngine.min.js
+          terser src/utils/TextProcessor.js -o dist/src/utils/TextProcessor.min.js --compress --mangle || cp src/utils/TextProcessor.js dist/src/utils/TextProcessor.min.js
+          terser src/utils/CacheManager.js -o dist/src/utils/CacheManager.min.js --compress --mangle || cp src/utils/CacheManager.js dist/src/utils/CacheManager.min.js
+          terser src/utils/ExportManager.js -o dist/src/utils/ExportManager.min.js --compress --mangle || cp src/utils/ExportManager.js dist/src/utils/ExportManager.min.js
+          terser src/utils/Validator.js -o dist/src/utils/Validator.min.js --compress --mangle || cp src/utils/Validator.js dist/src/utils/Validator.min.js
+          
+          # Create optimized index.html with proper fallbacks
+          cp index.html dist/index.html
+          
+          # Replace paths to minified versions in the deployed version
+          sed -i 's/src\/styles\/neumorphism\.css/src\/styles\/neumorphism.min.css/g' dist/index.html
+          sed -i 's/src\/styles\/style\.css/src\/styles\/style.min.css/g' dist/index.html
+          sed -i 's/src\/styles\/enhanced\.css/src\/styles\/enhanced.min.css/g' dist/index.html
+          sed -i 's/src\/scripts\/main\.js/src\/scripts\/main.min.js/g' dist/index.html
+          sed -i 's/src\/core\/LegalDatabase\.js/src\/core\/LegalDatabase.min.js/g' dist/index.html
+          sed -i 's/src\/scripts\/search\.js/src\/scripts\/search.min.js/g' dist/index.html
+          sed -i 's/src\/scripts\/i18n\.js/src\/scripts\/i18n.min.js/g' dist/index.html
+          sed -i 's/src\/scripts\/security\.js/src\/scripts\/security.min.js/g' dist/index.html
+          sed -i 's/src\/scripts\/gdpr\.js/src\/scripts\/gdpr.min.js/g' dist/index.html
+          sed -i 's/src\/scripts\/feedback\.js/src\/scripts\/feedback.min.js/g' dist/index.html
+          sed -i 's/src\/scripts\/tests\.js/src\/scripts\/tests.min.js/g' dist/index.html
           
           echo "Asset optimization completed"
 

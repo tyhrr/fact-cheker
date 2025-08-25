@@ -3,9 +3,9 @@
    Croatian Labor Law Fact Checker v2.1.0
    ========================================= */
 
-const CACHE_NAME = 'croatian-law-checker-v3.0.1';
-const STATIC_CACHE = 'static-cache-v3.0.1';
-const DYNAMIC_CACHE = 'dynamic-cache-v3.0.1';
+const CACHE_NAME = 'croatian-law-checker-v3.0.2';
+const STATIC_CACHE = 'static-cache-v3.0.2';
+const DYNAMIC_CACHE = 'dynamic-cache-v3.0.2';
 
 // Files to cache immediately
 const STATIC_FILES = [
@@ -39,7 +39,15 @@ self.addEventListener('install', event => {
         caches.open(STATIC_CACHE)
             .then(cache => {
                 console.log('Service Worker: Caching static files');
-                return cache.addAll(STATIC_FILES);
+                // Cache files individually to handle missing files gracefully
+                return Promise.allSettled(
+                    STATIC_FILES.map(url => 
+                        cache.add(url).catch(error => {
+                            console.warn(`Service Worker: Failed to cache ${url}:`, error);
+                            return null;
+                        })
+                    )
+                );
             })
             .then(() => {
                 console.log('Service Worker: Static files cached successfully');
@@ -117,14 +125,28 @@ self.addEventListener('fetch', event => {
                         return response;
                     })
                     .catch(error => {
-                        console.error('Service Worker: Fetch failed:', error);
+                        console.warn('Service Worker: Fetch failed for:', event.request.url, error);
                         
                         // Return offline fallback for HTML requests
                         if (event.request.destination === 'document') {
-                            return caches.match('/index.html');
+                            return caches.match('./index.html');
                         }
                         
-                        throw error;
+                        // For CSS/JS files, try to find cached version or return empty response
+                        if (event.request.url.includes('.css') || event.request.url.includes('.js')) {
+                            return caches.match(event.request.url.replace('.min.', '.')) || 
+                                   new Response('/* File not available */', {
+                                       status: 200,
+                                       statusText: 'OK',
+                                       headers: { 'Content-Type': 'text/plain' }
+                                   });
+                        }
+                        
+                        // Return empty response for other failed requests
+                        return new Response('Resource not available', {
+                            status: 503,
+                            statusText: 'Service Unavailable'
+                        });
                     });
             })
     );
