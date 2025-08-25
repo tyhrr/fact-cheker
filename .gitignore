@@ -1,17 +1,18 @@
 # Croatian Labor Law Fact Checker - GitHub Pages
-# .gitignore optimizado para deployment
+# .gitignore optimizado para deployment v2.1.0
+# Última actualización: Agosto 2025 - Post reorganización
 
 # ===========================================
 # Archivos de desarrollo que NO van a GitHub Pages
 # ===========================================
 
-# Node.js
+# Node.js y gestores de paquetes
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Dependencias
+# Dependencias (mantener package.json pero no los lock files en GitHub Pages)
 package-lock.json
 yarn.lock
 
@@ -26,8 +27,222 @@ yarn.lock
 *.swo
 *~
 
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
 # OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Windows specific
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# ===========================================
+# Archivos temporales y de caché
+# ===========================================
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Cache directories
+.cache/
+.temp/
+tmp/
+temp/
+.tmp/
+
+# ESLint cache
+.eslintcache
+
+# Stylelint cache
+.stylelintcache
+
+# Prettier cache
+.prettiercache
+
+# ===========================================
+# Archivos de testing y coverage
+# ===========================================
+
+# Coverage reports
+coverage/
+.nyc_output/
+*.lcov
+
+# Jest
+.jest/
+jest-results.json
+
+# ===========================================
+# Archivos de build y distribución
+# ===========================================
+
+# Build directories
+dist/
+build/
+out/
+
+# Production builds
+*.tgz
+*.tar.gz
+
+# ===========================================
+# Variables de entorno y configuración sensible
+# ===========================================
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Configuration files with sensitive data
+config/local.json
+config/development.json
+config/secrets.json
+*.secret
+*.key
+
+# ===========================================
+# Archivos específicos del proyecto
+# ===========================================
+
+# Archivos de validación temporal
+validation-results.txt
+structure-check.log
+
+# Archivos de desarrollo temporal
+*.dev.html
+*.test.js.backup
+*.temp.css
+
+# Archivos de documentación temporal
+*.draft.md
+draft-*
+
+# Backups
+*.backup
+*.bak
+*.old
+
+# ===========================================
+# Archivos que SÍ deben incluirse en GitHub Pages
+# ===========================================
+
+# IMPORTANTE: Estos archivos DEBEN estar en el repositorio
+# ! significa "no ignorar este archivo"
+
+# Core application files
+!index.html
+!manifest.json
+!sw.js
+!.htaccess
+!robots.txt
+!sitemap.xml
+
+# Source code
+!src/**/*
+!public/**/*
+
+# Documentation
+!docs/**/*
+!README.md
+!REORGANIZATION_REPORT.md
+
+# Validation tools
+!structure-test.html
+!validate-structure.sh
+
+# Configuration (no secrets)
+!package.json
+!_config.yml
+
+# Legal pages structure (even if empty)
+!public/legal/*.html
+
+# ===========================================
+# Desarrollo local y herramientas
+# ===========================================
+
+# Live server and development tools
+.live-server/
+live-server.json
+
+# Local development
+local/
+playground/
+sandbox/
+
+# Service worker development
+sw-debug/
+sw-cache/
+workbox-*
+
+# Analytics and monitoring (local files)
+analytics-local.json
+performance-*.json
+
+# ===========================================
+# Archivos de editor específicos
+# ===========================================
+
+# VS Code specific
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+!.vscode/tasks.json (si existe para el proyecto)
+
+# Brackets
+.brackets.json
+
+# CodeKit
+config.codekit3
+
+# Local History for Visual Studio Code
+.history/
+
+# ===========================================
+# Fin del .gitignore
+# ===========================================
 .DS_Store?
 ._*
 .Spotlight-V100

@@ -13,15 +13,22 @@ const STATIC_FILES = [
     './index.html',
     './src/styles/neumorphism.css',
     './src/styles/style.css',
+    './src/styles/enhanced.css',
     './src/scripts/main.js',
     './src/scripts/database.js',
     './src/scripts/search.js',
     './src/scripts/i18n.js',
     './src/scripts/security.js',
     './src/scripts/gdpr.js',
+    './src/scripts/feedback.js',
+    './src/scripts/tests.js',
     './public/assets/icons/favicon.svg',
     './public/assets/icons/favicon.ico',
-    './manifest.json'
+    './public/assets/icons/favicon-16x16.png',
+    './public/assets/icons/favicon-32x32.png',
+    './manifest.json',
+    './src/data/croatian-labor-law.json',
+    './src/data/translations.json'
 ];
 
 // Install event - cache static files
