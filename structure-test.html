@@ -151,7 +151,6 @@
 
         const dependencyTests = [
             { path: 'src/scripts/main.js', type: 'file', critical: true },
-            { path: 'src/scripts/database.js', type: 'file', critical: true },
             { path: 'src/scripts/search.js', type: 'file', critical: true },
             { path: 'src/core/LegalDatabase.js', type: 'file', critical: true },
             { path: 'src/core/SearchEngine.js', type: 'file', critical: true },
@@ -249,14 +248,15 @@
                 integrationScript.onerror = () => {
                     statusDiv.innerHTML = '⚠️ Enhanced system not available, checking fallback...';
                     
-                    // Try loading basic system
+                    // Try loading enhanced LegalDatabase system
                     const fallbackScript = document.createElement('script');
-                    fallbackScript.src = 'src/scripts/database.js';
+                    fallbackScript.type = 'module';
+                    fallbackScript.src = 'src/core/LegalDatabase.js';
                     fallbackScript.onload = () => {
-                        statusDiv.innerHTML = '✅ Fallback database system loaded successfully!';
+                        statusDiv.innerHTML = '✅ Enhanced LegalDatabase system loaded successfully!';
                     };
                     fallbackScript.onerror = () => {
-                        statusDiv.innerHTML = '❌ Database system failed to load';
+                        statusDiv.innerHTML = '❌ LegalDatabase system failed to load';
                     };
                     document.head.appendChild(fallbackScript);
                 };

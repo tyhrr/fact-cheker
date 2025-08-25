@@ -43,7 +43,6 @@ echo "✅ Configuration:"
 echo ""
 echo "✅ Core Scripts:"
 [ -f "src/scripts/main.js" ] && echo "  ✓ main.js" || echo "  ❌ main.js MISSING"
-[ -f "src/scripts/database.js" ] && echo "  ✓ database.js" || echo "  ❌ database.js MISSING"
 [ -f "src/scripts/search.js" ] && echo "  ✓ search.js" || echo "  ❌ search.js MISSING"
 
 echo ""

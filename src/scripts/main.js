@@ -62,7 +62,7 @@ class App {
             console.log('Initializing Enhanced Croatian Labor Law Database...');
             
             enhancedDatabase = await initializeFactChecker({
-                dataUrl: './data/croatian-labor-law.json',
+                dataUrl: './src/data/croatian-labor-law.json',
                 enableCache: true,
                 enableSearch: true,
                 enableValidation: true,

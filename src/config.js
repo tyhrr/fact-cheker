@@ -11,7 +11,7 @@ const isProduction = window.location.hostname !== 'localhost' &&
 // Configuration by environment
 export const config = {
     development: {
-        dataUrl: './data/croatian-labor-law.json',
+        dataUrl: './src/data/croatian-labor-law.json',
         enableCache: true,
         enableValidation: true,
         enableDebugLogs: true,
@@ -32,7 +32,7 @@ export const config = {
     },
     
     production: {
-        dataUrl: './data/croatian-labor-law.json',
+        dataUrl: './src/data/croatian-labor-law.json',
         enableCache: true,
         enableValidation: false,  // Disabled for performance
         enableDebugLogs: false,
