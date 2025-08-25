@@ -11,16 +11,16 @@ const DYNAMIC_CACHE = 'dynamic-cache-v2.1.1';
 const STATIC_FILES = [
     './',
     './index.html',
-    './css/neumorphism.css',
-    './css/style.css',
-    './js/main.js',
-    './js/database.js',
-    './js/search.js',
-    './js/i18n.js',
-    './js/security.js',
-    './js/gdpr.js',
-    './assets/icons/favicon.svg',
-    './assets/icons/favicon.ico',
+    './src/styles/neumorphism.css',
+    './src/styles/style.css',
+    './src/scripts/main.js',
+    './src/scripts/database.js',
+    './src/scripts/search.js',
+    './src/scripts/i18n.js',
+    './src/scripts/security.js',
+    './src/scripts/gdpr.js',
+    './public/assets/icons/favicon.svg',
+    './public/assets/icons/favicon.ico',
     './manifest.json'
 ];
 
@@ -137,8 +137,8 @@ self.addEventListener('push', event => {
     
     const options = {
         body: event.data ? event.data.text() : 'New update available',
-        icon: '/assets/icons/favicon-32x32.png',
-        badge: '/assets/icons/favicon-16x16.png',
+        icon: '/public/assets/icons/favicon-32x32.png',
+        badge: '/public/assets/icons/favicon-16x16.png',
         vibrate: [100, 50, 100],
         data: {
             dateOfArrival: Date.now(),
@@ -148,12 +148,12 @@ self.addEventListener('push', event => {
             {
                 action: 'explore',
                 title: 'View Update',
-                icon: '/assets/icons/favicon-32x32.png'
+                icon: '/public/assets/icons/favicon-32x32.png'
             },
             {
                 action: 'close',
                 title: 'Close',
-                icon: '/assets/icons/favicon-32x32.png'
+                icon: '/public/assets/icons/favicon-32x32.png'
             }
         ]
     };
