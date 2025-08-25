@@ -36,10 +36,12 @@
     <!-- Preload critical CSS -->
     <link rel="preload" href="src/styles/neumorphism.css" as="style">
     <link rel="preload" href="src/styles/style.css" as="style">
+    <link rel="preload" href="src/styles/enhanced.css" as="style">
     
     <!-- CSS Files -->
     <link rel="stylesheet" href="src/styles/neumorphism.css">
     <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="src/styles/enhanced.css">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="public/assets/icons/favicon.svg">
@@ -136,9 +138,54 @@
                             Try searching for: "vacation days", "overtime pay", "termination notice", "maternity leave"
                         </div>
                         
+                        <!-- Enhanced Search Operators Help -->
+                        <div class="search-operators-help-enhanced">
+                            <small>
+                                <strong>Napredna pretraga:</strong> 
+                                Koristite <code>AND</code>, <code>OR</code>, <code>NOT</code> ili <code>"exact phrase"</code>
+                                <br>
+                                <strong>Primjeri:</strong> 
+                                <code>radno AND vrijeme</code>, <code>"radni odnos"</code>, <code>plaća NOT minimalna</code>
+                            </small>
+                        </div>
+                        
                         <!-- Search Suggestions -->
                         <div id="search-suggestions" class="search-suggestions neumorphic-container" role="listbox" aria-label="Search suggestions">
                             <!-- Dynamically populated suggestions -->
+                        </div>
+                        
+                        <!-- Enhanced Search Filters -->
+                        <div class="search-filters-enhanced" style="display: none;">
+                            <div class="filter-group">
+                                <label for="category-filter-enhanced">Kategorija:</label>
+                                <select id="category-filter-enhanced" class="neumorphic-select">
+                                    <option value="">Sve kategorije</option>
+                                    <option value="opce-odredbe">Opće odredbe</option>
+                                    <option value="radni-odnosi">Radni odnosi</option>
+                                    <option value="radno-vrijeme">Radno vrijeme</option>
+                                    <option value="place-i-naknade">Plaće i naknade</option>
+                                    <option value="sigurnost-rada">Sigurnost rada</option>
+                                    <option value="kolektivni-ugovori">Kolektivni ugovori</option>
+                                </select>
+                            </div>
+                            
+                            <div class="filter-group">
+                                <label for="sort-filter-enhanced">Sortiranje:</label>
+                                <select id="sort-filter-enhanced" class="neumorphic-select">
+                                    <option value="relevance">Relevantnost</option>
+                                    <option value="date">Datum</option>
+                                    <option value="title">Naslov</option>
+                                    <option value="importance">Važnost</option>
+                                </select>
+                            </div>
+                            
+                            <div class="filter-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="fuzzy-search-enhanced" checked>
+                                    <span class="checkmark"></span>
+                                    Neizravna pretraga (fuzzy)
+                                </label>
+                            </div>
                         </div>
                     </form>
 
@@ -382,14 +429,18 @@
     </div>
 
     <!-- Scripts -->
+    <!-- Enhanced System v2.1.0 -->
+    <script type="module" src="src/integration.js"></script>
+    
+    <!-- Core Scripts -->
     <script src="src/scripts/security.js"></script>
     <script src="src/scripts/gdpr.js"></script>
     <script src="src/scripts/i18n.js"></script>
-    <script src="src/scripts/database.js"></script>
-    <script src="src/scripts/search.js"></script>
+    <script type="module" src="src/scripts/database.js"></script>
+    <script type="module" src="src/scripts/search.js"></script>
     <script src="src/scripts/feedback.js"></script>
     <script src="src/scripts/tests.js"></script>
-    <script src="src/scripts/main.js"></script>
+    <script type="module" src="src/scripts/main.js"></script>
     
     <!-- Service Worker Registration -->
     <script>

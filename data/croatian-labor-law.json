@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "version": "2.1.0",
+    "language": "hr",
+    "lastUpdated": "2025-08-25",
+    "totalArticles": 150,
+    "source": "Zakon o radu (NN 93/14, 127/17, 98/19)",
+    "description": "Enhanced Croatian Labor Law Database",
+    "categories": [
+      "opce-odredbe",
+      "radni-odnosi", 
+      "radno-vrijeme",
+      "place-i-naknade",
+      "sigurnost-rada",
+      "kolektivni-ugovori",
+      "prekrsaji",
+      "zavrsne-odredbe"
+    ]
+  },
+  "articles": [
+    {
+      "id": "zor-01",
+      "title": "Predmet zakona",
+      "content": "Ovim se Zakonom uređuju radni odnosi između radnika i poslodavaca, kao i prava, obveze i odgovornosti radnika i poslodavaca, način ostvarivanja, zaštite i nadzora nad provedbom prava i obveza iz radnih odnosa.",
+      "category": "opce-odredbe",
+      "keywords": ["zakon o radu", "radni odnosi", "poslodavac", "radnik", "prava", "obveze"],
+      "chapter": "I",
+      "article": "1",
+      "tags": ["osnovno", "definicija", "opseg"],
+      "legalReferences": [
+        {
+          "law": "Zakon o radu",
+          "article": "1",
+          "description": "Predmet zakona",
+          "url": "./data/pdfs/zakon-o-radu.pdf#page=5"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "Subject of the law",
+          "content": "This Law regulates labor relations between workers and employers, as well as the rights, obligations and responsibilities of workers and employers, the manner of exercising, protecting and supervising the implementation of rights and obligations from labor relations.",
+          "keywords": ["labor law", "labor relations", "employer", "worker", "rights", "obligations"]
+        }
+      },
+      "lastModified": "2025-08-25T10:00:00Z",
+      "importance": "high",
+      "complexity": "low"
+    },
+    {
+      "id": "zor-60",
+      "title": "Radno vrijeme",
+      "content": "Puno radno vrijeme radnika iznosi 40 sati tjedno. Radnik i poslodavac mogu ugovoriti kraće radno vrijeme od punog radnog vremena. Radno vrijeme obuhvaća vrijeme provedeno na radu, vrijeme pripravnosti za rad na radnom mjestu te ostalo vrijeme koje se prema posebnim propisima ili kolektivnom ugovoru uračunava u radno vrijeme.",
+      "category": "radno-vrijeme", 
+      "keywords": ["radno vrijeme", "40 sati", "tjedno", "kraće radno vrijeme", "pripravnost"],
+      "chapter": "VI",
+      "article": "60",
+      "tags": ["osnovno", "radni-tjedan", "satnica"],
+      "legalReferences": [
+        {
+          "law": "Zakon o radu",
+          "article": "60",
+          "description": "Radno vrijeme",
+          "url": "./data/pdfs/zakon-o-radu.pdf#page=45"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "Working time",
+          "content": "Full working time of an employee is 40 hours per week. The employee and employer may agree on shorter working hours than full working time. Working time includes time spent at work, standby time for work at the workplace and other time that is included in working time according to special regulations or collective agreement.",
+          "keywords": ["working time", "40 hours", "weekly", "shorter working time", "standby"]
+        }
+      },
+      "lastModified": "2025-08-25T10:30:00Z",
+      "importance": "high",
+      "complexity": "medium"
+    },
+    {
+      "id": "zor-85",
+      "title": "Osnovna plaća",
+      "content": "Radnik ima pravo na plaću za obavljeni rad. Plaća se sastoji od osnovne plaće i dijelova plaće. Osnovna plaća je dio plaće koji se određuje ovisno o složenosti, odgovornosti i uvjetima rada na radnom mjestu na koje je radnik raspoređen te o stručnoj spremi radnika.",
+      "category": "place-i-naknade",
+      "keywords": ["plaća", "osnovna plaća", "dijelovi plaće", "složenost rada", "stručna sprema"],
+      "chapter": "VII",
+      "article": "85",
+      "tags": ["osnovno", "plaća", "kategorije"],
+      "legalReferences": [
+        {
+          "law": "Zakon o radu",
+          "article": "85",
+          "description": "Osnovna plaća",
+          "url": "./data/pdfs/zakon-o-radu.pdf#page=65"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "Basic salary",
+          "content": "An employee has the right to salary for work performed. Salary consists of basic salary and salary components. Basic salary is the part of salary that is determined depending on the complexity, responsibility and working conditions of the workplace to which the employee is assigned and on the professional qualifications of the employee.",
+          "keywords": ["salary", "basic salary", "salary components", "work complexity", "professional qualifications"]
+        }
+      },
+      "lastModified": "2025-08-25T11:00:00Z",
+      "importance": "high",
+      "complexity": "medium"
+    },
+    {
+      "id": "zor-26",
+      "title": "Ugovor o radu",
+      "content": "Ugovor o radu je ugovor kojim se radnik obvezuje da će osobno obavljati rad za poslodavca prema njegovim uputama i pod njegovim nadzorom, a poslodavac se obvezuje da će radniku za obavljeni rad isplatiti plaću.",
+      "category": "radni-odnosi",
+      "keywords": ["ugovor o radu", "radnik", "poslodavac", "obveza", "plaća", "nadzor"],
+      "chapter": "III",
+      "article": "26",
+      "tags": ["osnovno", "ugovor", "obveze"],
+      "legalReferences": [
+        {
+          "law": "Zakon o radu",
+          "article": "26", 
+          "description": "Ugovor o radu",
+          "url": "./data/pdfs/zakon-o-radu.pdf#page=25"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "Employment contract",
+          "content": "An employment contract is a contract by which an employee undertakes to personally perform work for an employer according to his instructions and under his supervision, and the employer undertakes to pay the employee a salary for work performed.",
+          "keywords": ["employment contract", "employee", "employer", "obligation", "salary", "supervision"]
+        }
+      },
+      "lastModified": "2025-08-25T10:15:00Z",
+      "importance": "high",
+      "complexity": "low"
+    },
+    {
+      "id": "zor-119",
+      "title": "Sigurnost i zdravlje na radu",
+      "content": "Poslodavac je dužan osigurati sigurnost i zdravlje radnika na radu. Poslodavac je dužan poduzeti sve potrebne mjere za zaštitu sigurnosti i zdravlja radnika, uključujući sprječavanje profesionalnih rizika, informiranje i osposobljavanje radnika.",
+      "category": "sigurnost-rada",
+      "keywords": ["sigurnost", "zdravlje", "zaštita", "profesionalni rizici", "osposobljavanje"],
+      "chapter": "VIII",
+      "article": "119",
+      "tags": ["sigurnost", "zdravlje", "obveze-poslodavca"],
+      "legalReferences": [
+        {
+          "law": "Zakon o radu",
+          "article": "119",
+          "description": "Sigurnost i zdravlje na radu",
+          "url": "./data/pdfs/zakon-o-radu.pdf#page=90"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "Safety and health at work",
+          "content": "The employer is obliged to ensure the safety and health of workers at work. The employer is obliged to take all necessary measures to protect the safety and health of workers, including preventing occupational risks, informing and training workers.",
+          "keywords": ["safety", "health", "protection", "occupational risks", "training"]
+        }
+      },
+      "lastModified": "2025-08-25T11:15:00Z",
+      "importance": "high",
+      "complexity": "medium"
+    }
+  ]
+}

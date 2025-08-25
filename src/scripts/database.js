@@ -810,10 +810,120 @@ class LegalDatabase {
     }
 }
 
+// =====================================
+// ENHANCED COMPATIBILITY FUNCTIONS v2.1.0
+// =====================================
+
+// Compatibility functions for enhanced system
+export async function getArticleById(id) {
+    const factChecker = getFactChecker();
+    if (!factChecker) {
+        // Fallback to original system
+        return window.legalDatabase?.getArticleById(id) || null;
+    }
+    
+    return await factChecker.getArticle(id);
+}
+
+export function getArticlesByCategory(category) {
+    const factChecker = getFactChecker();
+    if (!factChecker) {
+        // Fallback to original system
+        return window.legalDatabase?.getArticlesBySection(category) || [];
+    }
+    
+    return factChecker.getArticlesByCategory(category);
+}
+
+export function getAllCategories() {
+    const factChecker = getFactChecker();
+    if (!factChecker) {
+        // Fallback to original system
+        return window.legalDatabase?.getAllSections() || [];
+    }
+    
+    return factChecker.getCategories();
+}
+
+// Enhanced functions
+export async function exportDatabase(format = 'json', options = {}) {
+    const factChecker = getFactChecker();
+    if (!factChecker) {
+        throw new Error('Enhanced database not initialized');
+    }
+    
+    return await factChecker.exportData(format, options);
+}
+
+export async function importDatabase(data, options = {}) {
+    const factChecker = getFactChecker();
+    if (!factChecker) {
+        throw new Error('Enhanced database not initialized');
+    }
+    
+    return await factChecker.importData(data, options);
+}
+
+export function getSearchStatistics() {
+    const factChecker = getFactChecker();
+    if (!factChecker) return null;
+    
+    const stats = factChecker.getStatistics();
+    return stats.searchStats || {};
+}
+
+export function getCacheStatistics() {
+    const factChecker = getFactChecker();
+    if (!factChecker) return null;
+    
+    const stats = factChecker.getStatistics();
+    return stats.cacheStats || {};
+}
+
+export function getDatabaseVersion() {
+    const factChecker = getFactChecker();
+    if (factChecker) {
+        return '2.1.0-enhanced';
+    }
+    return '1.0.0-legacy';
+}
+
+// Enhanced search wrapper
+export async function searchArticlesEnhanced(query, options = {}) {
+    const factChecker = getFactChecker();
+    if (!factChecker) {
+        // Fallback to original search
+        return window.legalDatabase?.searchArticles(query) || [];
+    }
+    
+    const results = await factChecker.search(query, options);
+    
+    // Convert to legacy format for compatibility
+    return results.map(result => ({
+        id: result.id,
+        title: result.title,
+        content: result.content,
+        section: result.category,
+        keywords: result.keywords || [],
+        relevance: Math.round(result.relevance * 100)
+    }));
+}
+
 // Create global instance
 window.legalDatabase = new LegalDatabase();
 
 // Export for use in other modules
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = LegalDatabase;
+    module.exports = {
+        LegalDatabase,
+        getArticleById,
+        getArticlesByCategory,
+        getAllCategories,
+        exportDatabase,
+        importDatabase,
+        searchArticlesEnhanced,
+        getSearchStatistics,
+        getCacheStatistics,
+        getDatabaseVersion
+    };
 }

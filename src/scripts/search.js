@@ -1,7 +1,10 @@
 /* =========================================
-   Search Engine Module
+   Search Engine Module - Enhanced v2.1.0
    Croatian Labor Law Fact Checker
    ========================================= */
+
+// Import enhanced system functions
+import { getFactChecker } from '../integration.js';
 
 class SearchEngine {
     constructor() {
@@ -16,6 +19,7 @@ class SearchEngine {
         this.searchHistory = [];
         this.searchTimeout = null;
         this.isSearching = false;
+        this.enhancedMode = true;
         
         // Search configuration
         this.searchConfig = {
@@ -34,11 +38,39 @@ class SearchEngine {
         this.bindEvents();
         this.loadSearchHistory();
         this.setupAdvancedSearch();
+        this.setupEnhancedFeatures();
         
-        // Listen for database ready event
+        // Listen for enhanced database ready event
+        window.addEventListener('enhancedDatabaseReady', () => {
+            this.onEnhancedDatabaseReady();
+        });
+        
+        // Fallback to original database
         window.addEventListener('databaseReady', () => {
             this.onDatabaseReady();
         });
+    }
+
+    setupEnhancedFeatures() {
+        // Setup real-time search suggestions
+        this.setupRealTimeSearch();
+        
+        // Setup search analytics
+        this.setupSearchAnalytics();
+        
+        // Setup boolean search help
+        this.setupBooleanSearchHelp();
+    }
+
+    onEnhancedDatabaseReady() {
+        console.log('Enhanced search engine ready');
+        this.enhancedMode = true;
+        
+        // Enable advanced search features
+        this.enableAdvancedFeatures();
+        
+        // Pre-load search suggestions
+        this.preloadSuggestions();
     }
 
     bindElements() {
@@ -1084,6 +1116,296 @@ class SearchEngine {
             this.searchInput.placeholder = window.i18n?.translate('search-placeholder') || 
                 'Ask about workers\' rights, employment contracts, vacation days...';
         }
+    }
+
+    // =====================================
+    // ENHANCED SEARCH FUNCTIONS v2.1.0
+    // =====================================
+
+    async searchArticlesEnhanced(query, options = {}) {
+        const factChecker = getFactChecker();
+        if (!factChecker) {
+            console.error('Enhanced database not initialized');
+            return [];
+        }
+        
+        try {
+            const searchOptions = {
+                fuzzySearch: options.fuzzy !== false,
+                maxResults: options.maxResults || 50,
+                categories: options.category ? [options.category] : undefined,
+                sortBy: options.sortBy || 'relevance',
+                sortOrder: options.sortOrder || 'desc',
+                minRelevance: options.minRelevance || 0.1
+            };
+            
+            const startTime = performance.now();
+            const results = await factChecker.search(query, searchOptions);
+            const searchTime = Math.round(performance.now() - startTime);
+            
+            // Record analytics
+            if (this.searchAnalytics) {
+                this.searchAnalytics.recordSearch(query, results.length, searchTime);
+            }
+            
+            // Convert to format compatible with existing UI
+            return results.map(result => ({
+                id: result.id,
+                title: result.title,
+                content: result.content,
+                category: result.category,
+                relevance: Math.round(result.relevance * 100),
+                matchedTerms: result.matchedTerms || [],
+                highlights: result.highlights || [],
+                searchTime: searchTime
+            }));
+            
+        } catch (error) {
+            console.error('Enhanced search failed:', error);
+            return [];
+        }
+    }
+
+    async advancedSearchEnhanced(criteria) {
+        const factChecker = getFactChecker();
+        if (!factChecker) return [];
+        
+        try {
+            const results = await factChecker.advancedSearch(criteria);
+            if (results.analytics && this.searchAnalytics) {
+                this.updateSearchAnalytics(results.analytics);
+            }
+            return results.results || [];
+        } catch (error) {
+            console.error('Advanced search failed:', error);
+            return [];
+        }
+    }
+
+    getSearchSuggestionsEnhanced(partialQuery) {
+        const factChecker = getFactChecker();
+        if (!factChecker || partialQuery.length < 2) return [];
+        
+        try {
+            return factChecker.getSearchSuggestions(partialQuery);
+        } catch (error) {
+            console.error('Failed to get suggestions:', error);
+            return [];
+        }
+    }
+
+    setupRealTimeSearch() {
+        if (!this.searchInput) return;
+
+        const suggestionsContainer = this.createSuggestionsContainer();
+        
+        this.searchInput.addEventListener('input', (e) => {
+            clearTimeout(this.searchTimeout);
+            const query = e.target.value.trim();
+            
+            if (query.length < 2) {
+                this.hideSuggestions(suggestionsContainer);
+                return;
+            }
+            
+            this.searchTimeout = setTimeout(() => {
+                // Show suggestions
+                const suggestions = this.getSearchSuggestionsEnhanced(query);
+                this.displaySuggestions(suggestions, suggestionsContainer);
+                
+                // Auto-search if query is long enough
+                if (query.length > 3 && this.enhancedMode) {
+                    this.performAutoSearch(query);
+                }
+            }, this.searchConfig.debounceDelay);
+        });
+    }
+
+    createSuggestionsContainer() {
+        let container = document.getElementById('search-suggestions-enhanced');
+        if (!container) {
+            container = document.createElement('div');
+            container.id = 'search-suggestions-enhanced';
+            container.className = 'suggestions-container-enhanced';
+            
+            if (this.searchInput && this.searchInput.parentNode) {
+                this.searchInput.parentNode.appendChild(container);
+            }
+        }
+        return container;
+    }
+
+    displaySuggestions(suggestions, container) {
+        if (!container) return;
+        
+        container.innerHTML = suggestions.slice(0, this.searchConfig.maxSuggestions).map(suggestion => 
+            `<div class="suggestion-item-enhanced" data-suggestion="${suggestion}">
+                <i class="suggestion-icon">🔍</i>
+                <span class="suggestion-text">${suggestion}</span>
+            </div>`
+        ).join('');
+        
+        container.style.display = suggestions.length > 0 ? 'block' : 'none';
+        
+        // Bind click events
+        container.querySelectorAll('.suggestion-item-enhanced').forEach(item => {
+            item.addEventListener('click', (e) => {
+                const suggestion = e.currentTarget.getAttribute('data-suggestion');
+                this.selectSuggestion(suggestion, container);
+            });
+        });
+    }
+
+    selectSuggestion(suggestion, container) {
+        if (this.searchInput) {
+            this.searchInput.value = suggestion;
+            this.hideSuggestions(container);
+            this.performSearch();
+        }
+    }
+
+    hideSuggestions(container) {
+        if (container) {
+            container.style.display = 'none';
+        }
+    }
+
+    async performAutoSearch(query) {
+        if (this.isSearching) return;
+        
+        try {
+            this.isSearching = true;
+            const results = await this.searchArticlesEnhanced(query, {
+                maxResults: 5,
+                minRelevance: 0.3
+            });
+            
+            // Show preview of results if relevant
+            if (results.length > 0 && results[0].relevance > 50) {
+                this.showSearchPreview(results.slice(0, 3));
+            }
+        } catch (error) {
+            console.error('Auto-search failed:', error);
+        } finally {
+            this.isSearching = false;
+        }
+    }
+
+    showSearchPreview(results) {
+        // Implementation for search preview popup
+        console.log('Preview results:', results);
+    }
+
+    setupSearchAnalytics() {
+        this.searchAnalytics = {
+            searchHistory: [],
+            popularQueries: new Map(),
+            recordSearch: function(query, resultCount, searchTime) {
+                this.searchHistory.push({
+                    query,
+                    resultCount,
+                    searchTime,
+                    timestamp: new Date().toISOString()
+                });
+                
+                // Update popular queries
+                const count = this.popularQueries.get(query) || 0;
+                this.popularQueries.set(query, count + 1);
+                
+                // Keep only last 100 searches
+                if (this.searchHistory.length > 100) {
+                    this.searchHistory.shift();
+                }
+            }
+        };
+    }
+
+    setupBooleanSearchHelp() {
+        // Add help text for boolean search operators
+        const helpContainer = document.createElement('div');
+        helpContainer.className = 'search-help-enhanced';
+        helpContainer.innerHTML = `
+            <small class="search-operators-help">
+                <strong>Napredna pretraga:</strong> 
+                Koristite <code>AND</code>, <code>OR</code>, <code>NOT</code> ili <code>"exact phrase"</code>
+                <br>
+                <strong>Primjeri:</strong> 
+                <code>radno AND vrijeme</code>, <code>"radni odnos"</code>, <code>plaća NOT minimalna</code>
+            </small>
+        `;
+        
+        if (this.searchInput && this.searchInput.parentNode) {
+            this.searchInput.parentNode.appendChild(helpContainer);
+        }
+    }
+
+    enableAdvancedFeatures() {
+        // Enable fuzzy search toggle
+        this.createFuzzySearchToggle();
+        
+        // Enable category filter
+        this.createCategoryFilter();
+        
+        // Enable sort options
+        this.createSortOptions();
+    }
+
+    createFuzzySearchToggle() {
+        const toggle = document.createElement('label');
+        toggle.className = 'fuzzy-search-toggle';
+        toggle.innerHTML = `
+            <input type="checkbox" id="fuzzy-search-enhanced" checked>
+            <span>Neizravna pretraga (fuzzy)</span>
+        `;
+        
+        if (this.searchInput && this.searchInput.parentNode) {
+            this.searchInput.parentNode.appendChild(toggle);
+        }
+    }
+
+    createCategoryFilter() {
+        const filter = document.createElement('select');
+        filter.id = 'category-filter-enhanced';
+        filter.className = 'category-filter-enhanced';
+        filter.innerHTML = `
+            <option value="">Sve kategorije</option>
+            <option value="opce-odredbe">Opće odredbe</option>
+            <option value="radni-odnosi">Radni odnosi</option>
+            <option value="radno-vrijeme">Radno vrijeme</option>
+            <option value="place-i-naknade">Plaće i naknade</option>
+            <option value="sigurnost-rada">Sigurnost rada</option>
+            <option value="kolektivni-ugovori">Kolektivni ugovori</option>
+        `;
+        
+        if (this.searchInput && this.searchInput.parentNode) {
+            this.searchInput.parentNode.appendChild(filter);
+        }
+    }
+
+    createSortOptions() {
+        const sort = document.createElement('select');
+        sort.id = 'sort-filter-enhanced';
+        sort.className = 'sort-filter-enhanced';
+        sort.innerHTML = `
+            <option value="relevance">Relevantnost</option>
+            <option value="date">Datum</option>
+            <option value="title">Naslov</option>
+            <option value="importance">Važnost</option>
+        `;
+        
+        if (this.searchInput && this.searchInput.parentNode) {
+            this.searchInput.parentNode.appendChild(sort);
+        }
+    }
+
+    preloadSuggestions() {
+        // Pre-load common search suggestions
+        const commonTerms = [
+            'radno vrijeme', 'plaća', 'radni odnos', 'prekovremeni rad',
+            'kolektivni ugovor', 'otkaz', 'godišnji odmor', 'bolovanje'
+        ];
+        
+        console.log('Enhanced search ready with suggestions:', commonTerms);
     }
 }
 

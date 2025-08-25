@@ -1,13 +1,20 @@
 /* =========================================
    Main Application Controller
-   Croatian Labor Law Fact Checker
+   Croatian Labor Law Fact Checker - Enhanced v2.1.0
    ========================================= */
+
+// Import enhanced system
+import { initializeFactChecker, getFactChecker } from '../integration.js';
+
+// Global variable for enhanced database
+let enhancedDatabase = null;
 
 class App {
     constructor() {
         this.isInitialized = false;
         this.theme = 'light';
         this.version = '2.1.0';
+        this.enhancedMode = true;
         
         this.init();
     }
@@ -45,9 +52,43 @@ class App {
     }
 
     async initPhase2() {
-        // Database and search initialization
-        await this.waitForDatabase();
+        // Enhanced database initialization
+        await this.initializeEnhancedDatabase();
         await this.delayExecution(10);
+    }
+
+    async initializeEnhancedDatabase() {
+        try {
+            console.log('Initializing Enhanced Croatian Labor Law Database...');
+            
+            enhancedDatabase = await initializeFactChecker({
+                dataUrl: './data/croatian-labor-law.json',
+                enableCache: true,
+                enableSearch: true,
+                enableValidation: true,
+                cacheSize: 200,
+                language: 'hr'
+            });
+            
+            // Show statistics
+            const stats = enhancedDatabase.getStatistics();
+            console.log('Enhanced Database Stats:', stats);
+            
+            // Dispatch database ready event
+            window.dispatchEvent(new CustomEvent('enhancedDatabaseReady', {
+                detail: { stats, version: this.version }
+            }));
+            
+            // Make available globally for backward compatibility
+            window.enhancedDatabase = enhancedDatabase;
+            
+        } catch (error) {
+            console.error('Failed to initialize enhanced database:', error);
+            
+            // Fallback to original system if needed
+            console.log('Falling back to original database system...');
+            await this.waitForDatabase();
+        }
     }
 
     async initPhase3() {
