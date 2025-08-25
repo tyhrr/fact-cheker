@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced System Testing - Croatian Labor Law v2.1.0</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="src/styles/neumorphism.css">
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="src/styles/enhanced.css">
+    
+    <style>
+        .testing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: var(--bg-primary);
+            min-height: 100vh;
+        }
+        
+        .testing-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            box-shadow: 4px 4px 12px var(--shadow-dark),
+                        -4px -4px 12px var(--shadow-light);
+        }
+        
+        .testing-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--bg-primary);
+            border-radius: 16px;
+            box-shadow: 4px 4px 12px var(--shadow-dark),
+                        -4px -4px 12px var(--shadow-light);
+        }
+        
+        .test-button {
+            padding: 12px 24px;
+            margin: 8px;
+            border: none;
+            border-radius: 12px;
+            background: var(--accent-color);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 2px 2px 8px var(--shadow-dark),
+                        -2px -2px 8px var(--shadow-light);
+        }
+        
+        .test-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 4px 4px 12px var(--shadow-dark),
+                        -4px -4px 12px var(--shadow-light);
+        }
+        
+        .test-button:active {
+            transform: translateY(0);
+            box-shadow: inset 2px 2px 5px var(--shadow-dark),
+                        inset -2px -2px 5px var(--shadow-light);
+        }
+        
+        .demo-search {
+            display: flex;
+            gap: 12px;
+            margin: 12px 0;
+            flex-wrap: wrap;
+        }
+        
+        .demo-input {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            background: var(--bg-primary);
+            box-shadow: inset 2px 2px 5px var(--shadow-dark),
+                        inset -2px -2px 5px var(--shadow-light);
+            color: var(--text-primary);
+        }
+        
+        .demo-results {
+            margin-top: 16px;
+            padding: 16px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        .status-loading { background: #FF9800; animation: pulse 2s infinite; }
+        .status-success { background: #4CAF50; }
+        .status-error { background: #F44336; }
+        
+        .console-output {
+            background: #1a1a1a;
+            color: #00ff00;
+            padding: 16px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="testing-container">
+        <!-- Header -->
+        <div class="testing-header">
+            <h1>🧪 Enhanced System Testing Suite</h1>
+            <h2>Croatian Labor Law Database v2.1.0</h2>
+            <p>Comprehensive testing of all enhanced features and functionality</p>
+        </div>
+        
+        <!-- System Status -->
+        <div class="testing-section">
+            <h3>📊 System Status</h3>
+            <div class="stats-grid-enhanced">
+                <div class="stat-item-enhanced">
+                    <span class="stat-value-enhanced" id="db-status">⏳</span>
+                    <span class="stat-label-enhanced">Database</span>
+                </div>
+                <div class="stat-item-enhanced">
+                    <span class="stat-value-enhanced" id="article-count">-</span>
+                    <span class="stat-label-enhanced">Articles</span>
+                </div>
+                <div class="stat-item-enhanced">
+                    <span class="stat-value-enhanced" id="cache-status">⏳</span>
+                    <span class="stat-label-enhanced">Cache</span>
+                </div>
+                <div class="stat-item-enhanced">
+                    <span class="stat-value-enhanced" id="search-engine">⏳</span>
+                    <span class="stat-label-enhanced">Search Engine</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quick Tests -->
+        <div class="testing-section">
+            <h3>🚀 Quick Tests</h3>
+            <button class="test-button" onclick="runQuickTest()">
+                🔧 Run Basic System Check
+            </button>
+            <button class="test-button" onclick="testSearchFeatures()">
+                🔍 Test Search Features
+            </button>
+            <button class="test-button" onclick="testBooleanSearch()">
+                🔢 Test Boolean Search
+            </button>
+            <button class="test-button" onclick="testPerformance()">
+                ⚡ Test Performance
+            </button>
+        </div>
+        
+        <!-- Search Demo -->
+        <div class="testing-section">
+            <h3>🔍 Live Search Demo</h3>
+            <div class="demo-search">
+                <input type="text" id="demo-search-input" class="demo-input" 
+                       placeholder="Try: radno vrijeme, plaća AND osnovna, "ugovor o radu"">
+                <button class="test-button" onclick="performDemoSearch()">Search</button>
+                <button class="test-button" onclick="clearDemoResults()">Clear</button>
+            </div>
+            <div class="search-filters-enhanced" style="display: block;">
+                <div class="filter-group">
+                    <label for="demo-category">Category:</label>
+                    <select id="demo-category" class="neumorphic-select">
+                        <option value="">All categories</option>
+                        <option value="opce-odredbe">Opće odredbe</option>
+                        <option value="radni-odnosi">Radni odnosi</option>
+                        <option value="radno-vrijeme">Radno vrijeme</option>
+                        <option value="place-i-naknade">Plaće i naknade</option>
+                        <option value="sigurnost-rada">Sigurnost rada</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="demo-sort">Sort:</label>
+                    <select id="demo-sort" class="neumorphic-select">
+                        <option value="relevance">Relevance</option>
+                        <option value="title">Title</option>
+                        <option value="date">Date</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="demo-fuzzy" checked>
+                        <span class="checkmark"></span>
+                        Fuzzy Search
+                    </label>
+                </div>
+            </div>
+            <div id="demo-results" class="demo-results" style="display: none;"></div>
+        </div>
+        
+        <!-- Full Test Suite -->
+        <div class="testing-section">
+            <h3>🧪 Complete Test Suite</h3>
+            <button class="test-button" onclick="runFullTestSuite()" id="full-test-btn">
+                🚀 Run Complete Test Suite
+            </button>
+            <div id="test-progress" style="margin-top: 16px;"></div>
+        </div>
+        
+        <!-- Console Output -->
+        <div class="testing-section">
+            <h3>📄 Console Output</h3>
+            <button class="test-button" onclick="clearConsole()">Clear Console</button>
+            <div id="console-output" class="console-output">
+                Waiting for tests to run...
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="src/integration.js"></script>
+    <script type="module" src="src/tests/enhanced-system.test.js"></script>
+    <script src="src/scripts/security.js"></script>
+    <script src="src/scripts/gdpr.js"></script>
+    <script src="src/scripts/i18n.js"></script>
+    <script type="module" src="src/scripts/database.js"></script>
+    <script type="module" src="src/scripts/search.js"></script>
+    <script type="module" src="src/scripts/main.js"></script>
+    
+    <script>
+        // Console capture for display
+        const originalLog = console.log;
+        const originalError = console.error;
+        const consoleOutput = document.getElementById('console-output');
+        
+        function logToConsole(message, type = 'log') {
+            const timestamp = new Date().toLocaleTimeString();
+            const formattedMessage = `[${timestamp}] ${message}\n`;
+            consoleOutput.textContent += formattedMessage;
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+        }
+        
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            logToConsole(args.join(' '), 'log');
+        };
+        
+        console.error = function(...args) {
+            originalError.apply(console, args);
+            logToConsole('ERROR: ' + args.join(' '), 'error');
+        };
+        
+        // Wait for system initialization
+        window.addEventListener('enhancedDatabaseReady', () => {
+            updateSystemStatus();
+            logToConsole('✅ Enhanced database ready for testing');
+        });
+        
+        function updateSystemStatus() {
+            const dbStatus = document.getElementById('db-status');
+            const articleCount = document.getElementById('article-count');
+            const cacheStatus = document.getElementById('cache-status');
+            const searchEngine = document.getElementById('search-engine');
+            
+            if (window.enhancedDatabase) {
+                dbStatus.textContent = '✅';
+                
+                const stats = window.enhancedDatabase.getStatistics();
+                articleCount.textContent = stats.totalArticles || 0;
+                
+                cacheStatus.textContent = stats.cacheStats ? '✅' : '❌';
+                searchEngine.textContent = stats.searchStats ? '✅' : '❌';
+            } else {
+                dbStatus.textContent = '❌';
+                articleCount.textContent = '0';
+                cacheStatus.textContent = '❌';
+                searchEngine.textContent = '❌';
+            }
+        }
+        
+        async function runQuickTest() {
+            logToConsole('🔧 Running quick system check...');
+            
+            if (!window.enhancedDatabase) {
+                logToConsole('❌ Enhanced database not available');
+                return;
+            }
+            
+            try {
+                const stats = window.enhancedDatabase.getStatistics();
+                logToConsole(`✅ Database loaded with ${stats.totalArticles} articles`);
+                
+                const testArticle = await window.enhancedDatabase.getArticle('zor-01');
+                logToConsole(`✅ Article retrieval: ${testArticle ? 'SUCCESS' : 'FAILED'}`);
+                
+                const categories = window.enhancedDatabase.getCategories();
+                logToConsole(`✅ Categories available: ${categories.length}`);
+                
+                logToConsole('✅ Quick test completed successfully');
+            } catch (error) {
+                logToConsole(`❌ Quick test failed: ${error.message}`);
+            }
+        }
+        
+        async function testSearchFeatures() {
+            logToConsole('🔍 Testing search features...');
+            
+            if (!window.enhancedDatabase) {
+                logToConsole('❌ Enhanced database not available');
+                return;
+            }
+            
+            try {
+                // Test basic search
+                const results1 = await window.enhancedDatabase.search('radno vrijeme');
+                logToConsole(`✅ Basic search: ${results1.length} results for "radno vrijeme"`);
+                
+                // Test case insensitive
+                const results2 = await window.enhancedDatabase.search('PLAĆA');
+                logToConsole(`✅ Case insensitive: ${results2.length} results for "PLAĆA"`);
+                
+                // Test suggestions
+                const suggestions = window.enhancedDatabase.getSearchSuggestions('rad');
+                logToConsole(`✅ Suggestions: ${suggestions.length} suggestions for "rad"`);
+                
+                logToConsole('✅ Search features test completed');
+            } catch (error) {
+                logToConsole(`❌ Search test failed: ${error.message}`);
+            }
+        }
+        
+        async function testBooleanSearch() {
+            logToConsole('🔢 Testing boolean search...');
+            
+            if (!window.enhancedDatabase) {
+                logToConsole('❌ Enhanced database not available');
+                return;
+            }
+            
+            try {
+                // Test AND
+                const andResults = await window.enhancedDatabase.search('radno AND vrijeme');
+                logToConsole(`✅ AND operator: ${andResults.length} results`);
+                
+                // Test OR
+                const orResults = await window.enhancedDatabase.search('plaća OR sigurnost');
+                logToConsole(`✅ OR operator: ${orResults.length} results`);
+                
+                // Test exact phrase
+                const phraseResults = await window.enhancedDatabase.search('"ugovor o radu"');
+                logToConsole(`✅ Exact phrase: ${phraseResults.length} results`);
+                
+                logToConsole('✅ Boolean search test completed');
+            } catch (error) {
+                logToConsole(`❌ Boolean search test failed: ${error.message}`);
+            }
+        }
+        
+        async function testPerformance() {
+            logToConsole('⚡ Testing performance...');
+            
+            if (!window.enhancedDatabase) {
+                logToConsole('❌ Enhanced database not available');
+                return;
+            }
+            
+            try {
+                const startTime = performance.now();
+                
+                // Perform multiple searches
+                await window.enhancedDatabase.search('radno vrijeme');
+                await window.enhancedDatabase.search('plaća');
+                await window.enhancedDatabase.search('sigurnost');
+                await window.enhancedDatabase.search('ugovor');
+                await window.enhancedDatabase.search('poslodavac');
+                
+                const endTime = performance.now();
+                const totalTime = Math.round(endTime - startTime);
+                
+                logToConsole(`✅ Performance: 5 searches completed in ${totalTime}ms`);
+                
+                if (totalTime < 500) {
+                    logToConsole('🚀 Excellent performance!');
+                } else if (totalTime < 1000) {
+                    logToConsole('✅ Good performance');
+                } else {
+                    logToConsole('⚠️  Performance could be improved');
+                }
+                
+            } catch (error) {
+                logToConsole(`❌ Performance test failed: ${error.message}`);
+            }
+        }
+        
+        async function performDemoSearch() {
+            const query = document.getElementById('demo-search-input').value;
+            const category = document.getElementById('demo-category').value;
+            const sortBy = document.getElementById('demo-sort').value;
+            const fuzzy = document.getElementById('demo-fuzzy').checked;
+            const resultsDiv = document.getElementById('demo-results');
+            
+            if (!query.trim()) {
+                alert('Please enter a search query');
+                return;
+            }
+            
+            if (!window.enhancedDatabase) {
+                resultsDiv.innerHTML = '❌ Enhanced database not available';
+                resultsDiv.style.display = 'block';
+                return;
+            }
+            
+            try {
+                logToConsole(`🔍 Demo search: "${query}" with filters`);
+                
+                const startTime = performance.now();
+                const results = await window.enhancedDatabase.search(query, {
+                    categories: category ? [category] : undefined,
+                    sortBy: sortBy,
+                    fuzzySearch: fuzzy
+                });
+                const searchTime = Math.round(performance.now() - startTime);
+                
+                let html = `<h4>Results: ${results.length} found in ${searchTime}ms</h4>`;
+                
+                results.forEach((result, index) => {
+                    html += `
+                        <div class="result-item-enhanced" style="margin-bottom: 12px;">
+                            <div class="result-header-enhanced">
+                                <h5 class="result-title-enhanced">${result.title}</h5>
+                                <span class="result-relevance-enhanced">${Math.round(result.relevance * 100)}%</span>
+                            </div>
+                            <p class="result-content-enhanced">${result.content.substring(0, 200)}...</p>
+                            <div class="result-meta-enhanced">
+                                <span class="result-category-enhanced">${result.category}</span>
+                                <small>Article ${result.article}</small>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                resultsDiv.innerHTML = html;
+                resultsDiv.style.display = 'block';
+                
+                logToConsole(`✅ Demo search completed: ${results.length} results in ${searchTime}ms`);
+                
+            } catch (error) {
+                resultsDiv.innerHTML = `❌ Search failed: ${error.message}`;
+                resultsDiv.style.display = 'block';
+                logToConsole(`❌ Demo search failed: ${error.message}`);
+            }
+        }
+        
+        function clearDemoResults() {
+            document.getElementById('demo-results').style.display = 'none';
+            document.getElementById('demo-search-input').value = '';
+        }
+        
+        async function runFullTestSuite() {
+            const btn = document.getElementById('full-test-btn');
+            const progress = document.getElementById('test-progress');
+            
+            btn.disabled = true;
+            btn.textContent = '⏳ Running Tests...';
+            progress.innerHTML = '<div class="status-loading"></div> Running comprehensive test suite...';
+            
+            logToConsole('🚀 Starting full test suite...');
+            
+            try {
+                if (window.enhancedSystemTester) {
+                    const results = await window.enhancedSystemTester.runAllTests();
+                    
+                    progress.innerHTML = `
+                        <div class="stats-grid-enhanced">
+                            <div class="stat-item-enhanced">
+                                <span class="stat-value-enhanced">${results.totalTests}</span>
+                                <span class="stat-label-enhanced">Total Tests</span>
+                            </div>
+                            <div class="stat-item-enhanced">
+                                <span class="stat-value-enhanced" style="color: #4CAF50;">${results.passed}</span>
+                                <span class="stat-label-enhanced">Passed</span>
+                            </div>
+                            <div class="stat-item-enhanced">
+                                <span class="stat-value-enhanced" style="color: #F44336;">${results.failed}</span>
+                                <span class="stat-label-enhanced">Failed</span>
+                            </div>
+                            <div class="stat-item-enhanced">
+                                <span class="stat-value-enhanced">${results.successRate}%</span>
+                                <span class="stat-label-enhanced">Success Rate</span>
+                            </div>
+                        </div>
+                    `;
+                    
+                    logToConsole(`🎯 Test suite completed: ${results.successRate}% success rate`);
+                } else {
+                    progress.innerHTML = '<div class="status-error"></div> Test suite not available';
+                    logToConsole('❌ Test suite not available');
+                }
+            } catch (error) {
+                progress.innerHTML = '<div class="status-error"></div> Test suite failed';
+                logToConsole(`❌ Test suite failed: ${error.message}`);
+            } finally {
+                btn.disabled = false;
+                btn.textContent = '🚀 Run Complete Test Suite';
+            }
+        }
+        
+        function clearConsole() {
+            document.getElementById('console-output').textContent = 'Console cleared...\n';
+        }
+        
+        // Auto-update status every 5 seconds
+        setInterval(updateSystemStatus, 5000);
+        
+        // Initial status update
+        setTimeout(updateSystemStatus, 1000);
+    </script>
+</body>
+</html>
