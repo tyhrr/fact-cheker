@@ -81,6 +81,7 @@ class App {
             
             // Make available globally for backward compatibility
             window.enhancedDatabase = enhancedDatabase;
+            window.legalDatabase = enhancedDatabase; // For compatibility with SearchEngine
             
         } catch (error) {
             console.error('Failed to initialize enhanced database:', error);
