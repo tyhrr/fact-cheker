@@ -1,7 +1,7 @@
 /**
  * @fileoverview Main Croatian Labor Law database class
  * Integrates all components for comprehensive legal article management
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 import { Article } from '../models/Article.js';
@@ -71,6 +71,7 @@ export class LegalDatabase {
         
         if (this.options.enableSearch) {
             this.searchEngine = new SearchEngine({
+                database: this,
                 ...this.options.searchOptions
             });
         }
@@ -319,19 +320,42 @@ export class LegalDatabase {
                 const cached = await this.cacheManager.get(`article_${id}`);
                 if (cached) {
                     this.updateMetrics(performance.now() - startTime);
-                    return new Article(cached);
+                    // Return the cached data directly if it's already an Article instance
+                    return cached instanceof Article ? cached : new Article(cached);
                 }
             }
             
-            const article = this.articles.get(id);
+            const articleData = this.articles.get(id);
+            if (!articleData) {
+                this.updateMetrics(performance.now() - startTime);
+                return null;
+            }
+            
+            // If it's already an Article instance, return it directly
+            if (articleData instanceof Article) {
+                this.updateMetrics(performance.now() - startTime);
+                return articleData;
+            }
+            
+            // For debugging: create a copy with fallback values for missing fields
+            const safeArticleData = {
+                id: articleData.id || id,
+                title: articleData.title || articleData.content?.substring(0, 50) || 'Untitled',
+                content: articleData.content || articleData.title || '',
+                category: articleData.category || 'general',
+                ...articleData // Keep all other original properties
+            };
+            
+            // Create Article instance from the safe data
+            const article = new Article(safeArticleData);
             
             // Cache the result
-            if (article && this.cacheManager) {
-                await this.cacheManager.set(`article_${id}`, article.toJSON(), 1800000); // 30 minutes
+            if (this.cacheManager) {
+                await this.cacheManager.set(`article_${id}`, article, 1800000); // 30 minutes
             }
             
             this.updateMetrics(performance.now() - startTime);
-            return article || null;
+            return article;
             
         } catch (error) {
             console.error('Failed to get article:', error);
@@ -632,7 +656,7 @@ export class LegalDatabase {
                 categories: Array.from(this.categories),
                 languages: Array.from(this.languages),
                 lastModified: this.lastModified.toISOString(),
-                version: '2.1.0'
+                version: '2.2.0'
             };
             
             await this.cacheManager.set(key, state, 0, { persistent: true }); // No expiration

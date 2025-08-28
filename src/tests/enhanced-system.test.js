@@ -1,5 +1,5 @@
 /* =========================================
-   Enhanced System Testing Suite - v2.1.0
+   Enhanced System Testing Suite - v2.2.0
    Croatian Labor Law Fact Checker
    ========================================= */
 
@@ -13,7 +13,7 @@ class EnhancedSystemTester {
     }
 
     async runAllTests() {
-        console.log('🚀 Starting Enhanced System Testing Suite v2.1.0');
+        console.log('🚀 Starting Enhanced System Testing Suite v2.2.0');
         console.log('='.repeat(60));
         
         this.startTime = performance.now();

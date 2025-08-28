@@ -1,7 +1,7 @@
 /**
  * @fileoverview Text processing utilities for Croatian Labor Law database
  * Provides advanced text analysis, tokenization, and search functionality
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 /**

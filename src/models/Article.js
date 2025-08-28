@@ -1,7 +1,7 @@
 /**
  * @fileoverview Article model for Croatian Labor Law database
  * Represents a single legal article with enhanced metadata and relationships
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 /**

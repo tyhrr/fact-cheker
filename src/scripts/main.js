@@ -1,6 +1,6 @@
 /* =========================================
    Main Application Controller
-   Croatian Labor Law Fact Checker - Enhanced v2.1.0
+   Croatian Labor Law Fact Checker - Enhanced v2.2.0
    ========================================= */
 
 // Import enhanced system
@@ -13,7 +13,7 @@ class App {
     constructor() {
         this.isInitialized = false;
         this.theme = 'light';
-        this.version = '2.1.0';
+        this.version = '2.2.0';
         this.enhancedMode = true;
         
         this.init();

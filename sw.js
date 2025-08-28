@@ -1,6 +1,6 @@
 /* =========================================
    Service Worker
-   Croatian Labor Law Fact Checker v2.1.0
+   Croatian Labor Law Fact Checker v2.2.0
    ========================================= */
 
 const CACHE_NAME = 'croatian-law-checker-v3.0.2';

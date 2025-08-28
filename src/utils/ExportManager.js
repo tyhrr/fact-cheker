@@ -1,7 +1,7 @@
 /**
  * @fileoverview Export and import manager for Croatian Labor Law database
  * Provides PDF generation, CSV export/import, and data exchange functionality
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 /**
@@ -507,7 +507,7 @@ export class ExportManager {
             const exportData = {
                 metadata: {
                     exportDate: new Date().toISOString(),
-                    version: '2.1.0',
+                    version: '2.2.0',
                     totalArticles: articles.length,
                     language: options.language || 'hr',
                     includeTranslations: options.includeTranslations || false
@@ -555,7 +555,7 @@ export class ExportManager {
             xmlContent += `<${xmlConfig.rootElement}>\n`;
             xmlContent += '  <metadata>\n';
             xmlContent += `    <exportDate>${new Date().toISOString()}</exportDate>\n`;
-            xmlContent += `    <version>2.1.0</version>\n`;
+            xmlContent += `    <version>2.2.0</version>\n`;
             xmlContent += `    <totalArticles>${articles.length}</totalArticles>\n`;
             xmlContent += '  </metadata>\n';
             xmlContent += '  <articles>\n';

@@ -1,7 +1,7 @@
 /**
  * @fileoverview Data validation utilities for Croatian Labor Law database
  * Provides comprehensive validation for articles, search results, and user data
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 /**

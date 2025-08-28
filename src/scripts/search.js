@@ -1,5 +1,5 @@
 /* =========================================
-   Search Engine Module - Enhanced v2.1.0
+   Search Engine Module - Enhanced v2.2.0
    Croatian Labor Law Fact Checker
    ========================================= */
 
@@ -455,7 +455,7 @@ class SearchEngine {
     }
 
     async executeMultiLanguageSearch(translatedQueries, filters) {
-        if (!window.legalDatabase || !window.legalDatabase.isLoaded) {
+        if (!window.legalDatabase || !window.legalDatabase.isInitialized) {
             throw new Error('Database not available');
         }
 
@@ -466,7 +466,7 @@ class SearchEngine {
         const allResults = new Map();
         
         // Search with original query
-        const originalResults = window.legalDatabase.search(translatedQueries.original, filters);
+        const originalResults = await window.legalDatabase.search(translatedQueries.original, filters);
         originalResults.forEach(result => {
             if (!allResults.has(result.id)) {
                 allResults.set(result.id, result);
@@ -475,8 +475,8 @@ class SearchEngine {
         });
         
         // Search with translated Croatian terms
-        translatedQueries.croatian.forEach(query => {
-            const results = window.legalDatabase.search(query, filters);
+        for (const query of translatedQueries.croatian) {
+            const results = await window.legalDatabase.search(query, filters);
             results.forEach(result => {
                 if (!allResults.has(result.id)) {
                     allResults.set(result.id, result);
@@ -484,11 +484,11 @@ class SearchEngine {
                 }
                 allResults.get(result.id).relevanceScore = (allResults.get(result.id).relevanceScore || 0) + 5;
             });
-        });
+        }
         
         // Search with translated English terms
-        translatedQueries.english.forEach(query => {
-            const results = window.legalDatabase.search(query, filters);
+        for (const query of translatedQueries.english) {
+            const results = await window.legalDatabase.search(query, filters);
             results.forEach(result => {
                 if (!allResults.has(result.id)) {
                     allResults.set(result.id, result);
@@ -496,11 +496,11 @@ class SearchEngine {
                 }
                 allResults.get(result.id).relevanceScore = (allResults.get(result.id).relevanceScore || 0) + 5;
             });
-        });
+        }
         
         // Search with translated Spanish terms
-        translatedQueries.spanish.forEach(query => {
-            const results = window.legalDatabase.search(query, filters);
+        for (const query of translatedQueries.spanish) {
+            const results = await window.legalDatabase.search(query, filters);
             results.forEach(result => {
                 if (!allResults.has(result.id)) {
                     allResults.set(result.id, result);
@@ -508,7 +508,7 @@ class SearchEngine {
                 }
                 allResults.get(result.id).relevanceScore = (allResults.get(result.id).relevanceScore || 0) + 5;
             });
-        });
+        }
         
         // Convert to array and sort by relevance
         const finalResults = Array.from(allResults.values());
@@ -518,14 +518,14 @@ class SearchEngine {
     }
 
     async executeSearch(query, filters) {
-        if (!window.legalDatabase || !window.legalDatabase.isLoaded) {
+        if (!window.legalDatabase || !window.legalDatabase.isInitialized) {
             throw new Error('Database not available');
         }
 
         // Simulate async operation for better UX
         await new Promise(resolve => setTimeout(resolve, 300));
         
-        return window.legalDatabase.search(query, filters);
+        return await window.legalDatabase.search(query, filters);
     }
 
     getSearchFilters() {
@@ -640,11 +640,11 @@ class SearchEngine {
         
         if (croatianContent) {
             // FORCE Croatian text - simple version for debugging
-            let croatianText = article.croatian;
+            let croatianText = article.content || article.title || '';
             
             // Don't apply highlighting for now to debug the basic functionality
             // if (article.highlightedText) {
-            //     croatianText = this.highlightTextInCroatian(article.croatian, article.highlightedText);
+            //     croatianText = this.highlightTextInCroatian(article.content, article.highlightedText);
             // }
             
             // Use secure HTML insertion to prevent XSS
@@ -671,13 +671,13 @@ class SearchEngine {
             
             // Determine translation text and flag based on current language
             if (currentLang === 'hr' || currentLang === 'croatian') {
-                translationText = article.croatian;
+                translationText = article.content || article.title || '';
                 flagEmoji = '🇭🇷';
             } else if (currentLang === 'es' || currentLang === 'spanish') {
-                translationText = article.spanish;
+                translationText = article.translations?.spanish || article.content || article.title || '';
                 flagEmoji = '🇪🇸';
             } else {
-                translationText = article.english;
+                translationText = article.translations?.english || article.content || article.title || '';
                 flagEmoji = '🇺🇸';
             }
             
@@ -770,7 +770,7 @@ class SearchEngine {
         const croatianContent = clone.querySelector('.text-content[data-lang="croatian"]');
         if (croatianContent) {
             const croatianText = article.highlightedText ? 
-                this.getHighlightedText(article, 'croatian') : article.croatian;
+                this.getHighlightedText(article, 'croatian') : (article.content || article.title || '');
             
             if (window.SecurityUtils) {
                 croatianContent.innerHTML = window.SecurityUtils.escapeHTML(croatianText);
@@ -782,8 +782,9 @@ class SearchEngine {
         const translationContent = clone.querySelector('.text-content[data-lang="translation"]');
         if (translationContent) {
             const currentLang = window.i18n?.getLanguage() || 'english';
-            const translationText = currentLang === 'hr' ? article.croatian : 
-                                  (currentLang === 'es' ? article.spanish : article.english);
+            const translationText = currentLang === 'hr' ? (article.content || article.title || '') : 
+                                  (currentLang === 'es' ? (article.translations?.spanish || article.content || article.title || '') : 
+                                   (article.translations?.english || article.content || article.title || ''));
             const finalTranslationText = article.highlightedText ? 
                 this.getHighlightedText(article, currentLang) : translationText;
                 
@@ -805,15 +806,15 @@ class SearchEngine {
 
     getHighlightedText(article, language) {
         const textMap = {
-            'croatian': article.croatian,
-            'hr': article.croatian,
-            'en': article.english,
-            'english': article.english,
-            'es': article.spanish,
-            'spanish': article.spanish
+            'croatian': article.content || article.title || '',
+            'hr': article.content || article.title || '',
+            'en': article.translations?.english || article.content || article.title || '',
+            'english': article.translations?.english || article.content || article.title || '',
+            'es': article.translations?.spanish || article.content || article.title || '',
+            'spanish': article.translations?.spanish || article.content || article.title || ''
         };
         
-        return article.highlightedText || textMap[language] || article.english;
+        return article.highlightedText || textMap[language] || (article.translations?.english || article.content || article.title || '');
     }
 
     switchLanguageTab(container, targetLang) {
@@ -916,9 +917,23 @@ class SearchEngine {
 
     getArticleTitle(article) {
         // Generate a meaningful title from the article content
+        if (!article) return 'Untitled Article';
+        
         const currentLang = window.i18n?.getLanguage() || 'en';
-        const text = currentLang === 'hr' ? article.croatian : 
-                    (currentLang === 'es' ? article.spanish : article.english);
+        
+        let text;
+        if (currentLang === 'hr') {
+            text = article.title || article.content || '';
+        } else if (currentLang === 'es') {
+            text = article.translations?.spanish || article.title || article.content || '';
+        } else { // English or default
+            text = article.translations?.english || article.title || article.content || '';
+        }
+        
+        // Fallback if no text found
+        if (!text) {
+            text = article.title || article.content || 'Untitled Article';
+        }
         
         // Extract first meaningful phrase (up to first period or 60 characters)
         let title = text.split('.')[0].substring(0, 60);
@@ -950,6 +965,9 @@ class SearchEngine {
     }
 
     createTagsHTML(tags) {
+        if (!tags || !Array.isArray(tags)) {
+            return '';
+        }
         return tags.map(tag => 
             `<span class="result-tag">${tag}</span>`
         ).join('');
@@ -1119,7 +1137,7 @@ class SearchEngine {
     }
 
     // =====================================
-    // ENHANCED SEARCH FUNCTIONS v2.1.0
+    // ENHANCED SEARCH FUNCTIONS v2.2.0
     // =====================================
 
     async searchArticlesEnhanced(query, options = {}) {

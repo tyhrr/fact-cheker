@@ -1,5 +1,5 @@
 /* =========================================
-   Configuration Module - Enhanced v2.1.0
+   Configuration Module - Enhanced v2.2.0
    Croatian Labor Law Fact Checker
    ========================================= */
 
@@ -162,7 +162,7 @@ export default function getAppConfig() {
         api: apiConfig,
         i18n: i18nConfig,
         security: securityConfig,
-        version: '2.1.0',
+        version: '2.2.0',
         buildDate: '2025-08-25',
         environment: isProduction ? 'production' : 'development'
     };

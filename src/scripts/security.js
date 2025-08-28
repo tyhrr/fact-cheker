@@ -11,6 +11,10 @@ class SecurityUtils {
     }
 
     static escapeHTML(str) {
+        if (!str || typeof str !== 'string') {
+            return '';
+        }
+        
         const htmlEscapes = {
             '&': '&amp;',
             '<': '&lt;',

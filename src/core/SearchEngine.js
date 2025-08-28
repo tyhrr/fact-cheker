@@ -1,7 +1,7 @@
 /**
  * @fileoverview Advanced search engine for Croatian Labor Law database
  * Provides boolean search, phrase matching, fuzzy search, and intelligent ranking
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 import { TextProcessor } from '../utils/TextProcessor.js';
@@ -49,6 +49,8 @@ import { SearchResult } from '../models/SearchResult.js';
  */
 export class SearchEngine {
     constructor(options = {}) {
+        this.database = options.database || null;
+        
         this.options = {
             maxResults: 50,
             minRelevance: 0.1,
@@ -503,14 +505,20 @@ export class SearchEngine {
             const relevanceScore = this.calculateRelevance(articleId, query, termScores, options);
             
             if (relevanceScore >= options.minRelevance) {
+                // Get the full article from the database
+                const article = this.database ? await this.database.getArticle(articleId) : null;
+                
+                if (!article) {
+                    console.warn(`Article not found for ID: ${articleId}`);
+                    continue;
+                }
+                
                 const searchResult = new SearchResult({
-                    articleId,
-                    title: metadata.title,
+                    article: article,
                     relevanceScore,
-                    matchedTerms: this.getMatchedTerms(articleId, query, termScores),
-                    snippet: await this.generateSnippet(articleId, query),
-                    category: metadata.category,
-                    lastModified: metadata.lastModified
+                    searchTerm: query.original,
+                    matches: [],
+                    highlights: []
                 });
                 
                 results.push(searchResult);

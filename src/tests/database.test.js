@@ -1,6 +1,6 @@
 /**
  * @fileoverview Unit tests for Croatian Labor Law database components
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 import { LegalDatabase } from '../core/LegalDatabase.js';

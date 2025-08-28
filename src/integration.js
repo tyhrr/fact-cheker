@@ -1,7 +1,7 @@
 /**
  * @fileoverview Integration example for Croatian Labor Law Database
  * Demonstrates how to integrate the enhanced database with existing system
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 import { LegalDatabase } from './core/LegalDatabase.js';
@@ -200,6 +200,14 @@ class EnhancedFactChecker {
      */
     getStatistics() {
         return this.database.getStats();
+    }
+
+    /**
+     * Check if database is initialized
+     * @returns {boolean} True if database is initialized
+     */
+    get isInitialized() {
+        return this.database.isInitialized;
     }
 
     /**

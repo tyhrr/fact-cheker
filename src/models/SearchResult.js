@@ -1,7 +1,7 @@
 /**
  * @fileoverview SearchResult model for Croatian Labor Law database
  * Represents search results with relevance scoring and metadata
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 /**

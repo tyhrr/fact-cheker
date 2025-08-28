@@ -480,10 +480,19 @@ class I18n {
         const format = this.dateFormats[targetLocale] || this.dateFormats['en'];
         
         try {
-            return new Intl.DateTimeFormat(format.locale, format.options).format(new Date(date));
+            // Validate the date input
+            if (!date) return '';
+            
+            const dateObj = new Date(date);
+            if (isNaN(dateObj.getTime())) {
+                console.warn('Invalid date value:', date);
+                return date || '';
+            }
+            
+            return new Intl.DateTimeFormat(format.locale, format.options).format(dateObj);
         } catch (error) {
-            console.warn('Error formatting date:', error);
-            return date;
+            console.error('Error formatting date:', error);
+            return date || '';
         }
     }
 

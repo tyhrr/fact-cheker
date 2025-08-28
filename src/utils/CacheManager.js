@@ -1,7 +1,7 @@
 /**
  * @fileoverview Cache management utilities for Croatian Labor Law database
  * Provides efficient browser storage with expiration, memory management, and performance optimization
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 /**
