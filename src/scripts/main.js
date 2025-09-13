@@ -6,6 +6,7 @@
 // Import enhanced system
 import { initializeFactChecker, getFactChecker } from '../integration.js';
 import { injectEnhancedArticles } from '../features/smart-answers/data/enhancedArticlesSample.js';
+import CroatianLawSearchEngine from '../search-engine/SearchManager.js';
 
 // Global variable for enhanced database
 let enhancedDatabase = null;
@@ -96,8 +97,24 @@ class App {
             await this.waitForDatabase();
         }
     }
+    
+    initializeSearchManager() {
+        console.log('🔍 Initializing SearchManager...');
+        
+        try {
+            // Create SearchManager instance and expose globally
+            window.searchManager = new CroatianLawSearchEngine();
+            console.log('✅ SearchManager initialized and available globally');
+        } catch (error) {
+            console.error('❌ Failed to initialize SearchManager:', error);
+        }
+    }
 
     async initPhase3() {
+        // Initialize SearchManager
+        this.initializeSearchManager();
+        await this.delayExecution(10);
+        
         // Additional features
         this.setupKeyboardNavigation();
         await this.delayExecution(10);

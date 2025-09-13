@@ -61,11 +61,12 @@ jobs:
       - name: Optimize assets
         run: |
           # Create directory structure
-          mkdir -p dist/src/styles dist/src/scripts dist/src/core dist/src/utils dist/src/data dist/src/search-engine dist/src/models dist/src/features dist/public
+          mkdir -p dist/src/styles dist/src/scripts dist/src/core dist/src/utils dist/src/data dist/src/search-engine dist/src/models dist/src/features dist/public dist/assets/icons
           
           # Copy original files first as fallback
           cp -r src/* dist/src/
           cp -r public/* dist/public/
+          cp -r assets/* dist/assets/ 2>/dev/null || true
           cp manifest.json dist/ 2>/dev/null || true
           cp sw.js dist/ 2>/dev/null || true
           

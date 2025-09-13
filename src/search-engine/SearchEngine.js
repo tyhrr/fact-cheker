@@ -135,6 +135,13 @@ export class SearchEngine {
      * Main search function - ACTUALLY WORKS
      */
     async search(query, options = {}) {
+        return this.executeSearch(query, options);
+    }
+    
+    /**
+     * Execute search - Called by SearchManager
+     */
+    async executeSearch(query, options = {}) {
         console.log(`🔍 WORKING SearchEngine: Searching for "${query}"`);
         
         if (!this.articlesData) {
@@ -266,18 +273,24 @@ export class SearchEngine {
 if (typeof window !== 'undefined') {
     window.addEventListener('databaseReady', () => {
         console.log('🔄 Database ready event received, updating SearchEngine...');
-        if (window.searchEngine && (window.legalDatabase || window.enhancedDatabase)) {
+        if ((window.searchEngine || (window.searchManager && window.searchManager.searchEngine)) && (window.legalDatabase || window.enhancedDatabase)) {
             const database = window.legalDatabase || window.enhancedDatabase;
-            window.searchEngine.updateDatabase(database);
+            const searchEngine = window.searchEngine || window.searchManager.searchEngine;
+            if (searchEngine && typeof searchEngine.updateDatabase === 'function') {
+                searchEngine.updateDatabase(database);
+            }
         }
     });
     
     // Also check immediately if database is already available
     setTimeout(() => {
-        if (window.searchEngine && (window.legalDatabase || window.enhancedDatabase)) {
+        if ((window.searchEngine || (window.searchManager && window.searchManager.searchEngine)) && (window.legalDatabase || window.enhancedDatabase)) {
             const database = window.legalDatabase || window.enhancedDatabase;
+            const searchEngine = window.searchEngine || window.searchManager.searchEngine;
             console.log('🔄 Database found, updating SearchEngine immediately...');
-            window.searchEngine.updateDatabase(database);
+            if (searchEngine && typeof searchEngine.updateDatabase === 'function') {
+                searchEngine.updateDatabase(database);
+            }
         }
     }, 1000);
 }
