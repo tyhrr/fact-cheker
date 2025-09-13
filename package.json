@@ -1,6 +1,6 @@
 {
     "name": "croatian-labor-law-fact-checker",
-    "version": "2.2.0",
+    "version": "2.3.2",
     "description": "A comprehensive web application for searching and verifying Croatian labor laws and workers' rights",
     "main": "index.html",
     "scripts": {

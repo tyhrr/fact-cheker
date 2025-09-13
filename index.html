@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="src/styles/neumorphism.css">
     <link rel="stylesheet" href="src/styles/style.css">
     <link rel="stylesheet" href="src/styles/enhanced.css">
+    <link rel="stylesheet" href="src/features/smart-answers/styles/smart-answer.css">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="public/assets/icons/favicon.svg">
@@ -267,7 +268,126 @@
         </div>
     </footer>
 
-    <!-- Result Template (Hidden) -->
+    <!-- Enhanced Smart Answer Template (Hidden) -->
+    <template id="smart-answer-template">
+        <article class="smart-answer-item neumorphic-container" tabindex="0" role="article">
+            <!-- Quick Answer Section -->
+            <div class="quick-answer-section">
+                <div class="answer-icon">💡</div>
+                <div class="quick-answer-content">
+                    <h3 class="quick-answer-title" data-i18n="smartAnswer.quick-answer">Quick Answer</h3>
+                    <p class="quick-answer-text"></p>
+                    <div class="confidence-indicator">
+                        <span class="confidence-label" data-i18n="smartAnswer.confidence">Confidence:</span>
+                        <div class="confidence-bar">
+                            <div class="confidence-fill"></div>
+                        </div>
+                        <span class="confidence-percentage"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Explanation Section -->
+            <div class="detailed-explanation-section" style="display: none;">
+                <div class="section-header">
+                    <h4 data-i18n="smartAnswer.detailed-explanation">Detailed Explanation</h4>
+                    <button class="toggle-section-button" data-i18n-aria="smartAnswer.expand-section">
+                        <span class="toggle-icon">📋</span>
+                    </button>
+                </div>
+                <div class="section-content">
+                    <div class="detailed-explanation-text"></div>
+                </div>
+            </div>
+
+            <!-- Practical Examples Section -->
+            <div class="practical-examples-section" style="display: none;">
+                <div class="section-header">
+                    <h4 data-i18n="smartAnswer.practical-examples">Practical Examples</h4>
+                    <button class="toggle-section-button" data-i18n-aria="smartAnswer.expand-section">
+                        <span class="toggle-icon">🔧</span>
+                    </button>
+                </div>
+                <div class="section-content">
+                    <div class="examples-container"></div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section" style="display: none;">
+                <div class="section-header">
+                    <h4 data-i18n="smartAnswer.frequently-asked">Frequently Asked Questions</h4>
+                    <button class="toggle-section-button" data-i18n-aria="smartAnswer.expand-section">
+                        <span class="toggle-icon">❓</span>
+                    </button>
+                </div>
+                <div class="section-content">
+                    <div class="faq-container"></div>
+                </div>
+            </div>
+
+            <!-- Key Takeaways Section -->
+            <div class="key-takeaways-section" style="display: none;">
+                <div class="section-header">
+                    <h4 data-i18n="smartAnswer.key-takeaways">Key Takeaways</h4>
+                    <button class="toggle-section-button" data-i18n-aria="smartAnswer.expand-section">
+                        <span class="toggle-icon">🎯</span>
+                    </button>
+                </div>
+                <div class="section-content">
+                    <ul class="takeaways-list"></ul>
+                </div>
+            </div>
+
+            <!-- Related Topics Section -->
+            <div class="related-topics-section" style="display: none;">
+                <div class="section-header">
+                    <h4 data-i18n="smartAnswer.related-topics">Related Topics</h4>
+                    <button class="toggle-section-button" data-i18n-aria="smartAnswer.expand-section">
+                        <span class="toggle-icon">🔗</span>
+                    </button>
+                </div>
+                <div class="section-content">
+                    <div class="related-topics-container"></div>
+                </div>
+            </div>
+
+            <!-- Legal Sources Section -->
+            <div class="legal-sources-section">
+                <div class="section-header">
+                    <h4 data-i18n="smartAnswer.legal-sources">Legal Sources</h4>
+                    <button class="toggle-section-button" data-i18n-aria="smartAnswer.expand-section">
+                        <span class="toggle-icon">⚖️</span>
+                    </button>
+                </div>
+                <div class="section-content" style="display: none;">
+                    <div class="source-articles-container"></div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="smart-answer-actions">
+                <button class="action-button helpful-button neumorphic-button" data-i18n-aria="smartAnswer.feedback-helpful">
+                    <span aria-hidden="true">👍</span>
+                    <span data-i18n="smartAnswer.helpful">Helpful</span>
+                </button>
+                <button class="action-button share-answer-button neumorphic-button" data-i18n-aria="smartAnswer.share">
+                    <span aria-hidden="true">📤</span>
+                    <span data-i18n="smartAnswer.share">Share</span>
+                </button>
+                <button class="action-button view-legal-button neumorphic-button" data-i18n-aria="smartAnswer.view-legal">
+                    <span aria-hidden="true">📄</span>
+                    <span data-i18n="smartAnswer.view-legal">View Legal</span>
+                </button>
+                <button class="action-button ask-followup-button neumorphic-button" data-i18n-aria="smartAnswer.ask-more">
+                    <span aria-hidden="true">💬</span>
+                    <span data-i18n="smartAnswer.ask-more">Ask More</span>
+                </button>
+            </div>
+        </article>
+    </template>
+
+    <!-- Original Result Template (Hidden) -->
     <template id="result-template">
         <article class="result-item neumorphic-container" tabindex="0" role="article">
             <header class="result-header">
@@ -348,18 +468,20 @@
     </div>
 
     <!-- Scripts -->
-    <!-- Enhanced System v2.1.0 -->
+    <!-- Enhanced System v2.2.0 -->
     <script type="module" src="src/integration.js"></script>
     
     <!-- Core Scripts -->
     <script src="src/scripts/security.js"></script>
     <script src="src/scripts/gdpr.js"></script>
     <script src="src/scripts/i18n.js"></script>
+    <script type="module" src="src/searchConfig.js"></script>
     <script type="module" src="src/core/LegalDatabase.js"></script>
-    <script type="module" src="src/scripts/search.js"></script>
+    <script type="module" src="src/search-engine/SearchEngine.js"></script>
     <script src="src/scripts/feedback.js"></script>
     <script src="src/scripts/tests.js"></script>
     <script type="module" src="src/scripts/main.js"></script>
+    <script type="module" src="src/search-engine/SearchManager.js"></script>
     
     <!-- Service Worker Registration -->
     <script>
@@ -375,5 +497,18 @@
             });
         }
     </script>
+    
+    <!-- Debug Scripts -->
+    <script src="debug-search.js"></script>
+    <script src="complete-debug-utils.js"></script>
+    <script src="test-search-fix.js"></script>
+    <script src="debug-maternity.js"></script>
+    <script src="test-translations.js"></script>
+    
+    <!-- Global Test Environment Setup -->
+    <script type="module" src="global-test-setup.js"></script>
+    
+    <!-- FORCE WORKING SEARCH ENGINE -->
+    <script src="force-working-search.js"></script>
 </body>
 </html>

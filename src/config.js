@@ -11,7 +11,7 @@ const isProduction = window.location.hostname !== 'localhost' &&
 // Configuration by environment
 export const config = {
     development: {
-        dataUrl: './src/data/croatian-labor-law.json',
+        dataUrl: './src/search-engine/data/croatian-labor-law.json',
         enableCache: true,
         enableValidation: true,
         enableDebugLogs: true,
@@ -32,7 +32,7 @@ export const config = {
     },
     
     production: {
-        dataUrl: './src/data/croatian-labor-law.json',
+        dataUrl: './src/search-engine/data/croatian-labor-law.json',
         enableCache: true,
         enableValidation: false,  // Disabled for performance
         enableDebugLogs: false,
@@ -132,10 +132,10 @@ export const apiConfig = {
 // Internationalization configuration
 export const i18nConfig = {
     defaultLanguage: 'hr',
-    supportedLanguages: ['hr', 'en'],
+    supportedLanguages: ['hr', 'en', 'es'],
     fallbackLanguage: 'en',
     loadRemoteTranslations: false,
-    translationsPath: './data/translations.json'
+    translationsPath: null  // No external translations file needed
 };
 
 // Security configuration

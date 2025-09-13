@@ -5,6 +5,7 @@
 
 // Import enhanced system
 import { initializeFactChecker, getFactChecker } from '../integration.js';
+import { injectEnhancedArticles } from '../features/smart-answers/data/enhancedArticlesSample.js';
 
 // Global variable for enhanced database
 let enhancedDatabase = null;
@@ -62,13 +63,17 @@ class App {
             console.log('Initializing Enhanced Croatian Labor Law Database...');
             
             enhancedDatabase = await initializeFactChecker({
-                dataUrl: './src/data/croatian-labor-law.json',
+                dataUrl: './src/search-engine/data/croatian-labor-law.json',
                 enableCache: true,
                 enableSearch: true,
                 enableValidation: true,
                 cacheSize: 200,
                 language: 'hr'
             });
+            
+            // Inject enhanced sample articles for testing smart answers
+            console.log('Injecting enhanced sample articles...');
+            injectEnhancedArticles(enhancedDatabase);
             
             // Show statistics
             const stats = enhancedDatabase.getStatistics();

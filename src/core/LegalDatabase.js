@@ -6,7 +6,7 @@
 
 import { Article } from '../models/Article.js';
 import { SearchResult } from '../models/SearchResult.js';
-import { SearchEngine } from '../core/SearchEngine.js';
+import { SearchEngine } from '../search-engine/SearchEngine.js';
 import { TextProcessor } from '../utils/TextProcessor.js';
 import { CacheManager } from '../utils/CacheManager.js';
 import { Validator } from '../utils/Validator.js';
@@ -527,6 +527,37 @@ export class LegalDatabase {
      */
     getLanguages() {
         return Array.from(this.languages).sort();
+    }
+
+    /**
+     * Get total number of articles in the database
+     * @returns {number} Number of articles
+     */
+    getArticleCount() {
+        return this.articles.size;
+    }
+
+    /**
+     * Check if database is loaded and ready
+     * @returns {boolean} True if database is loaded
+     */
+    get isLoaded() {
+        return this.isInitialized && this.articles.size > 0;
+    }
+
+    /**
+     * Get database statistics
+     * @returns {Object} Database statistics
+     */
+    getStats() {
+        return {
+            totalArticles: this.articles.size,
+            totalCategories: this.categories.size,
+            totalLanguages: this.languages.size,
+            isInitialized: this.isInitialized,
+            isIndexed: this.isIndexed,
+            lastModified: this.lastModified
+        };
     }
 
     /**

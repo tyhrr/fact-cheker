@@ -1,0 +1,508 @@
+/* =========================================
+   Smart Answer Interface Styles
+   Enhanced v2.3.0 - Better User Responses
+   ========================================= */
+
+/* Smart Answer Container */
+.smart-answer-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    background: var(--card-background);
+    box-shadow: var(--neumorphic-shadow);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.smart-answer-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--neumorphic-shadow-hover);
+}
+
+/* Quick Answer Section */
+.quick-answer-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-color-dark));
+    border-radius: 16px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.quick-answer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.answer-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.quick-answer-content {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.quick-answer-title {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.quick-answer-text {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Confidence Indicator */
+.confidence-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.confidence-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.confidence-bar {
+    flex: 1;
+    height: 6px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 3px;
+    overflow: hidden;
+    max-width: 100px;
+}
+
+.confidence-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    border-radius: 3px;
+    transition: width 0.8s ease;
+}
+
+.confidence-percentage {
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+/* Expandable Sections */
+.detailed-explanation-section,
+.practical-examples-section,
+.faq-section,
+.key-takeaways-section,
+.related-topics-section,
+.legal-sources-section {
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    background: var(--section-background);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: var(--header-background);
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.section-header:hover {
+    background: var(--header-background-hover);
+}
+
+.section-header h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.toggle-section-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-section-button:hover {
+    background: var(--button-hover-background);
+    transform: scale(1.1);
+}
+
+.toggle-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.section-expanded .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.section-content {
+    padding: 1.5rem;
+    animation: slideDown 0.3s ease when visible;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Detailed Explanation */
+.detailed-explanation-text {
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+.detailed-explanation-text h4 {
+    color: var(--primary-color);
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.detailed-explanation-text ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.detailed-explanation-text li {
+    margin-bottom: 0.5rem;
+}
+
+.detailed-explanation-text strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Practical Examples */
+.examples-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.example-item {
+    padding: 1.5rem;
+    background: var(--example-background);
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.example-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.example-scenario {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.example-calculation {
+    font-family: 'Courier New', monospace;
+    background: var(--code-background);
+    padding: 0.5rem;
+    border-radius: 6px;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.example-outcome {
+    color: var(--success-color);
+    font-weight: 500;
+}
+
+/* FAQ Section */
+.faq-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.faq-item {
+    border-radius: 10px;
+    background: var(--faq-background);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.faq-question {
+    padding: 1rem 1.5rem;
+    background: var(--faq-question-background);
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background: var(--faq-question-hover);
+}
+
+.faq-question::after {
+    content: '▼';
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.faq-item.expanded .faq-question::after {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 1rem 1.5rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    display: none;
+    border-top: 1px solid var(--border-color);
+}
+
+.faq-item.expanded .faq-answer {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Key Takeaways */
+.takeaways-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.takeaways-list li {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    background: var(--takeaway-background);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.takeaways-list li:hover {
+    transform: translateX(4px);
+    background: var(--takeaway-hover);
+}
+
+.takeaways-list li::before {
+    content: '✓';
+    position: absolute;
+    left: -0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--accent-color);
+    color: white;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Related Topics */
+.related-topics-container {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.related-topic-item {
+    padding: 1rem;
+    background: var(--related-background);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.related-topic-item:hover {
+    background: var(--related-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit;
+}
+
+.related-topic-title {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.related-topic-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Legal Sources */
+.source-articles-container {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.source-article-item {
+    padding: 0.75rem 1rem;
+    background: var(--source-background);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.source-article-item:hover {
+    background: var(--source-hover);
+    border-color: var(--primary-color);
+}
+
+.source-article-number {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.source-article-title {
+    flex: 1;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* Action Buttons */
+.smart-answer-actions {
+    display: flex;
+    gap: 0.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.smart-answer-actions .action-button {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.smart-answer-actions .action-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.helpful-button {
+    background: linear-gradient(135deg, var(--success-color), var(--success-color-dark));
+    color: white;
+}
+
+.share-answer-button {
+    background: linear-gradient(135deg, var(--info-color), var(--info-color-dark));
+    color: white;
+}
+
+.view-legal-button {
+    background: linear-gradient(135deg, var(--warning-color), var(--warning-color-dark));
+    color: white;
+}
+
+.ask-followup-button {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-color-dark));
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .smart-answer-item {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .quick-answer-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .smart-answer-actions {
+        flex-direction: column;
+    }
+    
+    .smart-answer-actions .action-button {
+        min-width: auto;
+        flex: none;
+    }
+    
+    .section-header {
+        padding: 0.75rem 1rem;
+    }
+    
+    .section-content {
+        padding: 1rem;
+    }
+}

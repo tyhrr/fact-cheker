@@ -2,7 +2,7 @@
   "name": "Croatian Labor Law Fact Checker",
   "short_name": "Croatian Law",
   "description": "A comprehensive fact checker for Croatian labor law with multilingual support",
-  "version": "2.2.0",
+  "version": "2.3.2",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",

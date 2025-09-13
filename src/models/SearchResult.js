@@ -37,9 +37,18 @@ export class SearchResult {
      * @param {number} [data.rank] - Result ranking position
      */
     constructor(data) {
+        console.log('Creating SearchResult with data:', {
+            hasArticle: !!data.article,
+            articleId: data.article?.id,
+            articleTitle: data.article?.title?.substring(0, 50),
+            relevanceScore: data.relevanceScore,
+            searchTerm: data.searchTerm
+        });
+        
         this.validateData(data);
         
         // Core properties
+        this.id = data.id || data.article?.id || Math.random().toString(36);
         this.article = data.article;
         this.relevanceScore = data.relevanceScore;
         this.matches = Array.isArray(data.matches) ? [...data.matches] : [];

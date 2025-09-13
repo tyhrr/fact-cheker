@@ -64,22 +64,21 @@ export class Article {
     constructor(data) {
         this.validateData(data);
         
-        // Core properties
-        this.id = data.id;
-        this.title = data.title;
-        this.content = data.content;
-        this.category = data.category;
+        // First, copy ALL original properties
+        Object.assign(this, data);
+        
+        // Then override with enhanced versions where needed
         this.keywords = Array.isArray(data.keywords) ? [...data.keywords] : [];
         this.translations = data.translations || {};
         
-        // Enhanced metadata
-        this.lastModified = data.lastModified || new Date().toISOString();
-        this.precedingArticles = Array.isArray(data.precedingArticles) ? [...data.precedingArticles] : [];
-        this.followingArticles = Array.isArray(data.followingArticles) ? [...data.followingArticles] : [];
-        this.legalReferences = Array.isArray(data.legalReferences) ? [...data.legalReferences] : [];
-        this.practicalExamples = Array.isArray(data.practicalExamples) ? [...data.practicalExamples] : [];
-        this.frequentlyAskedQuestions = Array.isArray(data.frequentlyAskedQuestions) ? [...data.frequentlyAskedQuestions] : [];
-        this.relatedCaseStudies = Array.isArray(data.relatedCaseStudies) ? [...data.relatedCaseStudies] : [];
+        // Enhanced metadata (only set if not already present)
+        if (!this.lastModified) this.lastModified = new Date().toISOString();
+        if (!this.precedingArticles) this.precedingArticles = Array.isArray(data.precedingArticles) ? [...data.precedingArticles] : [];
+        if (!this.followingArticles) this.followingArticles = Array.isArray(data.followingArticles) ? [...data.followingArticles] : [];
+        if (!this.legalReferences) this.legalReferences = Array.isArray(data.legalReferences) ? [...data.legalReferences] : [];
+        if (!this.practicalExamples) this.practicalExamples = Array.isArray(data.practicalExamples) ? [...data.practicalExamples] : [];
+        if (!this.frequentlyAskedQuestions) this.frequentlyAskedQuestions = Array.isArray(data.frequentlyAskedQuestions) ? [...data.frequentlyAskedQuestions] : [];
+        if (!this.relatedCaseStudies) this.relatedCaseStudies = Array.isArray(data.relatedCaseStudies) ? [...data.relatedCaseStudies] : [];
         
         // Performance and analytics
         this.accessCount = 0;
