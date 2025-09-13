@@ -104,6 +104,28 @@ export class SearchEngine {
         return null;
     }
     
+    /**
+     * Build search index - Required by LegalDatabase
+     * @param {Array|Map} articles - Articles data to index
+     */
+    buildIndex(articles) {
+        console.log('🔧 SearchEngine: Building search index...');
+        
+        if (articles) {
+            this.articlesData = articles;
+            console.log('✅ Search index built with', 
+                articles.size || articles.length || 0, 'articles');
+        } else if (this.database) {
+            this.articlesData = this.findArticlesData();
+            console.log('✅ Search index built from database with', 
+                this.getArticleCount(), 'articles');
+        } else {
+            console.warn('⚠️ No articles provided for index building');
+        }
+        
+        return Promise.resolve();
+    }
+    
     getArticleCount() {
         if (!this.articlesData) return 0;
         return this.articlesData.size || this.articlesData.length || 0;

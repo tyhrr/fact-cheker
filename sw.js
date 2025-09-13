@@ -18,15 +18,16 @@ const STATIC_FILES = [
     './src/core/LegalDatabase.js',
     './src/search-engine/data/croatian-labor-law.json',
     './src/search-engine/SearchManager.js',
+    './src/search-engine/SearchEngine.js',
     './src/scripts/i18n.js',
     './src/scripts/security.js',
     './src/scripts/gdpr.js',
     './src/scripts/feedback.js',
     './src/scripts/tests.js',
-    './public/assets/icons/favicon.svg',
-    './public/assets/icons/favicon.ico',
-    './public/assets/icons/favicon-16x16.png',
-    './public/assets/icons/favicon-32x32.png',
+    './assets/icons/favicon.svg',
+    './assets/icons/favicon.ico',
+    './assets/icons/favicon-16x16.png',
+    './assets/icons/favicon-32x32.png',
     './manifest.json'
 ];
 
