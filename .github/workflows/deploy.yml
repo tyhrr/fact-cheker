@@ -70,10 +70,21 @@ jobs:
           cp manifest.json dist/ 2>/dev/null || true
           cp sw.js dist/ 2>/dev/null || true
           
-          # Minify CSS (with error handling for existing files only)
-          test -f src/styles/neumorphism.css && (cleancss -o dist/src/styles/neumorphism.min.css src/styles/neumorphism.css || cp src/styles/neumorphism.css dist/src/styles/neumorphism.min.css)
-          test -f src/styles/style.css && (cleancss -o dist/src/styles/style.min.css src/styles/style.css || cp src/styles/style.css dist/src/styles/style.min.css)
-          test -f src/styles/enhanced.css && (cleancss -o dist/src/styles/enhanced.min.css src/styles/enhanced.css || cp src/styles/enhanced.css dist/src/styles/enhanced.min.css)
+          # Minify CSS (with error handling and fallbacks)
+          if test -f src/styles/neumorphism.css; then
+            cleancss -o dist/src/styles/neumorphism.min.css src/styles/neumorphism.css || cp src/styles/neumorphism.css dist/src/styles/neumorphism.min.css
+            echo "Neumorphism CSS processed"
+          fi
+          
+          if test -f src/styles/style.css; then
+            cleancss -o dist/src/styles/style.min.css src/styles/style.css || cp src/styles/style.css dist/src/styles/style.min.css  
+            echo "Style CSS processed"
+          fi
+          
+          if test -f src/styles/enhanced.css; then
+            cleancss -o dist/src/styles/enhanced.min.css src/styles/enhanced.css || cp src/styles/enhanced.css dist/src/styles/enhanced.min.css
+            echo "Enhanced CSS processed"
+          fi
           
           # Minify JavaScript (only existing files)
           test -f src/scripts/i18n.js && (terser src/scripts/i18n.js -o dist/src/scripts/i18n.min.js --compress --mangle || cp src/scripts/i18n.js dist/src/scripts/i18n.min.js)
@@ -99,19 +110,32 @@ jobs:
           # Create optimized index.html
           cp index.html dist/index.html
           
-          # Replace paths to minified versions in the deployed version (only for existing files)
-          sed -i 's/src\/styles\/neumorphism\.css/src\/styles\/neumorphism.min.css/g' dist/index.html 2>/dev/null || true
-          sed -i 's/src\/styles\/style\.css/src\/styles\/style.min.css/g' dist/index.html 2>/dev/null || true
-          sed -i 's/src\/styles\/enhanced\.css/src\/styles\/enhanced.min.css/g' dist/index.html 2>/dev/null || true
-          sed -i 's/src\/scripts\/main\.js/src\/scripts\/main.min.js/g' dist/index.html 2>/dev/null || true
-          sed -i 's/src\/core\/LegalDatabase\.js/src\/core\/LegalDatabase.min.js/g' dist/index.html 2>/dev/null || true
-          sed -i 's/src\/search-engine\/SearchEngine\.js/src\/search-engine\/SearchEngine.min.js/g' dist/index.html 2>/dev/null || true
-          sed -i 's/src\/search-engine\/SearchManager\.js/src\/search-engine\/SearchManager.min.js/g' dist/index.html 2>/dev/null || true
-          sed -i 's/src\/scripts\/i18n\.js/src\/scripts\/i18n.min.js/g' dist/index.html 2>/dev/null || true
-          sed -i 's/src\/scripts\/security\.js/src\/scripts\/security.min.js/g' dist/index.html 2>/dev/null || true
-          sed -i 's/src\/scripts\/gdpr\.js/src\/scripts\/gdpr.min.js/g' dist/index.html 2>/dev/null || true
-          sed -i 's/src\/scripts\/feedback\.js/src\/scripts\/feedback.min.js/g' dist/index.html 2>/dev/null || true
-          sed -i 's/src\/scripts\/tests\.js/src\/scripts\/tests.min.js/g' dist/index.html 2>/dev/null || true
+          # Replace paths to minified versions only if the minified files exist
+          if test -f dist/src/styles/neumorphism.min.css; then
+            sed -i 's/src\/styles\/neumorphism\.css/src\/styles\/neumorphism.min.css/g' dist/index.html
+          fi
+          
+          if test -f dist/src/styles/style.min.css; then
+            sed -i 's/src\/styles\/style\.css/src\/styles\/style.min.css/g' dist/index.html
+          fi
+          
+          if test -f dist/src/styles/enhanced.min.css; then
+            sed -i 's/src\/styles\/enhanced\.css/src\/styles\/enhanced.min.css/g' dist/index.html  
+          fi
+          
+          if test -f dist/src/scripts/main.min.js; then
+            sed -i 's/src\/scripts\/main\.js/src\/scripts\/main.min.js/g' dist/index.html
+          fi
+          
+          # Continue with other replacements for existing files
+          test -f dist/src/core/LegalDatabase.min.js && sed -i 's/src\/core\/LegalDatabase\.js/src\/core\/LegalDatabase.min.js/g' dist/index.html
+          test -f dist/src/search-engine/SearchEngine.min.js && sed -i 's/src\/search-engine\/SearchEngine\.js/src\/search-engine\/SearchEngine.min.js/g' dist/index.html
+          test -f dist/src/search-engine/SearchManager.min.js && sed -i 's/src\/search-engine\/SearchManager\.js/src\/search-engine\/SearchManager.min.js/g' dist/index.html
+          test -f dist/src/scripts/i18n.min.js && sed -i 's/src\/scripts\/i18n\.js/src\/scripts\/i18n.min.js/g' dist/index.html
+          test -f dist/src/scripts/security.min.js && sed -i 's/src\/scripts\/security\.js/src\/scripts\/security.min.js/g' dist/index.html
+          test -f dist/src/scripts/gdpr.min.js && sed -i 's/src\/scripts\/gdpr\.js/src\/scripts\/gdpr.min.js/g' dist/index.html
+          test -f dist/src/scripts/feedback.min.js && sed -i 's/src\/scripts\/feedback\.js/src\/scripts\/feedback.min.js/g' dist/index.html
+          test -f dist/src/scripts/tests.min.js && sed -i 's/src\/scripts\/tests\.js/src\/scripts\/tests.min.js/g' dist/index.html
           
           echo "Asset optimization completed"
 

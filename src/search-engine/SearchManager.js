@@ -83,20 +83,40 @@ class CroatianLawSearchEngine {
     }
 
     onEnhancedDatabaseReady() {
-        console.log('Enhanced search engine ready');
+        console.log('🔄 Enhanced search engine ready - initializing SearchEngine...');
         this.enhancedMode = true;
         
         // Initialize SearchEngine with the database
         try {
             const database = window.legalDatabase || window.enhancedDatabase;
             if (database) {
+                console.log('🗄️ Database available:', {
+                    type: database.constructor.name,
+                    articlesCount: database.articles?.size || database.articles?.length || 'unknown'
+                });
+                
                 this.searchEngine = new SearchEngine(database);
-                console.log('SearchEngine initialized successfully');
+                console.log('✅ SearchEngine initialized successfully with database');
+                
+                // Verify SearchEngine has articles
+                setTimeout(() => {
+                    const articleCount = this.searchEngine.getArticleCount();
+                    console.log(`🔍 SearchEngine verification: ${articleCount} articles available`);
+                    
+                    if (articleCount === 0) {
+                        console.warn('⚠️ SearchEngine has no articles, trying to reinitialize...');
+                        this.searchEngine.initialize();
+                    }
+                }, 500);
+                
             } else {
-                console.error('No database available for SearchEngine initialization');
+                console.error('❌ No database available for SearchEngine initialization');
+                
+                // Try to wait for database with timeout
+                this.waitForDatabaseWithTimeout();
             }
         } catch (error) {
-            console.error('Failed to initialize SearchEngine:', error);
+            console.error('❌ Failed to initialize SearchEngine:', error);
         }
         
         // Enable advanced search features
@@ -104,6 +124,32 @@ class CroatianLawSearchEngine {
         
         // Pre-load search suggestions
         this.preloadSuggestions();
+    }
+    
+    waitForDatabaseWithTimeout() {
+        console.log('⏳ Waiting for database to become available...');
+        let attempts = 0;
+        const maxAttempts = 10;
+        
+        const checkDatabase = () => {
+            attempts++;
+            const database = window.legalDatabase || window.enhancedDatabase;
+            
+            if (database && (database.articles?.size > 0 || database.articles?.length > 0)) {
+                console.log('✅ Database found after', attempts, 'attempts');
+                this.searchEngine = new SearchEngine(database);
+                console.log('🔍 SearchEngine initialized with', this.searchEngine.getArticleCount(), 'articles');
+                return;
+            }
+            
+            if (attempts < maxAttempts) {
+                setTimeout(checkDatabase, 1000);
+            } else {
+                console.error('❌ Database not available after', maxAttempts, 'attempts');
+            }
+        };
+        
+        setTimeout(checkDatabase, 1000);
     }
 
     bindElements() {

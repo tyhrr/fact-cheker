@@ -48,10 +48,40 @@ export class SearchEngine {
         this.articlesData = this.findArticlesData();
         
         if (this.articlesData) {
-            console.log('✅ Articles data found:', this.articlesData.size || this.articlesData.length, 'items');
+            const count = this.articlesData.size || this.articlesData.length;
+            console.log('✅ Articles data found:', count, 'items');
+            
+            if (count === 0) {
+                console.warn('⚠️ Articles data is empty, will retry later');
+                this.retryInitialization();
+            }
         } else {
-            console.error('❌ No articles data found in database');
+            console.error('❌ No articles data found in database, will retry...');
+            this.retryInitialization();
         }
+    }
+    
+    retryInitialization() {
+        setTimeout(() => {
+            console.log('🔄 Retrying SearchEngine initialization...');
+            
+            // Try to get database again
+            this.database = this.database || window.legalDatabase || window.enhancedDatabase;
+            
+            if (this.database) {
+                const articles = this.findArticlesData();
+                if (articles && (articles.size > 0 || articles.length > 0)) {
+                    this.articlesData = articles;
+                    console.log('✅ SearchEngine retry successful:', this.getArticleCount(), 'articles');
+                } else {
+                    console.log('⏳ Database found but no articles yet, waiting...');
+                    this.retryInitialization();
+                }
+            } else {
+                console.log('⏳ Still waiting for database...');
+                this.retryInitialization();
+            }
+        }, 2000);
     }
     
     findArticlesData() {
